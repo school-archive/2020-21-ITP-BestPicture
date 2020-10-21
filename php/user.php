@@ -41,3 +41,22 @@
             return $_SESSION["userid"];
         else return -1;
     }
+
+    /*
+     * Setzt den angemeldeten Benutzer
+     */
+    function set_logged_in_user($userid) {
+        if (session_status() != PHP_SESSION_ACTIVE)
+            session_start();
+        session_reset();
+        $_SESSION["userid"] = $userid;
+    }
+
+    /*
+     * Löscht die momentane Sitzung
+     */
+    function set_logged_out() {
+        if (session_status() != PHP_SESSION_ACTIVE)
+            session_start();
+        session_destroy();
+    }

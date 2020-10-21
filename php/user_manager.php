@@ -34,3 +34,11 @@
             ":password_hash" => $password_hash
         ));
     }
+
+    /*
+     * Return true wenn das Passwort mit dem in der Datenbank abgespeicherten übereinstimmt, sonst false
+     */
+    function check_password($userid, $password) {
+        $password_hash = get_user_by_id($userid)["password_hash"];
+        return password_verify($password, $password_hash);
+    }
