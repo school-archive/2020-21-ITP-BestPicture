@@ -4,9 +4,14 @@
  * Needs to be included in every file a sql connection is needed
  * @return PDO
  */
+
 function get_bp_mysql_object() {
+    global $pdo;
+    if (isset($pdo))
+        return $pdo;
+
     $host = "localhost";
-    $username = "bestpicture";
+    $username = getenv("DB_USERNAME");
     $password = getenv("DB_PASSWORD");
     $db = "bestpicture";
 
@@ -17,5 +22,5 @@ function get_bp_mysql_object() {
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC, //make the default fetch be an associative array
     ];
 
-    return new PDO($dsn, $username, $password, $options);
+    return $pdo = new PDO($dsn, $username, $password, $options);
 }
