@@ -17,7 +17,7 @@
         $s = get_bp_mysql_object()->prepare("select * from user where email = :email");
         $s->execute(array(":email" => $email));
         $obj = $s->fetch();
-        var_dump($obj);
+        return $obj["user_id"];
     }
 
     /*
