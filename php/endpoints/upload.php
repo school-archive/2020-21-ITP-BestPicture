@@ -23,7 +23,7 @@ if (!empty($_FILES)) {
     $quality = 100;
     if ($size > 1000000)
         $quality = 70;
-    imagejpeg($new_img, "../../images/" . $photoid . ".jpg", $quality);
+    imagejpeg($new_img, "../../assets/images/uploads/" . $photoid . ".jpg", $quality);
 
     echo "<br>photo id: $photoid<br>quality: $quality%<br>size: $size";
 }
