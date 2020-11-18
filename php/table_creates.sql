@@ -23,17 +23,19 @@ create table user (
                       nachname text,
                       profilepicture_id int default null,
                       description text,
-                      is_admin boolean default false,
-                      foreign key (profilepicture_id) references photo(photo_id) on delete set null
+                      is_admin boolean default false
 );
 
 create table photo (
-                       photo_id int primary key auto_increment,
+                       photo_id int primary key auto_increment null,
                        user_id int,
                        path text,
                        approved_by_admins boolean default false,
                        foreign key (user_id) references user(user_id) on delete set null
 );
+
+ALTER TABLE user
+    ADD CONSTRAINT fk_profilepic foreign key (profilepicture_id) references photo(photo_id);
 
 create table contest (
                          contest_id int primary key auto_increment,
