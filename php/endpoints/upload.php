@@ -33,7 +33,7 @@ function create_image_entry($userid, $approved_by_admins=false) {
     while (get_photo_by_id($photoid) != false)
         $photoid = random_int(0, 1000000000);
 
-    $path = "images/" . $photoid . ".jpg";
+    $path = "assets/images/uploads/" . $photoid . ".jpg";
 
     $s = get_bp_mysql_object()->
     prepare("insert into photo (photo_id, user_id, path, approved_by_admins) values (:photo_id, :user_id, :filepath, :approved_by_admins)");
