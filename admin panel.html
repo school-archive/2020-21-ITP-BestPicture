@@ -13,15 +13,64 @@
     <li>User mit ID ... löschen</li>
 </ul>
 
-<button>Wettbewerb starten</button>
-<button>Wettbewerb beenden</button>
+<button id="start-contest">Wettbewerb starten</button>
+<button id="stop-contest">Wettbewerb beenden</button>
 <br><br>
-<img src="http://via.placeholder.com/200x200"><br>
-<button>Annehmen</button>
-<button>Ablehnen</button>
+<img id="image-to-approve" src="http://via.placeholder.com/200x200"><br>
+<button id="approve-image">Annehmen</button>
+<button id="unapprove-image">Ablehnen</button>
 <br><br>
-User ID: <input type="text"> <button>Löschen</button>
+User ID: <input id="user-id" type="text"> <button id="delete-user">Löschen</button>
 <br><br>
-Bild ID: <input type="text"> <button>Löschen</button>
+Bild ID: <input id="image-id" type="text"> <button id="delete-image">Löschen</button>
+
+<script>
+    let btn_start_contest = document.getElementById("start-contest");
+    let btn_stop_contest = document.getElementById("stop-contest");
+    let img_to_approve = document.getElementById("image-to-approve");
+    let btn_approve = document.getElementById("approve-image");
+    let btn_unapprove = document.getElementById("unapprove-image");
+
+    let user_id = document.getElementById("user-id");
+    let btn_delete_user = document.getElementById("delete-user");
+    let image_id = document.getElementById("image-id");
+    let btn_delete_image = document.getElementById("delete-image");
+
+    btn_start_contest.addEventListener("click", function () {
+        let req = new XMLHttpRequest();
+        req.addEventListener("load", function (){
+            console.log(JSON.parse(this.responseText))
+        });
+        req.open("get", "php/endpoints/adminpanel.php?action=start_contest");
+        req.send();
+    })
+    btn_stop_contest.addEventListener("click", function () {
+        let req = new XMLHttpRequest();
+        req.addEventListener("load", function (){
+            console.log(JSON.parse(this.responseText))
+        });
+        req.open("get", "php/endpoints/adminpanel.php?action=stop_contest");
+        req.send();
+    })
+
+    btn_delete_user.addEventListener("click", function () {
+        let req = new XMLHttpRequest();
+        req.addEventListener("load", function (){
+            console.log(JSON.parse(this.responseText))
+        });
+        req.open("get", "php/endpoints/adminpanel.php?action=delete_user&userid=" + user_id.value);
+        req.send();
+    })
+
+    btn_delete_image.addEventListener("click", function () {
+        let req = new XMLHttpRequest();
+        req.addEventListener("load", function (){
+            console.log(JSON.parse(this.responseText))
+        });
+        req.open("get", "php/endpoints/adminpanel.php?action=delete_image&imageid=" + image_id.value);
+        req.send();
+    })
+</script>
+
 </body>
 </html>

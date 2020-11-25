@@ -1,5 +1,7 @@
 <?php
 require_once "../user.php";
+require_once "../photo.php";
+
 $userid = get_signed_in_user_id();
 if ($userid == null)
     handleError("not signed in");
@@ -26,31 +28,6 @@ if (!empty($_FILES)) {
     imagejpeg($new_img, "../../assets/images/uploads/" . $photoid . ".jpg", $quality);
 
     echo "<br>photo id: $photoid<br>quality: $quality%<br>size: $size";
-}
-
-function create_image_entry($userid, $approved_by_admins=false) {
-    $photoid = random_int(0, 1000000000);
-    while (get_photo_by_id($photoid) != false)
-        $photoid = random_int(0, 1000000000);
-
-    $path = "assets/images/uploads/" . $photoid . ".jpg";
-
-    $s = get_bp_mysql_object()->
-    prepare("insert into photo (photo_id, user_id, path, approved_by_admins) values (:photo_id, :user_id, :filepath, :approved_by_admins)");
-    $s->execute(array(
-        ":user_id" => $userid,
-        ":photo_id" => $photoid,
-        ":filepath" => $path,
-        ":approved_by_admins" => $approved_by_admins
-    ));
-
-    return $photoid;
-}
-
-function get_photo_by_id($photoid) {
-    $s = get_bp_mysql_object()->prepare("select * from photo where photo_id = :photoid");
-    $s->execute(array(":photoid" => $photoid));
-    return $s->fetch();
 }
 
 /**

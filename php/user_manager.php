@@ -42,3 +42,11 @@
         $password_hash = get_user_by_id($userid)["password_hash"];
         return password_verify($password, $password_hash);
     }
+
+    function delete_user($userid) {
+        $s = get_bp_mysql_object()->
+        prepare("delete from user where user_id = :userid");
+        $s->execute(array(
+            ":user_id" => $userid
+        ));
+    }

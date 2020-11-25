@@ -1,0 +1,39 @@
+<?php
+    require_once "mysql_manager.php";
+
+    function get_unapproved_photo() {
+        $s = get_bp_mysql_object()->prepare("select * from photo where approved_by_admins is not true");
+        $s->execute();
+        return $s->fetch();
+    }
+
+    function delete_photo($photoid) {
+        $s = get_bp_mysql_object()->prepare("delete from photo where photo_id = :photoid");
+        $s->execute(array(":photoid" => $photoid));
+        return $s->fetch();
+    }
+
+    function create_image_entry($userid, $approved_by_admins=false) {
+        $photoid = random_int(0, 1000000000);
+        while (get_photo_by_id($photoid) != false)
+            $photoid = random_int(0, 1000000000);
+
+        $path = "assets/images/uploads/" . $photoid . ".jpg";
+
+        $s = get_bp_mysql_object()->
+        prepare("insert into photo (photo_id, user_id, path, approved_by_admins) values (:photo_id, :user_id, :filepath, :approved_by_admins)");
+        $s->execute(array(
+            ":user_id" => $userid,
+            ":photo_id" => $photoid,
+            ":filepath" => $path,
+            ":approved_by_admins" => $approved_by_admins
+        ));
+
+        return $photoid;
+    }
+
+    function get_photo_by_id($photoid) {
+        $s = get_bp_mysql_object()->prepare("select * from photo where photo_id = :photoid");
+        $s->execute(array(":photoid" => $photoid));
+        return $s->fetch();
+    }
