@@ -26,6 +26,7 @@ header {
 }
 
 nav {
+    align-content: center;
     float: right;
     line-height: 50px;
 }
