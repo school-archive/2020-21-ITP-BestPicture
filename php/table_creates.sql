@@ -57,7 +57,9 @@ create table contest_entry (
 create table entry_rating (
                               entryrating_id int primary key auto_increment,
                               photo_id int,
-                              foreign key (photo_id) references photo(photo_id) on delete set null
+                              user_rated int,
+                              foreign key (photo_id) references photo(photo_id) on delete set null,
+                              foreign key (user_rated) references user(user_id) on delete set null
 );
 
 create table comment (
