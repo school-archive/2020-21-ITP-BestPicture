@@ -42,8 +42,8 @@ create table contest (
                          start timestamp default current_timestamp(),
                          end timestamp null,
                          name text default null,
-                         winner_user_id int default null,
-                         foreign key (winner_user_id) references user(user_id) on delete set null
+                         winner_entry_id int default null,
+                         foreign key (winner_entry_id) references contest_entry(entry_id) on delete set null
 );
 
 create table contest_entry (
