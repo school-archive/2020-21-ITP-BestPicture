@@ -1,0 +1,23 @@
+body{
+    font-family: acumin-pro-semi-condensed, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    align-content: center;
+}
+.wrapper{
+    width: 1200px;
+    margin: 0 auto;
+}
+.gallary-links{
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.gallary-links .gallary-link{
+    float: left;
+    align-self: center;
+    width: 380px;
+    height: 380px;
+    margin: 10px 10px 10px 10px;
+    background-color: #E3E3E3;
+}
