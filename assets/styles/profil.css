@@ -1,10 +1,7 @@
-body{
-    font-family: acumin-pro-semi-condensed, sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    align-content: center;
+#nav-profile{
+    margin-bottom: 20px;
 }
-.wrapper{
+.gallary-links .wrapper{
     width: 1200px;
     margin: 0 auto;
 }
@@ -21,7 +18,7 @@ body{
     margin: 10px 10px 10px 10px;
     background-color: #E3E3E3;
 }
-img {
+.content-picture{
     width: 380px;
     height:380px;
     object-fit: cover;
