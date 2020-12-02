@@ -16,25 +16,27 @@
 <button id="start-contest">Wettbewerb starten</button>
 <button id="stop-contest">Wettbewerb beenden</button>
 <br><br>
-<img id="image-to-approve" src="http://via.placeholder.com/200x200"><br>
-<button id="approve-image">Annehmen</button>
-<button id="unapprove-image">Ablehnen</button>
+<img id="photo-to-approve" src="http://via.placeholder.com/200x200"><br>
+<button id="approve-photo">Annehmen</button>
+<button id="unapprove-photo">Ablehnen (Und löschen)</button>
 <br><br>
 User ID: <input id="user-id" type="text"> <button id="delete-user">Löschen</button>
 <br><br>
-Bild ID: <input id="image-id" type="text"> <button id="delete-image">Löschen</button>
+Bild ID: <input id="photo-id" type="text"> <button id="delete-photo">Löschen</button>
 
 <script>
     let btn_start_contest = document.getElementById("start-contest");
     let btn_stop_contest = document.getElementById("stop-contest");
-    let img_to_approve = document.getElementById("image-to-approve");
-    let btn_approve = document.getElementById("approve-image");
-    let btn_unapprove = document.getElementById("unapprove-image");
+    let img_to_approve = document.getElementById("photo-to-approve");
+    let btn_approve = document.getElementById("approve-photo");
+    let btn_unapprove = document.getElementById("unapprove-photo");
+
+    let cur_img;
 
     let user_id = document.getElementById("user-id");
     let btn_delete_user = document.getElementById("delete-user");
-    let image_id = document.getElementById("image-id");
-    let btn_delete_image = document.getElementById("delete-image");
+    let photo_id = document.getElementById("photo-id");
+    let btn_delete_photo = document.getElementById("delete-photo");
 
     btn_start_contest.addEventListener("click", function () {
         let req = new XMLHttpRequest();
@@ -62,14 +64,63 @@ Bild ID: <input id="image-id" type="text"> <button id="delete-image">Löschen</b
         req.send();
     })
 
-    btn_delete_image.addEventListener("click", function () {
+    btn_delete_photo.addEventListener("click", function () {
         let req = new XMLHttpRequest();
         req.addEventListener("load", function (){
             console.log(JSON.parse(this.responseText))
         });
-        req.open("get", "php/endpoints/adminpanel.php?action=delete_image&imageid=" + image_id.value);
+        req.open("get", "php/endpoints/adminpanel.php?action=delete_photo&photoid=" + photo_id.value);
         req.send();
     })
+
+    btn_unapprove.addEventListener("click", function () {
+        let req = new XMLHttpRequest();
+        req.addEventListener("load", function (){
+            let json = JSON.parse(this.responseText);
+            console.log(json);
+            if (json.success) {
+                cur_img = null;
+                img_to_approve.src="http://via.placeholder.com/200x200";
+                request_photo(update_preview);
+            }
+        });
+        req.open("get", "php/endpoints/adminpanel.php?action=delete_photo&photoid=" + photo_id.value);
+        req.send();
+    })
+
+    btn_approve.addEventListener("click", function () {
+        if (cur_img !== null) {
+            let req = new XMLHttpRequest();
+            req.addEventListener("load", function (){
+                let json = JSON.parse(this.responseText);
+                console.log(json);
+                if (json.success) {
+                    cur_img = null;
+                    img_to_approve.src="http://via.placeholder.com/200x200";
+                    request_photo(update_preview);
+                }
+            });
+            req.open("get", "php/endpoints/adminpanel.php?action=approve_photo&photoid=" + cur_img.photo_id);
+            req.send();
+        }
+    })
+
+    function request_photo(f) {
+        let req = new XMLHttpRequest();
+        req.addEventListener("load", f);
+        req.open("get", "php/endpoints/adminpanel.php?action=get_unapproved_photo");
+        req.send();
+    }
+
+    function update_preview() {
+        let json = JSON.parse(this.responseText);
+        if (json.success) {
+            cur_img = json;
+            img_to_approve.src = json.path;
+        }
+    }
+
+    request_photo(update_preview);
 </script>
 
 </body>

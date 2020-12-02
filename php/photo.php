@@ -37,3 +37,12 @@
         $s->execute(array(":photoid" => $photoid));
         return $s->fetch();
     }
+
+    function set_photo_approved($photoid, $approved=true) {
+        $s = get_bp_mysql_object()->prepare("update photo set approved_by_admins=:approved where photo_id = :photoid");
+        $s->execute(array(
+            ":approved" => $approved,
+            ":photoid" => $photoid
+        ));
+        return $s->fetch();
+    }
