@@ -69,5 +69,3 @@
 
         return $response;
     }
-
-    echo get_login_url();
