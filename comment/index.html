@@ -3,51 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-
+    <link rel="stylesheet" href="https://use.typekit.net/hhh6sjk.css">
     <link href="../assets/styles/comment.css" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <div class="wrapper">
+            <img class="logo" src="../assets/images/Logo.png" alt="logo">
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Registrieren</a>
+                <a href="#">Login</a>
+                <a href="#">
+                    <img class="user" src="../assets/images/user.png" alt="user">
+                </a>
+            </nav>
+        </div>
+    </header>
 
     <section>
-        <article>
-            <!--Bild src nicht korrekt-->
-            <img src="../assets/images/uploads/picture.png">
-        </article>
+        <section id="section_left">
+            <article>
+                <img src="../assets/images/uploads/la.jpg" id="upload" alt="Upload">
+            </article>
 
-        <article id="lesezeichen">
-            <img src="../assets/images/herz.png">
-            <div>123</div>
-            <img src="../assets/images/speichern.png">
-        </article>
+            <article id="lesezeichen">
+                <div id="lesezeichen_left">
+                    <img src="../assets/images/black_heart.png" alt="Herz">
+                    <div>123</div>
+                </div>
+                <img src="../assets/images/lesezeichen.png" alt="Lesezeichen">
+            </article>
 
-        <article>
-            Kommentare
-        </article>
+            <article>
+                Kommentare...
+            </article>
+        </section>
+
+        <section id="section_right">
+            <article id="nebeneinander">
+                <div>
+                    <div>Name des Bildes</div>
+                    <div>Photograph</div>
+                    <div>Datum</div>
+                </div>
+
+                <div>
+                    <img src="../assets/images/fotograf_zugeschnitten.jpg" alt="Fotograf" id="profilbild">
+                </div>
+            </article>
+
+            <article>
+                <h1>Beschreibung des Bildes:</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem eligendi ex illo quos ratione.
+                    A amet, deleniti explicabo hic in ipsa, itaque laudantium natus necessitatibus nemo officia,
+                    quaerat quibusdam quis sit totam unde voluptate? Dignissimos ea, eum illo iste optio pariatur saepe
+                    soluta? Beatae minus nobis perferendis quidem quisquam tempora!
+                </p>
+            </article>
+        </section>
     </section>
 
-    <section>
-        <article id="nebeneinander">
-            <div>
-                <div>Name des Bildes</div>
-                <div>Photograph</div>
-                <div>Datum</div>
-            </div>
-
-            <div>
-                <img src="../assets/images/uploads/photgrafer.png">
-            </div>
-        </article>
-
-        <article>
-            <h1>Beschreibung des Bildes:</h1>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem eligendi ex illo quos ratione.
-                A amet, deleniti explicabo hic in ipsa, itaque laudantium natus necessitatibus nemo officia,
-                quaerat quibusdam quis sit totam unde voluptate? Dignissimos ea, eum illo iste optio pariatur saepe
-                soluta? Beatae minus nobis perferendis quidem quisquam tempora!
-            </p>
-        </article>
-    </section>
+    <footer>
+        <div>
+            Datenschutzerklärung / AGBs
+        </div>
+    </footer>
 
 </body>
 </html>
