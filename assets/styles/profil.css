@@ -1,8 +1,31 @@
-#nav-profile{
-    margin-bottom: 30px;
+header{
+    top: 0;
 }
+main{
+    margin-top: 5%;
+}
+h5{
+    text-decoration: none;
+    font-family: acumin-pro-semi-condensed, sans-serif;
+    font-style: normal;
+    letter-spacing: 4px;
+    font-size: 20px;
+    margin: 0 10px;
+    color: #fff;
+}
+
+.bo {width: 250px;
+    height: 250px;
+    border-radius:50%;
+}
+.boimg-1 {;
+    object-fit: cover;
+    object-position: 10%;
+    margin: 10px 10px 20px 10px;
+}
+
 .gallary-links .wrapper{
-    width: 1200px;
+    width: 80%;
     margin: 0 auto;
 }
 .gallary-links{
