@@ -4,14 +4,27 @@ header{
 main{
     margin-top: 5%;
 }
-h5{
-    text-decoration: none;
+
+#h5{
     font-family: acumin-pro-semi-condensed, sans-serif;
+    font-weight: 100;
     font-style: normal;
     letter-spacing: 4px;
+    padding: 55px 30px 30px 55px;
+    font-size: 40px;
+}
+p{
+    font-family: acumin-pro-semi-condensed, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    letter-spacing: 4px;
+    padding: 0px 5px 5px 55px;
     font-size: 20px;
-    margin: 0 10px;
-    color: #fff;
+}
+.profil{
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
 }
 
 .bo {width: 250px;
@@ -21,9 +34,11 @@ h5{
 .boimg-1 {;
     object-fit: cover;
     object-position: 10%;
-    margin: 10px 10px 20px 10px;
+    margin: 10px 10px 20px 75px;
 }
-
+.bold{
+    font-weight: bold;
+}
 .gallary-links .wrapper{
     width: 80%;
     margin: 0 auto;
@@ -46,4 +61,27 @@ h5{
     height:380px;
     object-fit: cover;
     object-position: 10%
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 250px;
+    background: #5B5FE3;
+    color: white;
+    width: 100%;
+    font-size: 10px;
+}
+footer img{
+    width: 20%;
+    align-self: flex-end;
+    justify-content: center;
+}
+.contact{
+    font-weight: bold;
+    align-self: flex-start ;
+}
+footer p{
+    align-self: center;
 }
