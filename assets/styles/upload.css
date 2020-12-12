@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    background-image: url(../images/upload.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.form{
+    position: fixed;
+    background: white;
+    margin: 15%;
+    max-width: 500px;
+    border-radius: 2px;
+    padding: 10px;
+}
+
+.flogo{
+    width: 10px;
+    height: 10px;
+}
+
+.ftext{
+
+}
+
+header {
+    height: 50px;
+    background: #5B5FE3;
+    width: 100%;
+    z-index: 10;
+    position: fixed;
+}
+
+.logo{
+    width: 50px;
+    padding: 5px;
+}
+
+.user{
+    width: 27px;
+}
+
+nav {
+    align-content: center;
+    float: right;
+    line-height: 50px;
+}
+nav a {
+    text-decoration: none;
+    font-family: acumin-pro-semi-condensed, sans-serif;
+    font-style: normal;
+    letter-spacing: 4px;
+    font-size: 20px;
+    margin: 0 10px;
+    color: #fff;
+
+}
