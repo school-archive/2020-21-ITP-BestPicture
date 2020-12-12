@@ -18,14 +18,20 @@ header {
 }
 
 .user{
-    width: 27px;
+    width: 26px;
+    float: right;
+    padding: 9px;
+}
 
+.wrapper{
+    align-items: baseline;
 }
 
 nav {
     align-content: center;
     float: right;
     line-height: 50px;
+    padding-right: 10px ;
 }
 nav a {
     text-decoration: none;

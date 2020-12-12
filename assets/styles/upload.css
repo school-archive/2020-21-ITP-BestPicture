@@ -19,6 +19,10 @@ body{
     padding: 10px;
 }
 
+textarea{
+    resize: none;
+}
+
 .flogo{
     width: 10px;
     height: 10px;
@@ -42,14 +46,19 @@ header {
 }
 
 .user{
-    width: 27px;
+    width: 26px;
+    float: right;
+    padding: 9px;
 }
+
 
 nav {
     align-content: center;
     float: right;
     line-height: 50px;
+    padding-right: 10px ;
 }
+
 nav a {
     text-decoration: none;
     font-family: acumin-pro-semi-condensed, sans-serif;
