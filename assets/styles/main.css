@@ -86,9 +86,6 @@ nav a {
     height: 100%;
 }
 
-
-
-
 .item1{
     float: left;
     margin-right: 10px;
@@ -121,12 +118,49 @@ nav a {
     background: url("/assets/images/herz.png") no-repeat;
 }
 
-.container{
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 5vw);
-    grid-gap: 15px;
+.emails{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer{
+    font-family: acumin-pro-semi-condensed, sans-serif;
+    font-style: normal;
+    background-color: #5B5FE3;
+    position: fixed;
+    float: bottom;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+footer p{
+    padding: 5px;
+}
+
+.emails{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+
 
 }
 
+.agbs{
+    float: bottom;
+    font-weight: bolder;
+    padding-left: 85%;
+}
+
+.logofooter{
+    width: 100px;
+    justify-content: center;
+}
+
+.contact{
+    font-size: 20px;
+}
