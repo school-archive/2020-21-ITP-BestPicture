@@ -12,7 +12,7 @@ body{
 .form{
     position: absolute;
     justify-content: center;
-    max-width: 500px;
+    width: 50%;
     padding: 10px;
     background-color: white;
     margin: 15%;
@@ -28,82 +28,6 @@ textarea{
 }
 
 .ftext{
-}
-
-header {
-    height: 50px;
-    background: #5B5FE3;
-    width: 100%;
-    z-index: 10;
-    position: fixed;
-}
-
-.logo{
-    width: 50px;
-    padding: 5px;
-}
-
-.user{
-    width: 26px;
-    float: right;
-    padding: 9px;
-}
-
-
-nav {
-    align-content: center;
-    float: right;
-    line-height: 50px;
-    padding-right: 10px ;
-}
-
-nav a {
-    text-decoration: none;
-    font-family: acumin-pro-semi-condensed, sans-serif;
-    font-style: normal;
-    letter-spacing: 4px;
-    font-size: 20px;
-    margin: 0 10px;
-    color: #fff;
-}
-
-footer{
-    font-family: acumin-pro-semi-condensed, sans-serif;
-    font-style: normal;
-    background-color: #5B5FE3;
-    position: fixed;
-    float: bottom;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    color: white;
-}
-
-footer p{
-    padding: 5px;
-}
-
-.emails{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 10px;
-}
-
-.agbs{
-    float: bottom;
-    font-weight: bolder;
-    padding-left: 84%;
-}
-
-.logofooter{
-    width: 100px;
-    justify-content: center;
-}
-
-.contact{
-    font-size: 20px;
 }
 
 div.form{

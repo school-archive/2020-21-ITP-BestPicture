@@ -140,20 +140,29 @@ footer{
 footer p{
     padding: 5px;
 }
+#contact{
+    font-family: acumin-pro-semi-condensed, sans-serif;
+    font-weight: bold;
+    font-size: larger;
+}
+footer a{
+    font-family: acumin-pro-semi-condensed, sans-serif;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
 
 .emails{
     display: flex;
     flex-direction: row;
     justify-content: center;
     padding: 10px;
-
-
 }
 
 .agbs{
     float: bottom;
     font-weight: bolder;
-    padding-left: 85%;
+    padding-left: 84%;
 }
 
 .logofooter{
