@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-
 }
 
 body{
@@ -11,12 +10,12 @@ body{
 }
 
 .form{
-    position: fixed;
-    background: white;
-    margin: 25%;
+    position: absolute;
+    justify-content: center;
     max-width: 500px;
-    border-radius: 2px;
     padding: 10px;
+    background-color: white;
+    margin: 15%;
 }
 
 textarea{
@@ -29,7 +28,6 @@ textarea{
 }
 
 .ftext{
-
 }
 
 header {
@@ -83,7 +81,7 @@ footer{
 }
 
 footer p{
-    padding: 10px;
+    padding: 5px;
 }
 
 .emails{
@@ -95,9 +93,20 @@ footer p{
 
 .agbs{
     float: bottom;
+    font-weight: bolder;
+    padding-left: 84%;
 }
 
 .logofooter{
     width: 100px;
     justify-content: center;
+}
+
+.contact{
+    font-size: 20px;
+}
+
+div.form{
+    display: block;
+    text-align: center;
 }

@@ -14,24 +14,24 @@
             </nav>
         </div>
     </header>
-    <form class="form">
-<!--        <div class="flogo">-->
-<!--            <img src="assets/images/Logo.png" alt="logo">-->
-<!--        </div>-->
-        <div class="ftext">
-            <label>
-                <input type="text" name="Titel" placeholder="Name des Bildes">
-            </label><br>
-            <label>
-                <textarea  name="Beschreibung" placeholder="Beschreibung des Bildes"></textarea>
-            </label>
-        </div>
-
-        <form method="post" action="php/endpoints/upload.php" enctype="multipart/form-data">
-            <input type="file" name="file">
-            <button type="submit">Upload</button>
+        <form class="form">
+            <!--        <div class="flogo">-->
+            <!--            <img src="assets/images/Logo.png" alt="logo">-->
+            <!--        </div>-->
+            <div class="ftext">
+                <label>
+                    <input type="text" name="Titel" placeholder="Name des Bildes">
+                </label><br>
+                <label>
+                    <textarea  name="Beschreibung" placeholder="Beschreibung des Bildes"></textarea>
+                </label>
+            </div>
+            <form method="post" action="php/endpoints/upload.php" enctype="multipart/form-data">
+                <input type="file" name="file">
+                <button type="submit">Upload</button>
+            </form>
         </form>
-    </form>
+
     <footer>
         <p>Contact</p><br>
         <div class="emails">
