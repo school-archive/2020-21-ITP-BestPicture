@@ -1,3 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    height: 50px;
+    background: #5B5FE3;
+    width: 100%;
+    z-index: 10;
+    position: fixed;
+}
+
+.logo{
+    width: 50px;
+    padding: 5px;
+}
+
+.user{
+    width: 26px;
+    float: right;
+    padding: 9px;
+}
+
+header .wrapper{
+    align-items: baseline;
+}
+
+nav {
+    align-content: center;
+    float: right;
+    line-height: 50px;
+    padding-right: 10px ;
+}
+nav a {
+    text-decoration: none;
+    font-family: acumin-pro-semi-condensed, sans-serif;
+    font-style: normal;
+    letter-spacing: 4px;
+    font-size: 20px;
+    margin: 0 10px;
+    color: #fff;
+}
+header{
+    top: 0;
+}
+main{
+    margin-top: 5%;
+}
+
+#h5{
+    font-family: acumin-pro-semi-condensed, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    letter-spacing: 4px;
+    padding: 55px 30px 30px 55px;
+    font-size: 40px;
+}
+.acc{
+    font-family: acumin-pro-semi-condensed, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    letter-spacing: 4px;
+    padding: 0px 5px 5px 55px;
+    font-size: 20px;
+}
+.profil{
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.bo {width: 250px;
+    height: 250px;
+    border-radius:50%;
+}
+.boimg-1 {;
+    object-fit: cover;
+    object-position: 10%;
+    margin: 10px 10px 20px 75px;
+}
+.bold{
+    font-weight: bold;
+}
+.gallary-links .wrapper{
+    width: 80%;
+    margin: 0 auto;
+}
+.gallary-links{
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.gallary-links .gallary-link{
+    float: left;
+    align-self: center;
+    width: 380px;
+    height: 380px;
+    margin: 10px 10px 10px 10px;
+    background-color: #E3E3E3;
+}
+.content-picture{
+    width: 380px;
+    height:380px;
+    object-fit: cover;
+    object-position: 10%
+}
 
 .emails{
     display: flex;
@@ -9,7 +117,6 @@ footer{
     font-family: acumin-pro-semi-condensed, sans-serif;
     font-style: normal;
     background-color: #5B5FE3;
-    position: fixed;
     float: bottom;
     left: 0;
     bottom: 0;
