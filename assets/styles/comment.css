@@ -50,7 +50,7 @@ header{
     top: 0;
 }
 
-body > section, #nebeneinander {
+body > section, #nebeneinander, #kommentar > div {
     display: flex;
 }
 
@@ -72,7 +72,7 @@ body > section, #nebeneinander {
     font-style: italic;
 }
 
-#lesezeichen, #lesezeichen_left {
+#lesezeichen, #lesezeichen_left, #kommentar > form {
     display: flex;
     width: 44vw;
 }
@@ -117,6 +117,57 @@ body > section, #nebeneinander {
     height: 120px;
     width: 120px;
 }
+
+#kommentar {
+    border: 2px solid lightgray;
+}
+
+#kommentar > div, #kommentar > h3, #kommentar > form > input {
+    padding-left: 4px;
+}
+
+#kommentar > h3 {
+    color: #60C8FF;
+}
+
+#kommentar > div > div:first-child {
+    margin-right: 5px;
+}
+
+#kommentar > div > div:last-child, #kommentar > form > input::placeholder {
+    font-weight: 100;
+    font-style: italic;
+}
+
+#kommentar > form {
+    border-top: 2px solid lightgray;
+}
+
+#kommentar > form > button {
+    color: #95D5FF;
+    font-style: normal;
+    font-size: medium;
+    border: none;
+    background: none;
+    padding-right: 4px;
+}
+
+#kommentar > form > input {
+    border: none;
+    font-size: medium;
+    width: 44vw;
+}
+#kommentar > form > input::placeholder {
+    color: darkgray;
+}
+#kommentar > form > input:focus, #kommentar > form > button {
+    outline: none;
+}
+
+#kommentar > form > button:hover {
+    color: #60C8FF;
+}
+
 
 .emails{
     display: flex;
