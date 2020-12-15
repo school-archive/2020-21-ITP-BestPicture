@@ -132,3 +132,7 @@ body > section, #nebeneinander, #kommentar > div > div {
     overflow-y: scroll;
     height: 71px;
 }
+
+footer * {
+    line-height: normal;
+}
