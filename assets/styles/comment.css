@@ -7,7 +7,7 @@
     padding: 0;
 }
 
-body > section, #nebeneinander, #kommentar > div {
+body > section, #nebeneinander, #kommentar > div > div {
     display: flex;
 }
 
@@ -41,7 +41,7 @@ body > section, #nebeneinander, #kommentar > div {
 
 #lesezeichen_left > div {
     margin-left: 0.7vw;
-    font-size: 40px;
+    font-size: 25px;
     font-weight: 50;
     align-self: center;
     justify-content: center;
@@ -77,6 +77,7 @@ body > section, #nebeneinander, #kommentar > div {
 
 #kommentar {
     border: 2px solid lightgray;
+    margin-top: 15px;
 }
 
 #kommentar > div, #kommentar > h3, #kommentar > form > input {
@@ -87,11 +88,11 @@ body > section, #nebeneinander, #kommentar > div {
     color: #60C8FF;
 }
 
-#kommentar > div > div:first-child {
+#kommentar > div > div > div:first-child {
     margin-right: 5px;
 }
 
-#kommentar > div > div:last-child, #kommentar > form > input::placeholder {
+#kommentar > div > div > div:last-child, #kommentar > form > input::placeholder {
     font-weight: 100;
     font-style: italic;
 }
@@ -123,4 +124,11 @@ body > section, #nebeneinander, #kommentar > div {
 
 #kommentar > form > button:hover {
     color: #60C8FF;
+}
+
+
+/* Scrollbar */
+.myBox {
+    overflow-y: scroll;
+    height: 71px;
 }
