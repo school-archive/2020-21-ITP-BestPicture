@@ -5,6 +5,11 @@
     padding: 10px;
 }
 
+body {
+    position: relative;
+    padding-bottom: 294px;
+}
+
 footer{
     font-family: acumin-pro-semi-condensed, sans-serif;
     font-style: normal;
@@ -15,6 +20,7 @@ footer{
     width: 100%;
     text-align: center;
     color: white;
+    position: absolute;
 }
 
 footer p{
