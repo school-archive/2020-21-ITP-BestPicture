@@ -12,28 +12,32 @@
         <div class="wrapper">
             <a href="index.html"> <img class="logo" src="assets/images/Logo.png" alt="logo"></a>
             <nav>
-                <a href="index.html">Home</a> <a href="#">Anmelden</a> <a href="upload.html">Upload</a><a href="profil/index.html"> <img class="user" src="assets/images/user.png" alt="user"> </a>
+                <a href="index.html">Home</a> <a href="#">Anmelden</a> <a href="upload.html">Upload</a><a
+                    href="profil/index.html"> <img class="user" src="assets/images/user.png" alt="user"> </a>
             </nav>
         </div>
     </header>
     <main>
-        <form class="form">
-            <!--        <div class="flogo">-->
-            <!--            <img src="assets/images/Logo.png" alt="logo">-->
-            <!--        </div>-->
-            <div class="ftext">
-                <label>
-                    <input type="text" name="Titel" placeholder="Name des Bildes">
-                </label><br>
-                <label>
-                    <textarea  name="Beschreibung" placeholder="Beschreibung des Bildes"></textarea>
-                </label>
-            </div>
-            <form method="post" action="php/endpoints/upload.php" enctype="multipart/form-data">
-                <input type="file" name="file">
-                <button type="submit">Upload</button>
+        <section>
+            <form class="form" method="post" action="php/endpoints/upload.php" enctype="multipart/form-data">
+                <!--        <div class="flogo">-->
+                <!--            <img src="assets/images/Logo.png" alt="logo">-->
+                <!--        </div>-->
+                <div class="ftext">
+                    <label>
+                        <input type="text" name="Titel" placeholder="Name des Bildes">
+                    </label><br>
+                    <label>
+                        <textarea name="Beschreibung" placeholder="Beschreibung des Bildes"></textarea>
+                    </label>
+                </div>
+
+                <div class="buttons">
+                    <input type="file" name="file">
+                    <button type="submit">Upload</button>
+                </div>
             </form>
-        </form>
+        </section>
     </main>
     <footer>
         <p id="contact">Contact</p><br>
