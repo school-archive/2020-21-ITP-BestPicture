@@ -16,15 +16,14 @@
     <link href="assets/styles/footer.css" rel="stylesheet">
     <link href="assets/styles/gallery.css" rel="stylesheet">
 </head>
-
 <body>
 <div class="box-area">
     <header>
         <div class="wr">
-            <a href="index.html"> <img class="logo" src="assets/images/Logo.png" alt="logo"></a>
+            <a href="index.php"> <img class="logo" src="assets/images/Logo.png" alt="logo"></a>
             <nav>
-                <a href="index.html">Home</a> <a href="login/login.html">Anmelden</a> <a href="upload.html">Upload</a> <a
-                    href="profil/index.html"> <img class="user" src="assets/images/user.png" alt="user"> </a>
+                <a href="index.php">Home</a> <a href="login/login.html">Anmelden</a> <a href="upload.html">Upload</a> <a
+                    href="profil/index.php"> <img class="user" src="assets/images/user.png" alt="user"> </a>
             </nav>
         </div>
     </header>
