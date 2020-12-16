@@ -50,7 +50,6 @@
     </div>
 
     <div class="gallery-image">
-
         <?php
         $photos = get_all_photos_in_contest(1);
 
@@ -74,62 +73,6 @@
                    </a>";
         }
         ?>
-
-        <a href="comment/index.html">
-            <div class="img-box">
-                <img src="assets/images/butterfly.jpg" alt=""/>
-                <div class="transparent-box">
-                    <div class="caption">
-                        <p>Titel</p>
-                        <p class="opacity-low">Photographer</p>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a href="comment/index.html">
-            <div class="img-box">
-                <img src="assets/images/img_1.png" alt=""/>
-                <div class="transparent-box">
-                    <div class="caption">
-                        <p>Titel</p>
-                        <p class="opacity-low">Photographer</p>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a href="comment/index.html">
-            <div class="img-box">
-                <img src="assets/images/img_3.jpg" alt=""/>
-                <div class="transparent-box">
-                    <div class="caption">
-                        <p>Titel</p>
-                        <p class="opacity-low">Photographer</p>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a href="comment/index.html">
-            <div class="img-box">
-                <img src="assets/images/img_4.jpg" alt=""/>
-                <div class="transparent-box">
-                    <div class="caption">
-                        <p>Titel</p>
-                        <p class="opacity-low">Photographer</p>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a href="comment/index.html">
-            <div class="img-box">
-                <img src="assets/images/img.png" alt=""/>
-                <div class="transparent-box">
-                    <div class="caption">
-                        <p>Titel</p>
-                        <p class="opacity-low">Photographer</p>
-                    </div>
-                </div>
-            </div>
-        </a>
     </div>
 </div>
 <footer>
