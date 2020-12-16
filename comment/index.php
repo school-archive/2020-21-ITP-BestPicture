@@ -1,7 +1,8 @@
 <?php
 session_start();
 require_once "../php/comment.php";
-require_once "../php/photo.php"
+require_once "../php/photo.php";
+require_once "../php/user.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +17,7 @@ require_once "../php/photo.php"
 <body>
     <header>
         <div class="wrapper">
-            <a href="index.php"> <img class="logo" src="../assets/images/Logo.png" alt="logo"></a>
+            <a href="../index.php"> <img class="logo" src="../assets/images/Logo.png" alt="logo"></a>
             <nav>
                 <a href="../index.php">Home</a> <a href="#">Anmelden</a> <a href="../upload.html">Upload</a> <a href="../profil/index.php"> <img class="user" src="../assets/images/user.png" alt="user"> </a>
             </nav>
@@ -33,6 +34,8 @@ require_once "../php/photo.php"
                     $path = substr($photo['path'], 1);
                     $namePhoto = $photo['title'];
                     $photografer = get_username_by_photo($photo['photo_id']);
+                    $date = $photo['date'];
+                    $beschreibung = $photo['description'];
 
                     echo " <img src='$path' id='upload' alt='$namePhoto'>";
                 ?>
@@ -75,9 +78,9 @@ require_once "../php/photo.php"
         <section id="section_right">
             <article id="nebeneinander">
                 <div>
-                    <div><?php $namePhoto ?></div>
-                    <div>Photograph</div>
-                    <div>Datum</div>
+                    <div><?php echo $namePhoto ?></div>
+                    <div><?php echo $photografer ?></div>
+                    <div><?php echo $date ?></div>
                 </div>
 
                 <div>
@@ -88,10 +91,7 @@ require_once "../php/photo.php"
             <article>
                 <h1>Beschreibung des Bildes:</h1>
                 <p id="beschreibung">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem eligendi ex illo quos ratione.
-                    A amet, deleniti explicabo hic in ipsa, itaque laudantium natus necessitatibus nemo officia,
-                    quaerat quibusdam quis sit totam unde voluptate? Dignissimos ea, eum illo iste optio pariatur saepe
-                    soluta? Beatae minus nobis perferendis quidem quisquam tempora!
+                    <?php echo $beschreibung ?>
                 </p>
             </article>
         </section>

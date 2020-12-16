@@ -2,6 +2,7 @@
     session_start();
     require_once "php/contest.php";
     require_once "php/photo.php";
+    require_once "php/user.php";
 ?>
 
 <!DOCTYPE html>
@@ -57,8 +58,8 @@
 
             $id = $photo['photo_id'];
             $path = substr($photo['path'], 4);
-            $namePhoto = $photo['name'];
-            $photografer = get_username_by_photo($photo['photo_id'])['name'];
+            $namePhoto = $photo['title'];
+            $photografer = get_username_by_photo($photo['photo_id']);
 
             echo "<a href='comment/index.php?id=$id'>
                     <div class='img-box'>

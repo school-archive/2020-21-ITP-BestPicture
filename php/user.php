@@ -21,8 +21,20 @@
     }
 
     /*
-     * Liefert den momentan angemeldeten Benutzer
-     */
+    * Liefert den Usernamen eines gegebenen Fotos
+    */
+    function get_username_by_photo($photoid) {
+        $s = get_bp_mysql_object()->prepare("select concat(vorname, ' ', nachname) as name from user u join photo p on u.user_id = p.user_id where photo_id = :photoid");
+        $s->execute(array(
+            ":photoid" => $photoid
+        ));
+        $obj = $s->fetch();
+        return $obj['name'];
+    }
+
+/*
+ * Liefert den momentan angemeldeten Benutzer
+ */
     function get_signed_in_user() {
         $userid = get_signed_in_user_id();
         if ($userid == -1)
