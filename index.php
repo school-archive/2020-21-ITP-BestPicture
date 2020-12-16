@@ -75,7 +75,7 @@
 
         <a href="comment/index.html">
             <div class="img-box">
-                <img src="assets/images/butterfl.png" alt=""/>
+                <img src="assets/images/butterfly.jpg" alt=""/>
                 <div class="transparent-box">
                     <div class="caption">
                         <p>Titel</p>

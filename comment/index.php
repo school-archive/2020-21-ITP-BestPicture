@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once "../php/comment.php";
+require_once "../php/photo.php"
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,9 +28,14 @@ require_once "../php/comment.php";
         <section id="section_left">
             <article>
                 <?php
-                    $_GET[id];
+                    $id=$_GET['id'];
+                    $photo= get_photo_by_id('id');
+                    $path = substr($photo['path'], 2);
+                    $namePhoto = $photo['name'];
+                    $photografer = get_username_by_photo($photo[photo_id]);
+
+                    echo " <img src='$path' id='upload' alt='$namePhoto'>";
                 ?>
-                <img src="../assets/images/uploads/la.jpg" id="upload" alt="Upload">
             </article>
 
             <article id="lesezeichen">
