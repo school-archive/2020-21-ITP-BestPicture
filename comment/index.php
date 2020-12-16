@@ -18,7 +18,7 @@ require_once "../php/photo.php"
         <div class="wrapper">
             <a href="index.php"> <img class="logo" src="../assets/images/Logo.png" alt="logo"></a>
             <nav>
-                <a href="../index.html">Home</a> <a href="#">Anmelden</a> <a href="../upload.html">Upload</a> <a href="../profil/index.php"> <img class="user" src="../assets/images/user.png" alt="user"> </a>
+                <a href="../index.php">Home</a> <a href="#">Anmelden</a> <a href="../upload.html">Upload</a> <a href="../profil/index.php"> <img class="user" src="../assets/images/user.png" alt="user"> </a>
             </nav>
 
         </div>
@@ -29,10 +29,10 @@ require_once "../php/photo.php"
             <article>
                 <?php
                     $id=$_GET['id'];
-                    $photo= get_photo_by_id('id');
-                    $path = substr($photo['path'], 2);
-                    $namePhoto = $photo['name'];
-                    $photografer = get_username_by_photo($photo[photo_id]);
+                    $photo= get_photo_by_id($id);
+                    $path = substr($photo['path'], 1);
+                    $namePhoto = $photo['title'];
+                    $photografer = get_username_by_photo($photo['photo_id']);
 
                     echo " <img src='$path' id='upload' alt='$namePhoto'>";
                 ?>
@@ -75,7 +75,7 @@ require_once "../php/photo.php"
         <section id="section_right">
             <article id="nebeneinander">
                 <div>
-                    <div>Name des Bildes</div>
+                    <div><?php $namePhoto ?></div>
                     <div>Photograph</div>
                     <div>Datum</div>
                 </div>
