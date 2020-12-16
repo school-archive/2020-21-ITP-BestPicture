@@ -16,15 +16,14 @@
     <link href="assets/styles/footer.css" rel="stylesheet">
     <link href="assets/styles/gallery.css" rel="stylesheet">
 </head>
-
 <body>
 <div class="box-area">
     <header>
         <div class="wr">
-            <a href="index.html"> <img class="logo" src="assets/images/Logo.png" alt="logo"></a>
+            <a href="index.php"> <img class="logo" src="assets/images/Logo.png" alt="logo"></a>
             <nav>
-                <a href="index.html">Home</a> <a href="login/login.html">Anmelden</a> <a href="upload.html">Upload</a> <a
-                    href="profil/index.html"> <img class="user" src="assets/images/user.png" alt="user"> </a>
+                <a href="index.php">Home</a> <a href="login/login.html">Anmelden</a> <a href="upload.html">Upload</a> <a
+                    href="profil/index.php"> <img class="user" src="assets/images/user.png" alt="user"> </a>
             </nav>
         </div>
     </header>
@@ -57,13 +56,12 @@
 
         foreach ($photos as $photo) {
 
+            $id = $photo['photo_id'];
             $path = substr($photo['path'], 4);
             $namePhoto = $photo['name'];
-            $photografer = get_username_by_photo($photo['photo_id']);
+            $photografer = get_username_by_photo($photo['photo_id'])['name'];
 
-            print_r($photografer);
-
-            echo "<a href='comment/index.php'>
+            echo "<a href='comment/index.php?id=$id'>
                     <div class='img-box'>
                         <img src='$path' alt='$namePhoto'/>
                         <div class='transparent-box'>
