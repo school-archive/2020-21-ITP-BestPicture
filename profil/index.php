@@ -24,7 +24,7 @@ if(get_signed_in_user_id()!=-1){
     <main>
         <section class="gallary-links">
             <article class="wrapper profil">
-                <img class="bo boimg-1" src="../assets/images/butterfl.png" alt="placehold">
+                <img class="bo boimg-1" src="../assets/images/butterfly.jpg" alt="placehold">
                 <div class="text">
                     <p id="h5">Sandra Müller</p>
                     <p class="acc"><span class="bold">7047@htl.rennweg.at</span></p>
@@ -34,19 +34,19 @@ if(get_signed_in_user_id()!=-1){
             </article>
             <div class="wrapper">
                 <div class="gallary-link">
-                    <img src="../assets/images/butterfl.png" class="content-picture">
+                    <img src="../assets/images/butterfly.jpg" class="content-picture">
                 </div>
                 <div class="gallary-link">
-                    <img src="../assets/images/butterfl.png" class="content-picture">
+                    <img src="../assets/images/butterfly.jpg" class="content-picture">
                 </div>
                 <div class="gallary-link">
-                    <img src="../assets/images/butterfl.png" class="content-picture">
+                    <img src="../assets/images/butterfly.jpg" class="content-picture">
                 </div>
                 <div class="gallary-link">
-                    <img src="../assets/images/butterfl.png" class="content-picture">
+                    <img src="../assets/images/butterfly.jpg" class="content-picture">
                 </div>
                 <div class="gallary-link">
-                    <img src="../assets/images/butterfl.png" class="content-picture">
+                    <img src="../assets/images/butterfly.jpg" class="content-picture">
                 </div>
             </div>
         </section>
