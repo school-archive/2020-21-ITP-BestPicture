@@ -49,15 +49,19 @@
         </div>
     </div>
 
-    <?php
-        $photos = get_all_photos_in_contest(1);
-        echo $photos[0];
-        foreach ($photos as $photo) {
-            $path = substr($photo->path, 4);
-            $namePhoto = $photo->name;
-            $photografer = get_username_by_photo($photo->photo_id);
+    <div class="gallery-image">
 
-            echo "<a href='comment/index.php'>
+        <?php
+        $photos = get_all_photos_in_contest(1);
+
+        foreach ($photos as $photo) {
+
+            $id = $photo['photo_id'];
+            $path = substr($photo['path'], 4);
+            $namePhoto = $photo['name'];
+            $photografer = get_username_by_photo($photo['photo_id'])['name'];
+
+            echo "<a href='comment/index.php?id=$id'>
                     <div class='img-box'>
                         <img src='$path' alt='$namePhoto'/>
                         <div class='transparent-box'>
@@ -69,9 +73,7 @@
                     </div>
                    </a>";
         }
-    ?>
-
-    <div class="gallery-image">
+        ?>
 
         <a href="comment/index.html">
             <div class="img-box">
