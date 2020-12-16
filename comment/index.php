@@ -1,8 +1,8 @@
 <?php
-session_start();
-require_once "../php/comment.php";
-require_once "../php/photo.php";
-require_once "../php/user.php";
+    session_start();
+    require_once "../php/comment.php";
+    require_once "../php/photo.php";
+    require_once "../php/user.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,9 +33,10 @@ require_once "../php/user.php";
                     $photo= get_photo_by_id($id);
                     $path = substr($photo['path'], 1);
                     $namePhoto = $photo['title'];
-                    $photografer = get_username_by_photo($photo['photo_id']);
+                    $photografer = get_username_by_photo($id);
                     $date = $photo['date'];
                     $beschreibung = $photo['description'];
+                    $likes = get_count_likes_by_photo($id);
 
                     echo " <img src='$path' id='upload' alt='$namePhoto'>";
                 ?>
@@ -44,7 +45,7 @@ require_once "../php/user.php";
             <article id="lesezeichen">
                 <div id="lesezeichen_left">
                     <img src="../assets/images/heart.png" id="heart" alt="Herz">
-                    <div id="likes">123</div>
+                    <div id="likes"><?php echo $likes ?></div>
                 </div>
             </article>
 

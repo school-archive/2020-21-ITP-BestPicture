@@ -57,4 +57,10 @@
         return $s->fetchAll();
     }
 
+    function get_count_likes_by_photo($photoid) {
+        $s = get_bp_mysql_object()->prepare("select count(entryrating_id) as count from photo p join entry_rating er on p.photo_id = er.photo_id where p.photo_id = :photoid");
+        $s->execute(array(":photoid" => $photoid));
+        $obj = $s->fetchAll();
+        return $obj[0]['count'];
+    }
 
