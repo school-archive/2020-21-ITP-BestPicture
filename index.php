@@ -49,8 +49,9 @@
             </div>
         </div>
     </div>
-
+    <p class="u1">Gallery</p>
     <div class="gallery-image">
+
         <?php
         $photos = get_all_photos_in_contest(get_current_contest_id());
 

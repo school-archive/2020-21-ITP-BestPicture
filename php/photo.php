@@ -64,6 +64,15 @@
         return $obj[0]['count'];
     }
 
+    function increase_like($photoid, $userid) {
+        $s = get_bp_mysql_object()->
+        prepare("insert into entry_rating(photo_id, user_rated) values (:photo_id, :user_id)");
+        $s->execute(array(
+            ":user_id" => $userid,
+            ":photo_id" => $photoid
+        ));
+    }
+
     function get_date_by_photoid($photoid) {
         $date = get_photo_by_id($photoid)['date'];
         $array = explode('-', $date);
