@@ -56,7 +56,7 @@
     }
 
     function get_username_by_photo($photoid) {
-        $s = get_bp_mysql_object()->prepare("select concat(vorname, ' ', nachname) from user u join photo p on u.user_id = p.user_id where photo_id = :photoid");
+        $s = get_bp_mysql_object()->prepare("select concat(vorname, ' ', nachname) as name from user u join photo p on u.user_id = p.user_id where photo_id = :photoid");
         $s->execute(array(
             ":photoid" => $photoid
         ));

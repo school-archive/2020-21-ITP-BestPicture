@@ -50,15 +50,18 @@
         </div>
     </div>
 
-    <?php
+    <div class="gallery-image">
+
+        <?php
         $photos = get_all_photos_in_contest(1);
-        #echo $photos[0];
 
         foreach ($photos as $photo) {
 
             $path = substr($photo['path'], 4);
             $namePhoto = $photo['name'];
             $photografer = get_username_by_photo($photo['photo_id']);
+
+            print_r($photografer);
 
             echo "<a href='comment/index.php'>
                     <div class='img-box'>
@@ -72,9 +75,7 @@
                     </div>
                    </a>";
         }
-    ?>
-
-    <div class="gallery-image">
+        ?>
 
         <a href="comment/index.html">
             <div class="img-box">
