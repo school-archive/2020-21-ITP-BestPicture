@@ -5,7 +5,9 @@ require_once "../photo.php";
 $userid = get_signed_in_user_id();
 if ($userid == null)
     handleError("not signed in");
-
+var_dump($_POST);
+if (!isset($_POST["title"]) || !isset($_POST["desc"]))
+    handleError("title or description missing");
 if (!empty($_FILES)) {
     echo "<pre>\r\n";
     echo htmlspecialchars(print_r($_FILES, 1));
@@ -16,7 +18,7 @@ if (!empty($_FILES)) {
 
     echo "<br>" . $userid;
 
-    $photoid = create_image_entry($userid);
+    $photoid = create_image_entry($userid, $_POST["title"], $_POST["desc"]);
     ob_start();
     imagejpeg($new_img, null, 100);
     $size = ob_get_length();
