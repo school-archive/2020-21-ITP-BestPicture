@@ -34,18 +34,16 @@ footer p{
 footer a{
     font-family: acumin-pro-semi-condensed, sans-serif;
     color: white;
-    font-weight: bold;
+    font-weight: bolder;
     text-decoration: none;
 }
 
 .agbs{
-    font-weight: bolder;
     float: right;
 }
 
 .logofooter{
     width: 100px;
-
 }
 
 .contact{

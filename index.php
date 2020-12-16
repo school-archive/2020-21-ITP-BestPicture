@@ -23,7 +23,7 @@
         <div class="wr">
             <a href="index.php"> <img class="logo" src="assets/images/Logo.png" alt="logo"></a>
             <nav>
-                <a href="index.php">Home</a> <a href="login/login.html">Anmelden</a> <a href="upload.html">Upload</a> <a
+                <a href="index.php">Home</a> <a href="login/login.html">Anmelden</a> <a href="upload/upload.html">Upload</a> <a
                     href="profil/index.php"> <img class="user" src="assets/images/user.png" alt="user"> </a>
             </nav>
         </div>
@@ -88,7 +88,7 @@
         <p><a href="mailto:7053@htl.rennweg.at">Nicoletta Sarzi Satori</a></p>
     </div>
     <img class="logofooter" src="assets/images/Logo.png" alt="logo"><br>
-    <a href="../rechte/rechte.html"><p class="agbs">Datenschutzerklärung | AGBs</p></a>
+    <a href="rechte/rechte.html"><p class="agbs">Datenschutzerklärung | AGBs</p></a>
 </footer>
 
 </body>

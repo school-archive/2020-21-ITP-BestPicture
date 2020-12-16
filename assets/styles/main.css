@@ -45,6 +45,7 @@
     line-height: 30px;
     display: grid;
     height: 100%;
+    padding-bottom: 50px;
 }
 
 .item1{
@@ -93,5 +94,8 @@
     height: 100%;
 }
 
+body{
+    background-color: #202125;
+}
 
 
