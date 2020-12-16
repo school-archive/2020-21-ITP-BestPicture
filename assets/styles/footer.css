@@ -39,14 +39,13 @@ footer a{
 }
 
 .agbs{
-    float: bottom;
     font-weight: bolder;
-    padding-left: 84%;
+    float: right;
 }
 
 .logofooter{
     width: 100px;
-    justify-content: center;
+
 }
 
 .contact{

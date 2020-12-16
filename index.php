@@ -87,9 +87,8 @@
         <p>●</p>
         <p><a href="mailto:7053@htl.rennweg.at">Nicoletta Sarzi Satori</a></p>
     </div>
-
-    <img class="logofooter" src="assets/images/Logo.png" alt="logo">
-    <p class="agbs">Datenschutzerklärung | AGBs</p>
+    <img class="logofooter" src="assets/images/Logo.png" alt="logo"><br>
+    <a href="../rechte/rechte.html"><p class="agbs">Datenschutzerklärung | AGBs</p></a>
 </footer>
 
 </body>
