@@ -57,13 +57,12 @@
 
         foreach ($photos as $photo) {
 
+            $id = $photo['photo_id'];
             $path = substr($photo['path'], 4);
             $namePhoto = $photo['name'];
-            $photografer = get_username_by_photo($photo['photo_id']);
+            $photografer = get_username_by_photo($photo['photo_id'])['name'];
 
-            print_r($photografer);
-
-            echo "<a href='comment/index.php'>
+            echo "<a href='comment/index.php?id=$id'>
                     <div class='img-box'>
                         <img src='$path' alt='$namePhoto'/>
                         <div class='transparent-box'>
