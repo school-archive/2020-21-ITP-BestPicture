@@ -16,7 +16,7 @@ if(get_signed_in_user_id()!=-1){
         <div class="wrapper">
         <a href="../index.php"> <img class="logo" src="../assets/images/Logo.png" alt="logo"></a>
         <nav>
-            <a href="../index.php">Home</a> <a href="#">Anmelden</a> <a href="../upload.html">Upload</a> <a href="index.php"> <img class="user" src="../assets/images/user.png" alt="user"> </a>
+            <a href="../index.php">Home</a> <a href="#">Anmelden</a> <a href="../upload/upload.html">Upload</a> <a href="index.php"> <img class="user" src="../assets/images/user.png" alt="user"> </a>
         </nav>
 
     </div>

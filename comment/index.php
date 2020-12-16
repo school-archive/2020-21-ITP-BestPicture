@@ -22,7 +22,7 @@
         <div class="wrapper">
             <a href="../index.php"> <img class="logo" src="../assets/images/Logo.png" alt="logo"></a>
             <nav>
-                <a href="../index.php">Home</a> <a href="#">Anmelden</a> <a href="../upload.html">Upload</a> <a href="../profil/index.php"> <img class="user" src="../assets/images/user.png" alt="user"> </a>
+                <a href="../index.php">Home</a> <a href="#">Anmelden</a> <a href="../upload/upload.html">Upload</a> <a href="../profil/index.php"> <img class="user" src="../assets/images/user.png" alt="user"> </a>
             </nav>
 
         </div>
@@ -114,8 +114,8 @@
             <p><a href="mailto:7053@htl.rennweg.at">Nicoletta Sarzi Satori</a></p>
         </div>
 
-        <img class="logofooter" src="../assets/images/Logo.png" alt="logo">
-        <p class="agbs">Datenschutzerklärung | AGBs</p>
+        <img class="logofooter" src="../assets/images/Logo.png" alt="logo"><br>
+        <a href="rechte/rechte.html"><p class="agbs">Datenschutzerklärung | AGBs</p></a>
     </footer>
     <script>
         /*document.getElementById('heart').addEventListener('click', likePlus);
