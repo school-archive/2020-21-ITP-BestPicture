@@ -30,6 +30,8 @@ create table photo (
                        photo_id int primary key auto_increment null,
                        user_id int,
                        path text,
+                       name text,
+                       beschreibung text,
                        approved_by_admins boolean default false,
                        foreign key (user_id) references user(user_id) on delete set null
 );

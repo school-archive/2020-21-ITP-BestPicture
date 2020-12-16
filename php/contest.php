@@ -63,5 +63,3 @@
         $s->execute(array(":contestid" => $contestid));
         return $s->fetchAll();
     }
-
-    var_dump(get_all_photos_in_contest());
