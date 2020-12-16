@@ -51,11 +51,13 @@
 
     <?php
         $photos = get_all_photos_in_contest(1);
-        echo $photos[0];
+        #echo $photos[0];
+
         foreach ($photos as $photo) {
-            $path = substr($photo->path, 4);
-            $namePhoto = $photo->name;
-            $photografer = get_username_by_photo($photo->photo_id);
+
+            $path = substr($photo['path'], 4);
+            $namePhoto = $photo['name'];
+            $photografer = get_username_by_photo($photo['photo_id']);
 
             echo "<a href='comment/index.php'>
                     <div class='img-box'>
