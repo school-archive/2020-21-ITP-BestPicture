@@ -46,3 +46,19 @@
         ));
         return $s->fetch();
     }
+
+    function get_all_photos_by_user($userid=null) {
+        if ($userid == null) $userid = get_signed_in_user_id();
+
+        $s = get_bp_mysql_object()->prepare("select * from photo p where user_id = :userid and approved_by_admins");
+        $s->execute(array(":userid" => $userid));
+        return $s->fetchAll();
+    }
+
+    function get_username_by_photo($photoid) {
+        $s = get_bp_mysql_object()->prepare("select concat(vorname, ' ', nachname) from user u join photo p on u.user_id = p.user_id where photo_id = :photoid");
+        $s->execute(array(
+            ":photoid" => $photoid
+        ));
+        return $s->fetch();
+    }
