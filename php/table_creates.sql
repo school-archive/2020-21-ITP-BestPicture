@@ -44,8 +44,7 @@ create table contest (
                          start timestamp default current_timestamp(),
                          end timestamp null,
                          name text default null,
-                         winner_entry_id int default null,
-                         foreign key (winner_entry_id) references contest_entry(entry_id) on delete set null
+                         winner_entry_id int default null
 );
 
 create table contest_entry (
@@ -55,6 +54,9 @@ create table contest_entry (
                                foreign key (contest_id) references contest(contest_id) on delete set null,
                                foreign key (photo_id) references photo(photo_id) on delete set null
 );
+
+ALTER TABLE contest
+    ADD CONSTRAINT fk_winner_entry foreign key (winner_entry_id) references contest_entry(entry_id);
 
 create table entry_rating (
                               entryrating_id int primary key auto_increment,
