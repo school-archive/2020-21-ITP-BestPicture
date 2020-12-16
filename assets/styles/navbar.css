@@ -2,7 +2,7 @@ header {
     height: 50px;
     background: #5B5FE3;
     width: 100%;
-    z-index: 10;
+    z-index: 99;
     position: fixed;
     top: 0;
 }

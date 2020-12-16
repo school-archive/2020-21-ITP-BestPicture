@@ -1,8 +1,8 @@
 <?php
-    session_start();
-    require_once "php/contest.php";
-    require_once "php/photo.php";
-    require_once "php/user.php";
+session_start();
+require_once "php/contest.php";
+require_once "php/photo.php";
+require_once "php/user.php";
 ?>
 
 <!DOCTYPE html>
@@ -28,30 +28,32 @@
             </nav>
         </div>
     </header>
-    <div class="banner-area">
-        <img class="bestpicture" src="assets/images/bestpicture.png" alt="bestpicture">
-    </div>
-    <div class="content-area">
-        <h2>Best Picture </h2>
-        <!--            <span class="year" style="font-style: italic">2020</span>-->
-        <div class="container">
-            <div class="item1">
-                <p class="ue1">Fotowettbewerb HTL Rennweg</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, esse est iste magni reprehenderit
-                    saepe sint! Assumenda consectetur fugit sit tempore. Architecto blanditiis deleniti, est fuga iusto
-                    perspiciatis suscipit voluptatibus! </p>
-            </div>
-            <div class="item2">
-                <p class="ue1">Teilnehmer:</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, esse est iste magni reprehenderit
-                    saepe sint! Assumenda consectetur fugit sit tempore. Architecto blanditiis deleniti, est fuga iusto
-                    perspiciatis suscipit voluptatibus! </p>
-            </div>
+</div>
+<div class="main hintergrund">
+    <img class="bestpicture" src="assets/images/bestpicture.png" alt="Bestpicture">
+</div>
+
+<div class="text content-area">
+    <h2>Best Picture </h2>
+    <!--            <span class="year" style="font-style: italic">2020</span>-->
+    <div class="container">
+        <div class="item1">
+            <p class="ue1">Fotowettbewerb HTL Rennweg</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, esse est iste magni reprehenderit
+                saepe sint! Assumenda consectetur fugit sit tempore. Architecto blanditiis deleniti, est fuga iusto
+                perspiciatis suscipit voluptatibus! </p>
+        </div>
+        <div class="item2">
+            <p class="ue1">Teilnehmer:</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, esse est iste magni reprehenderit
+                saepe sint! Assumenda consectetur fugit sit tempore. Architecto blanditiis deleniti, est fuga iusto
+                perspiciatis suscipit voluptatibus! </p>
         </div>
     </div>
+</div>
+<div class="main gallery">
     <p class="u1">Gallery</p>
     <div class="gallery-image">
-
         <?php
         $photos = get_all_photos_in_contest(get_current_contest_id());
 
@@ -63,16 +65,16 @@
             $photografer = get_username_by_photo($photo['photo_id']);
 
             echo "<a href='comment/index.php?id=$id'>
-                    <div class='img-box'>
-                        <img src='$path' alt='$namePhoto'/>
-                        <div class='transparent-box'>
-                            <div class='caption'>
-                                <p>$namePhoto</p>
-                                <p class='opacity-low'>$photografer</p>
+                        <div class='img-box'>
+                            <img src='$path' alt='$namePhoto'/>
+                            <div class='transparent-box'>
+                                <div class='caption'>
+                                    <p>$namePhoto</p>
+                                    <p class='opacity-low'>$photografer</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                   </a>";
+                       </a>";
         }
         ?>
     </div>
