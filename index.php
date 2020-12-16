@@ -51,7 +51,7 @@
 
     <div class="gallery-image">
         <?php
-        $photos = get_all_photos_in_contest(1);
+        $photos = get_all_photos_in_contest(get_current_contest_id());
 
         foreach ($photos as $photo) {
 
