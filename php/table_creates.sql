@@ -37,7 +37,7 @@ create table photo (
 );
 
 ALTER TABLE user
-    ADD CONSTRAINT fk_profilepic foreign key (profilepicture_id) references photo(photo_id);
+    ADD CONSTRAINT fk_profilepic foreign key (profilepicture_id) references photo(photo_id) on delete set null;
 
 create table contest (
                          contest_id int primary key auto_increment,
@@ -56,7 +56,7 @@ create table contest_entry (
 );
 
 ALTER TABLE contest
-    ADD CONSTRAINT fk_winner_entry foreign key (winner_entry_id) references contest_entry(entry_id);
+    ADD CONSTRAINT fk_winner_entry foreign key (winner_entry_id) references contest_entry(entry_id) on delete set null;
 
 create table entry_rating (
                               entryrating_id int primary key auto_increment,
