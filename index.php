@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    require_once "php/contest.php";
+    require_once "php/photo.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +24,7 @@
             <a href="index.html"> <img class="logo" src="assets/images/Logo.png" alt="logo"></a>
             <nav>
                 <a href="index.html">Home</a> <a href="login/login.html">Anmelden</a> <a href="upload.html">Upload</a> <a
-                    href="profil/index.php"> <img class="user" src="assets/images/user.png" alt="user"> </a>
+                    href="profil/index.html"> <img class="user" src="assets/images/user.png" alt="user"> </a>
             </nav>
         </div>
     </header>
@@ -44,19 +50,31 @@
         </div>
     </div>
 
-    <div class="gallery-image">
-        <a href="comment/index.php">
-            <div class="img-box">
-                <img src="assets/images/mountain.jpg" alt=""/>
-                <div class="transparent-box">
-                    <div class="caption">
-                        <p>Titel</p>
-                        <p class="opacity-low">Photographer</p>
+    <?php
+        $photos = get_all_photos_in_contest(1);
+        echo $photos[0];
+        foreach ($photos as $photo) {
+            $path = substr($photo->path, 4);
+            $namePhoto = $photo->name;
+            $photografer = get_username_by_photo($photo->photo_id);
+
+            echo "<a href='comment/index.php'>
+                    <div class='img-box'>
+                        <img src='$path' alt='$namePhoto'/>
+                        <div class='transparent-box'>
+                            <div class='caption'>
+                                <p>$namePhoto</p>
+                                <p class='opacity-low'>$photografer</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </a>
-        <a href="comment/index.php">
+                   </a>";
+        }
+    ?>
+
+    <div class="gallery-image">
+
+        <a href="comment/index.html">
             <div class="img-box">
                 <img src="assets/images/butterfl.png" alt=""/>
                 <div class="transparent-box">
@@ -67,7 +85,7 @@
                 </div>
             </div>
         </a>
-        <a href="comment/index.php">
+        <a href="comment/index.html">
             <div class="img-box">
                 <img src="assets/images/img_1.png" alt=""/>
                 <div class="transparent-box">
@@ -78,7 +96,7 @@
                 </div>
             </div>
         </a>
-        <a href="comment/index.php">
+        <a href="comment/index.html">
             <div class="img-box">
                 <img src="assets/images/img_3.jpg" alt=""/>
                 <div class="transparent-box">
@@ -89,7 +107,7 @@
                 </div>
             </div>
         </a>
-        <a href="comment/index.php">
+        <a href="comment/index.html">
             <div class="img-box">
                 <img src="assets/images/img_4.jpg" alt=""/>
                 <div class="transparent-box">
@@ -100,7 +118,7 @@
                 </div>
             </div>
         </a>
-        <a href="comment/index.php">
+        <a href="comment/index.html">
             <div class="img-box">
                 <img src="assets/images/img.png" alt=""/>
                 <div class="transparent-box">
