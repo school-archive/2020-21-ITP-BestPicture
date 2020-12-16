@@ -11,7 +11,7 @@ require_once "../php/user.php";
 </head>
 <body>
 <?php
-if(get_signed_in_user_id()!=-1){
+if(get_signed_in_user_id()==-1){
     echo ' <header>
         <div class="wrapper">
         <a href="../index.php"> <img class="logo" src="../assets/images/Logo.png" alt="logo"></a>
