@@ -9,10 +9,13 @@
 <head>
     <meta charset="UTF-8">
     <title>BestPicture</title>
+
     <link rel="stylesheet" href="https://use.typekit.net/hhh6sjk.css">
     <link href="../assets/styles/navbar.css" rel="stylesheet">
     <link href="../assets/styles/footer.css" rel="stylesheet">
     <link href="../assets/styles/comment.css" rel="stylesheet">
+
+    <script type="text/javascript" src="../assets/scripts/comment.js"></script>
 </head>
 <body>
     <header>
@@ -85,7 +88,7 @@
                 </div>
 
                 <div>
-                    <img src="../assets/images/fotograf.jpg" alt="Fotograf" id="profilbild">
+                    <img src="../assets/images/Logo_light.jpg" alt="Fotograf" id="profilbild">
                 </div>
             </article>
 
