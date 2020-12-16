@@ -1,20 +1,30 @@
-* {
-    margin: 0;
-    padding: 0;
+*{
+    margin: 0px;
 }
 
-.banner-area {
-    width: 100%;
-    height: 800px;
-    /*position: fixed;*/
-    background-image: url(../images/mountain.jpg);
-    -webkit-background-size: cover;
+html, body{
+    height: 100%;
+}
+
+.main{
+    height: 100%;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.text{
+    height: 50%;
+    background-color: white;
+}
+
+.hintergrund{
+    background-image: url("../images/mountain.jpg");
+    -webkit-background-size: cover;
     background-position: center center;
     display: flex;
     justify-content: center;
 }
-
 .bestpicture{
     position: absolute;
     margin: 350px;
@@ -25,7 +35,7 @@
     /*position: relative;*/
     top: 840px;
     background: white;
-    height: 100%;
+    height: 80%;
 
 
 }
@@ -95,7 +105,7 @@
     height: 100%;
 }
 
-body{
+.gallery{
     background-color: #202125;
 }
 

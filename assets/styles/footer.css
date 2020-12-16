@@ -21,6 +21,7 @@ footer{
     text-align: center;
     color: white;
     position: absolute;
+    order:2;
 }
 
 footer p{

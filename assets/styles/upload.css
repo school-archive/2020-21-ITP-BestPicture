@@ -2,7 +2,7 @@ body {
     background: url("../images/upload.jpg") no-repeat;
     background-size: 100%;
     font-family: acumin-pro, sans-serif;
-    margin: 0px;
+    margin: 0;
 }
 
 .main {
@@ -76,8 +76,10 @@ textarea{
     font-size: 13px;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.04);
 }
-file{
-    padding-left: 46px;
+input[type=file] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 .close {
     width: 30px;
