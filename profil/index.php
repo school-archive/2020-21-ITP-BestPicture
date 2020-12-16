@@ -1,3 +1,7 @@
+<?php
+session_start();
+require_once "../php/user.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,11 +10,13 @@
     <title>BestPicture</title>
 </head>
 <body>
-    <header>
+<?php
+if(get_signed_in_user_id()!=-1){
+    echo ' <header>
         <div class="wrapper">
-        <a href="../index.html"> <img class="logo" src="../assets/images/Logo.png" alt="logo"></a>
+        <a href="../index.php"> <img class="logo" src="../assets/images/Logo.png" alt="logo"></a>
         <nav>
-            <a href="../index.html">Home</a> <a href="#">Anmelden</a> <a href="../upload.html">Upload</a> <a href="./index.html"> <img class="user" src="../assets/images/user.png" alt="user"> </a>
+            <a href="../index.php">Home</a> <a href="#">Anmelden</a> <a href="../upload.html">Upload</a> <a href="index.php"> <img class="user" src="../assets/images/user.png" alt="user"> </a>
         </nav>
 
     </div>
@@ -59,6 +65,11 @@
 
         <img class="logofooter" src="../assets/images/Logo.png" alt="logo">
         <p class="agbs">Datenschutzerklärung | AGBs</p>
-    </footer>
+    </footer>';}
+else{
+    echo 'You need to sign in';
+    exit();
+}
+?>
 </body>
 </html>

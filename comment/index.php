@@ -1,8 +1,12 @@
+<?php
+session_start();
+require_once "../php/comment.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>BestPicture</title>
     <link rel="stylesheet" href="https://use.typekit.net/hhh6sjk.css">
     <link href="../assets/styles/navbar.css" rel="stylesheet">
     <link href="../assets/styles/footer.css" rel="stylesheet">
@@ -11,9 +15,9 @@
 <body>
     <header>
         <div class="wrapper">
-            <a href="index.html"> <img class="logo" src="../assets/images/Logo.png" alt="logo"></a>
+            <a href="index.php"> <img class="logo" src="../assets/images/Logo.png" alt="logo"></a>
             <nav>
-                <a href="../index.html">Home</a> <a href="#">Anmelden</a> <a href="../upload.html">Upload</a> <a href="../profil/index.html"> <img class="user" src="../assets/images/user.png" alt="user"> </a>
+                <a href="../index.html">Home</a> <a href="#">Anmelden</a> <a href="../upload.html">Upload</a> <a href="../profil/index.php"> <img class="user" src="../assets/images/user.png" alt="user"> </a>
             </nav>
 
         </div>
@@ -22,6 +26,9 @@
     <section>
         <section id="section_left">
             <article>
+                <?php
+                    $_GET[id];
+                ?>
                 <img src="../assets/images/uploads/la.jpg" id="upload" alt="Upload">
             </article>
 
