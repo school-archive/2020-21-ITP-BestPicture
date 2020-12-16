@@ -33,6 +33,7 @@ create table photo (
                        title text,
                        description text,
                        approved_by_admins boolean default false,
+                       date date default current_date(),
                        foreign key (user_id) references user(user_id) on delete set null
 );
 
