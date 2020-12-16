@@ -43,6 +43,7 @@
 
                     echo " <img src='$path' id='upload' alt='$namePhoto'>";
                 ?>
+
             </article>
 
             <article id="lesezeichen">
@@ -116,6 +117,25 @@
         <img class="logofooter" src="../assets/images/Logo.png" alt="logo">
         <p class="agbs">Datenschutzerklärung | AGBs</p>
     </footer>
+    <script>
+        /*document.getElementById('heart').addEventListener('click', likePlus);
 
+        function likePlus() {
+            let heart = document.getElementById("heart");
+            let split = heart.src.split('/');
+            alert("hha");
+
+            if(split[split.length-1] === "heart.png") {
+                <?php
+                #if(get_signed_in_user_id()!==-1) {
+                $id = $_GET['id'];
+                increase_like($id, get_signed_in_user_id()); ?>
+                document.getElementById('likes').innerText = <?php get_count_likes_by_photo($id); ?>
+                    heart.src = "../assets/images/heart_full.png";
+                <?php#}?>
+
+            }
+        }*/
+    </script>
 </body>
 </html>
