@@ -64,3 +64,9 @@
         return $obj[0]['count'];
     }
 
+    function get_date_by_photoid($photoid) {
+        $date = get_photo_by_id($photoid)['date'];
+        $array = explode('-', $date);
+        return "$array[2].$array[1].$array[0]";
+    }
+

@@ -34,7 +34,7 @@
                     $path = substr($photo['path'], 1);
                     $namePhoto = $photo['title'];
                     $photografer = get_username_by_photo($id);
-                    $date = $photo['date'];
+                    $date = get_date_by_photoid($id);
                     $beschreibung = $photo['description'];
                     $likes = get_count_likes_by_photo($id);
 
