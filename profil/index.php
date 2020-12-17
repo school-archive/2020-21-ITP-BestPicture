@@ -21,7 +21,7 @@ if(get_signed_in_user_id()==-1){
 
     </div>
     </header>
-    <main>
+    <main class="main">
         <section class="gallary-links">
             <article class="wrapper profil">
                 <img class="bo boimg-1" src="../assets/images/butterfly.jpg" alt="placehold">
@@ -67,7 +67,8 @@ if(get_signed_in_user_id()==-1){
         <p class="agbs">Datenschutzerklärung | AGBs</p>
     </footer>';}
 else{
-    echo 'You need to sign in';
+    $url="test.html";
+    header("Location: " . $url);
     exit();
 }
 ?>

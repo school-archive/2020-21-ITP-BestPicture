@@ -4,6 +4,9 @@ body {
     font-family: acumin-pro, sans-serif;
     margin: 0;
 }
+main{
+    padding-top: 29px;
+}
 
 .main {
     background-color: #FFFFFF;
@@ -104,60 +107,6 @@ input[type=file] {
     left: 20px;
     top:5px;
 }
-
-.input-file-trigger{
-    display: inline-block;
-    background: linear-gradient(to right, #5B5FE3, #70C8FA);
-    color: white;
-    cursor: pointer;
-    border: 0;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    font-family: 'acumin-pro', sans-serif;
-    margin-left: 29.5%;
-    font-size: 13px;
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.04);
-    cursor: pointer;
-    border-radius: 5em;
-    margin-bottom: 10px;
+#foot{
+    bottom: 0;
 }
-
-.input-file-container {
-    position: relative;
-
-}
-
-.js .input-file {
-    position: absolute;
-    top: 0; left: 0;
-    width: 225px;
-    opacity: 0;
-    padding: 14px 0;
-    cursor: pointer;
-}
-
-.file-return {
-    margin: 0;
-}
-.file-return:not(:empty) {
-    margin: 1em 0;
-}
-.js .file-return {
-    font-style: italic;
-    font-size: .9em;
-    font-weight: bold;
-}
-.js .file-return:not(:empty):before {
-    content: "Selected file: ";
-    font-style: normal;
-    font-weight: normal;
-    margin-left: 20%;
-    color: #5B5FE3;
-}
-
-main{
-    padding-top: 29px;
-}
-
