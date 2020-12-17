@@ -1,3 +1,7 @@
+<?php
+session_start();
+require_once "../php/user.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,11 +12,14 @@
     <link href="../assets/styles/footer.css" rel="stylesheet">
 </head>
 <body>
+<?php
+if(get_signed_in_user_id()!=-1){
+    echo ' 
     <header>
         <div class="wrapper">
             <a href="../index.php"> <img class="logo" src="../assets/images/Logo.png" alt="logo"></a>
             <nav>
-                <a href="../index.php">Home</a> <a href="../login/login.html">Anmelden</a> <a href="upload.html">Upload</a><a
+                <a href="../index.php">Home</a> <a href="../login/login.html">Anmelden</a> <a href="upload.php">Upload</a><a
                     href="../profil/index.php"> <img class="user" src="../assets/images/user.png" alt="user"> </a>
             </nav>
         </div>
@@ -57,7 +64,13 @@
 
         <img class="logofooter" src="../assets/images/Logo.png" alt="logo"><br>
         <a href="../rechte/rechte.html"><p class="agbs">Datenschutzerklärung | AGBs</p></a>
-    </footer>
+    </footer>';}
+else{
+    $url="../profil/test.html";
+    header("Location: " . $url);
+    exit();
+    }
+?>
 </body>
 <script>
     document.querySelector("html").classList.add('js');
