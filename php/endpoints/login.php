@@ -18,6 +18,7 @@
     if ($password_correct) {
         set_logged_in_user($userid);
         // TODO weiterleiten zu angemeldeter seite
+        header('Location: ../../index.php');
     } else {
         handleError("invalid password");
     }
