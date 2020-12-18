@@ -22,13 +22,14 @@
         handleError("passwort too long (max 256 chars)");
 
     require_once "../user_manager.php";
-    if (get_userid_by_email($email) != -1)
+    if (gettype(get_userid_by_email($email))!='NULL')
         handleError("this email is already in use");
 
     $userid = create_user($email, $_POST["firstname"], $_POST["surname"], password_hash($_POST["password"], PASSWORD_DEFAULT));
     set_logged_in_user($userid);
 
     // TODO weiterleiten zu angemeldeter seite
+    header('Location: ../../index.php');
 
     function handleError($msg) {
         // TODO proper error handling

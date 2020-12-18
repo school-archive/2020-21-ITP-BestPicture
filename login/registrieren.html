@@ -150,12 +150,12 @@
 <div class="main">
     <a href="../index.php"> <div class="close"></div></a>
     <p class="sign" align="center">Registrieren</p>
-    <form class="form1">
-        <input class="un " type="text" align="center" placeholder="E-Mail">
-        <input class="un " type="text" align="center" placeholder="Vorname">
-        <input class="un " type="text" align="center" placeholder="Nachname">
-        <input class="pass" type="password" align="center" placeholder="Passwort">
-        <a class="submit" align="center">Weiter</a><br>
+    <form class="form1" method="post" action="../php/endpoints/register.php">
+        <input class="un " type="text" align="center" placeholder="E-Mail" name="email">
+        <input class="un " type="text" align="center" placeholder="Vorname" name="firstname">
+        <input class="un " type="text" align="center" placeholder="Nachname" name="surname">
+        <input class="pass" type="password" align="center" placeholder="Passwort" name="password">
+        <button value="submit" class="submit" align="center">Weiter</button><br>
         <div class="microsoft"></div>
         <p class="login" align="center"><a href="login.html">Login</a></p>
     </form>
