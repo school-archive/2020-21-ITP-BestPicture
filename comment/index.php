@@ -49,7 +49,7 @@
             <article id="lesezeichen">
                 <div id="lesezeichen_left">
                     <?php
-                        if(if_user_liked_photo($id, 1)) {#get_signed_in_user_id())) {
+                        if(if_user_liked_photo($id, get_signed_in_user_id())) {
                             echo '<img src="../assets/images/heart_full.png" id="heart" alt="Herz">';
                         }
                         else {
