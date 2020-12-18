@@ -41,7 +41,7 @@
                     $beschreibung = $photo['description'];
                     $likes = get_count_likes_by_photo($id);
 
-                    echo " <img src='$path' id='upload' alt='$namePhoto'>";
+                    echo " <img src='$path' id='upload' alt='$namePhoto'>"; #id bild id
                 ?>
 
             </article>
@@ -117,25 +117,5 @@
         <img class="logofooter" src="../assets/images/Logo.png" alt="logo"><br>
         <a href="rechte/rechte.html"><p class="agbs">Datenschutzerklärung | AGBs</p></a>
     </footer>
-    <script>
-        /*document.getElementById('heart').addEventListener('click', likePlus);
-
-        function likePlus() {
-            let heart = document.getElementById("heart");
-            let split = heart.src.split('/');
-            alert("hha");
-
-            if(split[split.length-1] === "heart.png") {
-                <?php
-                #if(get_signed_in_user_id()!==-1) {
-                $id = $_GET['id'];
-                increase_like($id, get_signed_in_user_id()); ?>
-                document.getElementById('likes').innerText = <?php get_count_likes_by_photo($id); ?>
-                    heart.src = "../assets/images/heart_full.png";
-                <?php#}?>
-
-            }
-        }*/
-    </script>
 </body>
 </html>
