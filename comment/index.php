@@ -22,7 +22,7 @@
         <div class="wrapper">
             <a href="../index.php"> <img class="logo" src="../assets/images/Logo.png" alt="logo"></a>
             <nav>
-                <a href="../index.php">Home</a> <a href="#">Anmelden</a> <a href="../upload/index.php">Upload</a> <a href="../profil/index.php"> <img class="user" src="../assets/images/user.png" alt="user"> </a>
+                <a href="../index.php">Home</a> <a href="../login/login.html">Anmelden</a> <a href="../upload/index.php">Upload</a> <a href="../profil/index.php"> <img class="user" src="../assets/images/user.png" alt="user"> </a>
             </nav>
 
         </div>
@@ -41,7 +41,7 @@
                     $beschreibung = $photo['description'];
                     $likes = get_count_likes_by_photo($id);
 
-                    echo " <img src='$path' id='upload' alt='$namePhoto'>"; #id bild id
+                    echo " <img src='$path' id='upload' alt='$namePhoto'>";
                 ?>
 
             </article>
