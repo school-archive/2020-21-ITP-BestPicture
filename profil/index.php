@@ -16,7 +16,7 @@ if(get_signed_in_user_id()!=-1){
         <div class="wrapper">
         <a href="../index.php"> <img class="logo" src="../assets/images/Logo.png" alt="logo"></a>
         <nav>
-            <a href="../index.php">Home</a> <a href="#">Anmelden</a> <a href="../upload/upload.php">Upload</a> <a href="index.php"> <img class="user" src="../assets/images/user.png" alt="user"> </a>
+            <a href="../index.php">Home</a> <a href="#">Anmelden</a> <a href="../upload/index.php">Upload</a> <a href="index.php"> <img class="user" src="../assets/images/user.png" alt="user"> </a>
         </nav>
 
     </div>
@@ -67,7 +67,7 @@ if(get_signed_in_user_id()!=-1){
         <p class="agbs">Datenschutzerklärung | AGBs</p>
     </footer>';}
 else{
-    $url="test.html";
+    $url="needSignIn.html";
     header("Location: " . $url);
     exit();
 }
