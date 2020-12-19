@@ -25,6 +25,7 @@
 
     function handleError($msg) {
         // TODO proper error handling
-        echo $msg;
-        exit();
+        header("Location: ../../index.php?error=$msg"); #array
+        #echo $msg;
+        #exit();
     }

@@ -1,10 +1,10 @@
 <?php
 
-    if (! (isset($_POST["firstname"]) && isset($_POST["surname"])))
-        handleError("name missing");
-
     if (!isset($_POST["email"]))
         handleError("email missing");
+
+    if (! (isset($_POST["firstname"]) && isset($_POST["surname"])))
+        handleError("name missing");
 
     if (!isset($_POST["password"]))
         handleError("password missing");
@@ -17,9 +17,9 @@
         handleError("invalid email domain");
 
     if (strlen($_POST["password"]) < 8)
-        handleError("passwort too short (min 8 chars)");
+        handleError("password too short (min 8 chars)");
     else if (strlen($_POST["password"]) > 256)
-        handleError("passwort too long (max 256 chars)");
+        handleError("password too long (max 256 chars)");
 
     require_once "../user_manager.php";
     if (gettype(get_userid_by_email($email))!='NULL')
@@ -28,11 +28,9 @@
     $userid = create_user($email, $_POST["firstname"], $_POST["surname"], password_hash($_POST["password"], PASSWORD_DEFAULT));
     set_logged_in_user($userid);
 
-    // TODO weiterleiten zu angemeldeter seite
-    header('Location: ../../index.php');
+    echo "success";
 
     function handleError($msg) {
-        // TODO proper error handling
         echo $msg;
         exit();
     }
