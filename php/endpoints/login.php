@@ -23,9 +23,11 @@
         handleError("invalid password");
     }
 
+    echo 'success';
+
     function handleError($msg) {
         // TODO proper error handling
-        header("Location: ../../index.php?error=$msg"); #array
-        #echo $msg;
-        #exit();
+        #header("Location: ../../index.php?error=$msg");
+        echo $msg;
+        exit();
     }
