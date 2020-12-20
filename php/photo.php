@@ -73,6 +73,15 @@
         ));
     }
 
+    function decrease_like($photoid, $userid) {
+        $s = get_bp_mysql_object()->
+        prepare("delete from entry_rating where photo_id = :photo_id and user_rated = :user_id");
+        $s->execute(array(
+            ":user_id" => $userid,
+            ":photo_id" => $photoid
+        ));
+    }
+
     function get_date_by_photoid($photoid) {
         $date = get_photo_by_id($photoid)['date'];
         $array = explode('-', $date);
