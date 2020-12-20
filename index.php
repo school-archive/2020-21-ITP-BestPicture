@@ -91,7 +91,7 @@ require_once "php/user.php";
             <p>●</p>
             <p><a href="mailto:7055@htl.rennweg.at">Nils Schneider-Sturm</a></p>
             <p>●</p>
-            <p><a href="mailto:7053@htl.rennweg.at">Nicoletta Sarzi Satori</a></p>
+            <p><a href="mailto:7053@htl.rennweg.at">Nicoletta Sarzi Sartori</a></p>
         </div>
         <img class="logofooter" src="assets/images/Logo.png" alt="logo"><br>
         <a href="rechte/rechte.php"><p class="agbs">Datenschutzerklärung | AGBs</p></a>

@@ -63,7 +63,7 @@ if(get_signed_in_user_id()!=-1){
             <p>●</p>
             <p><a href="mailto:7055@htl.rennweg.at">Nils Schneider-Sturm</a></p>
             <p>●</p>
-            <p><a href="mailto:7053@htl.rennweg.at">Nicoletta Sarzi Satori</a></p>
+            <p><a href="mailto:7053@htl.rennweg.at">Nicoletta Sarzi Sartori</a></p>
         </div>
 
         <img class="logofooter" src="../assets/images/Logo.png" alt="logo">
