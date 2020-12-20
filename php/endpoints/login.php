@@ -2,32 +2,27 @@
     require_once "../user_manager.php";
 
     if (!isset($_POST["email"]))
-        handleError("email missing");
+        handleError("E-Mail fehlt");
 
     if (!isset($_POST["password"]))
-        handleError("password missing");
+        handleError("Passwort fehlt");
 
     $email = trim(strtolower($_POST["email"]));
     $userid = get_userid_by_email($email);
 
-    if ($userid == -1)
-        handleError("this email is not registered");
+    if (gettype(get_userid_by_email($email))=='NULL')
+        handleError("E-Mail ist nicht registriert");
 
     $password_correct = check_password($userid, $_POST["password"]);
 
     if ($password_correct) {
         set_logged_in_user($userid);
-        // TODO weiterleiten zu angemeldeter seite
-        header('Location: ../../index.php');
+        echo 'success';
     } else {
-        handleError("invalid password");
+        handleError("Ungültiges Passwort");
     }
 
-    echo 'success';
-
     function handleError($msg) {
-        // TODO proper error handling
-        #header("Location: ../../index.php?error=$msg");
-        echo $msg;
+        echo "#" .$msg;
         exit();
     }
