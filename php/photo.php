@@ -83,7 +83,7 @@
     * True wenn User Foto schon geliked hat
     */
     function if_user_liked_photo($photoid, $userid) {
-        #if ($userid!==-1) {
+        if ($userid!==-1) {
             $s = get_bp_mysql_object()->prepare("select if(entryrating_id is null, 0, 1) as bool from entry_rating where photo_id = :photoid and user_rated = :userid");
             $s->execute(array(
                 ":photoid" => $photoid,
@@ -91,6 +91,6 @@
             ));
             $obj = $s->fetch();
             return gettype($obj) == 'array';
-        #}
+        }
         return false;
     }
