@@ -14,12 +14,12 @@ require_once "../php/user.php";
 <body>
 <?php
 if(get_signed_in_user_id()!=-1){
-    echo ' 
+    ?>
     <header>
         <div class="wrapper">
             <a href="../index.php"> <img class="logo" src="../assets/images/Logo.png" alt="logo"></a>
             <nav>
-                <a href="../index.php">Home</a> <a href="../login/login.php">Anmelden</a> <a href="index.php">Upload</a><a
+                <a href="../index.php">Home</a> <a href="../login/abmelden.html">Abmelden</a> <a href="index.php">Upload</a><a
                     href="../profil/index.php"> <img class="user" src="../assets/images/user.png" alt="user"> </a>
             </nav>
         </div>
@@ -63,8 +63,9 @@ if(get_signed_in_user_id()!=-1){
         </div>
 
         <img class="logofooter" src="../assets/images/Logo.png" alt="logo"><br>
-        <a href="../rechte/rechte.html"><p class="agbs">Datenschutzerklärung | AGBs</p></a>
-    </footer>';}
+        <a href="../rechte/rechte.php"><p class="agbs">Datenschutzerklärung | AGBs</p></a>
+    </footer>
+    <?php ;}
 else{
     $url="../profil/needSignIn.html";
     header("Location: " . $url);

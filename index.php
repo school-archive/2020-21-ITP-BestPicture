@@ -22,8 +22,11 @@ require_once "php/user.php";
         <div class="wr">
             <a href="index.php"> <img class="logo" src="assets/images/Logo.png" alt="logo"></a>
             <nav>
-                <a href="index.php">Home</a> <a href="login/login.php">Anmelden</a> <a href="upload/index.php">Upload</a> <a
-                    href="profil/index.php"> <img class="user" src="assets/images/user.png" alt="user"> </a>
+                <a href="index.php">Home</a>
+                <?php echo ((get_signed_in_user_id()!==-1) ? '<a href="login/abmelden.html">Abmelden</a>' : '<a href="login/login.php">Anmelden</a>'); ?>
+                <a href="upload/index.php">Upload</a>
+                <a href="profil/index.php"> <img class="user" src="assets/images/user.png" alt="user">
+                </a>
             </nav>
         </div>
     </header>
@@ -91,7 +94,7 @@ require_once "php/user.php";
             <p><a href="mailto:7053@htl.rennweg.at">Nicoletta Sarzi Satori</a></p>
         </div>
         <img class="logofooter" src="assets/images/Logo.png" alt="logo"><br>
-        <a href="rechte/rechte.html"><p class="agbs">Datenschutzerklärung | AGBs</p></a>
+        <a href="rechte/rechte.php"><p class="agbs">Datenschutzerklärung | AGBs</p></a>
     </footer>
 </div>
 </body>

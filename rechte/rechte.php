@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    require_once "../php/user.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,8 +29,11 @@
     <div class="wr">
         <a href="../index.php"> <img class="logo" src="../assets/images/Logo.png" alt="logo"></a>
         <nav>
-            <a href="../index.php">Home</a> <a href="../login/login.php">Anmelden</a> <a href="../upload/index.php">Upload</a>
-            <a href="../profil/index.php"> <img class="user" src="../assets/images/user.png" alt="user"> </a>
+            <a href="../index.php">Home</a>
+            <?php echo ((get_signed_in_user_id()!==-1) ? '<a href="../login/abmelden.html">Abmelden</a>' : '<a href="../login/login.php">Anmelden</a>'); ?>
+            <a href="../upload/index.php">Upload</a>
+            <a href="../profil/index.php"> <img class="user" src="../assets/images/user.png" alt="user">
+            </a>
         </nav>
     </div>
 </header>
