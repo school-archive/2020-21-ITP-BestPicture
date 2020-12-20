@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once "../php/user.php";
+require_once "../php/photo.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,6 +13,12 @@ require_once "../php/user.php";
 <body>
 <?php
 if(get_signed_in_user_id()!=-1){
+    $user = get_signed_in_user();
+    $userid = $user['user_id'];
+    $name = $user['vorname'] .' ' .$user['nachname'];
+    $email = $user['email'];
+    $likes = get_count_likes_of_user($userid);
+    $posts = get_count_photos_of_user($userid);
     ?>
     <header>
         <div class="wrapper">
@@ -25,30 +32,25 @@ if(get_signed_in_user_id()!=-1){
     <main class="main">
         <section class="gallary-links">
             <article class="wrapper profil">
-                <img class="bo boimg-1" src="../assets/images/butterfly.jpg" alt="placehold">
+                <img class="bo boimg-1" src="../assets/images/Logo_light.jpg" alt="placehold">
                 <div class="text">
-                    <p id="h5">Sandra Müller</p>
-                    <p class="acc"><span class="bold">7047@htl.rennweg.at</span></p>
-                    <p class="acc"><span class="bold">300</span> Likes</p>
-                    <p class="acc"><span class="bold">50</span>  Posts</p>
+                    <p id="h5"><?php echo $name ?></p>
+                    <p class="acc"><span class="bold"><?php echo $email ?></span></p>
+                    <p class="acc"><span class="bold"><?php echo $likes ?></span> Likes</p>
+                    <p class="acc"><span class="bold"><?php echo $posts ?></span>  Posts</p>
                 </div>
             </article>
             <div class="wrapper">
-                <div class="gallary-link">
-                    <img src="../assets/images/butterfly.jpg" class="content-picture">
-                </div>
-                <div class="gallary-link">
-                    <img src="../assets/images/butterfly.jpg" class="content-picture">
-                </div>
-                <div class="gallary-link">
-                    <img src="../assets/images/butterfly.jpg" class="content-picture">
-                </div>
-                <div class="gallary-link">
-                    <img src="../assets/images/butterfly.jpg" class="content-picture">
-                </div>
-                <div class="gallary-link">
-                    <img src="../assets/images/butterfly.jpg" class="content-picture">
-                </div>
+                <?php
+                    $photos = get_all_photos_by_user($userid);
+                    foreach ($photos as $photo) {
+                        $path = substr($photo['path'], 1);
+                        $photoid = $photo['photo_id'];
+                        echo "<a href='../comment/index.php?id=$photoid' class='gallary-link'>
+                                <img src='$path' class='content-picture'>
+                              </a>";
+                    }
+                ?>
             </div>
         </section>
     </main>

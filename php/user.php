@@ -32,9 +32,33 @@
         return $obj['name'];
     }
 
-/*
- * Liefert den momentan angemeldeten Benutzer
- */
+    /*
+     * Liefert Summe aller bekommenen Likes von einem User
+     */
+    function get_count_likes_of_user($userid) {
+        $s = get_bp_mysql_object()->prepare("select count(entryrating_id) as likes from user u join photo p on u.user_id = p.user_id join entry_rating er on p.photo_id = er.photo_id where p.user_id = :userid;");
+        $s->execute(array(
+            ":userid" => $userid
+        ));
+        $obj = $s->fetch();
+        return $obj['likes'];
+    }
+
+    /*
+     * Liefert Summe aller hochgeladenen Fotos von einem User
+     */
+    function get_count_photos_of_user($userid) {
+        $s = get_bp_mysql_object()->prepare("select count(photo_id) as posts from user u join photo p on u.user_id = p.user_id where p.user_id = :userid;");
+        $s->execute(array(
+            ":userid" => $userid
+        ));
+        $obj = $s->fetch();
+        return $obj['posts'];
+    }
+
+    /*
+     * Liefert den momentan angemeldeten Benutzer
+     */
     function get_signed_in_user() {
         $userid = get_signed_in_user_id();
         if ($userid == -1)
