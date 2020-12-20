@@ -65,27 +65,23 @@
 
             <article id="kommentar">
                 <h3>Kommentare...</h3>
-                <div class="myBox">
-                    <div>
-                        <div>Martin</div>
-                        <div>wow very cool picture!</div>
-                    </div>
-                    <div>
-                        <div>x107lol</div>
-                        <div>amazing</div>
-                    </div>
-                    <div>
-                        <div>x107lol</div>
-                        <div>amazing</div>
-                    </div>
-                    <div>
-                        <div>x107lol</div>
-                        <div>amazing</div>
-                    </div>
+                <div class="myBox" id="myBox">
+                    <?php
+                        $comments = getComments($id);
+                        foreach ($comments as $comment) {
+                            $nameCommentator = $comment['Name'];
+                            $txtComment = $comment["text"];
+                            echo "
+                            <div>
+                                <div>$nameCommentator</div>
+                                <div>$txtComment</div>
+                            </div>";
+                        }
+                    ?>
                 </div>
                 <form>
-                    <input type="text" placeholder="Kommentar hinzufügen...">
-                    <button value="submit">Posten</button>
+                    <input type="text" id="text" placeholder="Kommentar hinzufügen...">
+                    <a id="submit">Posten</a>
                 </form>
             </article>
         </section>

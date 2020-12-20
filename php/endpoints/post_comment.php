@@ -13,6 +13,8 @@ if (!isset($_GET["photoid"])) {
     handleError("comment content not set");
 } else {
     filterComment($_GET["photoid"], $_GET["comment"]);
+    $user =  get_signed_in_user();
+    echo $user['vorname'] .' ' .$user['nachname'];
 }
 
 function handleError($msg) {

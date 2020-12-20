@@ -30,7 +30,7 @@
     /*
      * Liefert Array [Vorname Nachname] => Kommentar
      */
-    function getComment($photo_id) {
+    function getComments($photo_id) {
         $s = get_bp_mysql_object()->prepare("select concat(vorname, ' ', nachname) Name, text
         from photo p
         join comment c on p.photo_id = c.photo_id
@@ -38,7 +38,6 @@
         where p.photo_id = :photo_id
         ");
         $s->execute(array(":photo_id" => $photo_id));
-        $obj = $s->fetch();
-
-        return array_combine($obj["Name"], $obj["text"]);
+        return $s->fetchAll();
+        #return array_combine($obj["Name"], $obj["text"]);
     }

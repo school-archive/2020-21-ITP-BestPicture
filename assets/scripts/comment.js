@@ -3,6 +3,7 @@
 
     function init() {
         document.getElementById('heart').addEventListener('click', like);
+        document.getElementById('submit').addEventListener('click', postComment);
     }
 
     function like() {
@@ -27,6 +28,25 @@
             }
         });
 
-        xmlhttp.open("get", (plus) ? `../php/endpoints/comment.php?action=like&picture=${id}` : `../php/endpoints/comment.php?action=minus&picture=${id}`, true);
+        xmlhttp.open("get", (plus) ? `../php/endpoints/like.php?action=like&picture=${id}` : `../php/endpoints/like.php?action=minus&picture=${id}`, true);
         xmlhttp.send();
+    }
+
+    function postComment() {
+        let comment = document.getElementById('text').value;
+        let id = window.location.search.split("=")[1]
+        if(comment!=='') {
+            let xmlhttp = new XMLHttpRequest();
+
+            xmlhttp.addEventListener("load", function () {
+                console.log(this.responseText)
+                document.getElementById('text').value = '';
+                let name = this.responseText;
+                let child = document.createTextNode(`<div><div>${name}</div><div>${comment}</div></div>`);
+                document.getElementById('myBox').appendChild(child);
+            });
+
+            xmlhttp.open("get", `../php/endpoints/post_comment.php?photoid=${id}&comment=${comment}`, true);
+            xmlhttp.send();
+        }
     }

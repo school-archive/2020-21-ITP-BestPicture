@@ -101,7 +101,7 @@ body > section, #nebeneinander, #kommentar > div > div {
     border-top: 2px solid lightgray;
 }
 
-#kommentar > form > button {
+#submit {
     color: #54ABF0;
     font-style: normal;
     font-size: medium;
@@ -118,14 +118,13 @@ body > section, #nebeneinander, #kommentar > div > div {
 #kommentar > form > input::placeholder {
     color: darkgray;
 }
-#kommentar > form > input:focus, #kommentar > form > button {
+#kommentar > form > input:focus {
     outline: none;
 }
 
-#kommentar > form > button:hover {
-    color: #5887FA;
+#text {
+    font-weight: normal;
 }
-
 
 /* Scrollbar */
 .myBox {
@@ -135,4 +134,13 @@ body > section, #nebeneinander, #kommentar > div > div {
 
 footer * {
     line-height: normal;
+}
+
+#submit:hover {
+    color: #5887FA;
+    cursor: pointer;
+}
+
+#heart:hover {
+    cursor: pointer;
 }
