@@ -1,3 +1,11 @@
+<?php
+    require_once "../php/user.php";
+
+    if(get_signed_in_user_id()!==-1) {
+        header('Location: ./abmelden.html');
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
