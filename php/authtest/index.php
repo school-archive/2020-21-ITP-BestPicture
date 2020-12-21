@@ -12,7 +12,7 @@
     if ($info == null)
         handleError("an error occurred while trying to fetch user data");
 
-    var_dump($info);
+    //var_dump($info);
 
     $existing_userid = get_userid_by_email(trim(strtolower($info["mail"])));
 
