@@ -1,6 +1,12 @@
 <?php
 session_start();
 require_once "../php/user.php";
+if (get_signed_in_user_id() == -1) {
+    $url="needSignIn.html";
+    header("Location: " . $url);
+    exit();
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,9 +18,6 @@ require_once "../php/user.php";
     <link href="../assets/styles/footer.css" rel="stylesheet">
 </head>
 <body>
-<?php
-if(get_signed_in_user_id()!=-1){
-    ?>
     <header>
         <div class="wrapper">
             <a href="../index.php"> <img class="logo" src="../assets/images/Logo.png" alt="logo"></a>
@@ -63,13 +66,6 @@ if(get_signed_in_user_id()!=-1){
         <img class="logofooter" src="../assets/images/Logo.png" alt="logo"><br>
         <a href="../rechte/rechte.php"><p class="agbs">Datenschutzerklärung | AGBs</p></a>
     </footer>
-    <?php ;}
-else{
-    $url="../profil/needSignIn.html";
-    header("Location: " . $url);
-    exit();
-    }
-?>
 </body>
 <script>
     document.querySelector("html").classList.add('js');
