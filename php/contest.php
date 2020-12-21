@@ -59,7 +59,7 @@
     function get_all_photos_in_contest($contestid=null) {
         if ($contestid == null) $contestid = get_current_contest_id();
 
-        $s = get_bp_mysql_object()->prepare("select * from photo p left join contest_entry ce on p.photo_id = ce.photo_id where contest_id = :contestid and approved_by_admins");
+        $s = get_bp_mysql_object()->prepare("select * from photo p left join contest_entry ce on p.photo_id = ce.photo_id where contest_id = :contestid and approved_by_admins order by date desc");
         $s->execute(array(":contestid" => $contestid));
         return $s->fetchAll();
     }
