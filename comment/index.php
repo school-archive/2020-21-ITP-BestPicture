@@ -14,6 +14,7 @@
     <link href="../assets/styles/navbar.css" rel="stylesheet">
     <link href="../assets/styles/footer.css" rel="stylesheet">
     <link href="../assets/styles/comment.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon.ico">
 
     <script type="text/javascript" src="../assets/scripts/comment.js"></script>
 </head>
@@ -121,7 +122,7 @@
         </div>
 
         <img class="logofooter" src="../assets/images/Logo.png" alt="logo"><br>
-        <a href="rechte/rechte.html"><p class="agbs">Datenschutzerklärung | AGBs</p></a>
+        <a href="../rechte/rechte.php"><p class="agbs">Datenschutzerklärung | AGBs</p></a>
     </footer>
 </body>
 </html>

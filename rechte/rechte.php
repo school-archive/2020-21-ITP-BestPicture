@@ -10,6 +10,7 @@
     <title>BestPicture</title>
     <link href="../assets/styles/navbar.css" rel="stylesheet">
     <link href="../assets/styles/footer.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon.ico">
 </head>
 <style>
     body {

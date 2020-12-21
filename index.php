@@ -15,6 +15,7 @@ require_once "php/user.php";
     <link href="assets/styles/main.css" rel="stylesheet">
     <link href="assets/styles/navbar.css" rel="stylesheet">
     <link href="assets/styles/gallery.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
 </head>
 <body>
 <div class="box-area">

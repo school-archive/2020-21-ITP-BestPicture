@@ -13,6 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>BestPicture</title>
     <script type="text/javascript" src="../assets/scripts/login.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon.ico">
 </head>
 <style>
     body {
