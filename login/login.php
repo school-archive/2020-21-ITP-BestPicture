@@ -101,7 +101,7 @@
     .login {
         text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
         color: #5B5FE3;
-        padding-top: 30px;
+        padding-top: 10px;
     }
 
     a {
@@ -114,18 +114,6 @@
         .main {
             border-radius: 0px;
         }
-    }
-
-    .microsoft {
-        background-color: #f25022;
-        box-shadow:
-                20px 0 0 0 #7fba00,
-                0 20px 0 0 #00a4ef,
-                20px 20px 0 0 #ffb900;
-        height: 20px;
-        width: 20px;
-        margin-left: 178px;
-        margin-top: 40px;
     }
 
     .close {
@@ -174,6 +162,34 @@
         transition: 0.3s;
         display: none;
     }
+
+    .microsoft-logo{
+        width:44px;
+        margin:20px auto;
+    }
+    .square {
+        width: 20px;
+        height: 20px;
+        margin:0;
+        float:left;
+    }
+    .square.red{
+        background-color:#F35325;
+        margin-left: 178px;
+        margin-top: 40px;
+    }
+    .square.green{
+        background-color:#81BC06;
+        margin-top: 40px;
+    }
+    .square.blue{
+        background-color:#05A6F0;
+        margin-left: 178px;
+    }
+    .square.yellow{background-color:#FFBA08;}
+    .row {
+        display: flex;
+    }
 </style>
 
 <body>
@@ -189,7 +205,16 @@
             <input class="un " type="text" align="center" placeholder="E-Mail" id="email">
             <input class="pass" type="password" align="center" placeholder="Passwort" id="password">
             <a class="submit" align="center" id="submit">Login</a><br>
-            <a href="<?php echo get_login_url() ?>"><div class="microsoft"></div></a>
+            <a href="<?php echo get_login_url() ?>" class="microsoft-logo">
+                <div class="row">
+                    <div class="square red"></div>
+                    <div class="square green"></div>
+                </div>
+                <div class="row">
+                    <div class="square blue"></div>
+                    <div class="square yellow"></div>
+                </div>
+            </a>
             <p class="login" align="center"><a href="registrieren.html">Registrieren</a></p>
         </form>
     </div>
