@@ -10,7 +10,7 @@ function get_bp_mysql_object() {
     if (isset($pdo))
         return $pdo;
 
-    $host = "localhost";
+    $host = getenv("DB_HOST") ? getenv("DB_HOST") : "localhost";
     $username = getenv("DB_USERNAME");
     $password = getenv("DB_PASSWORD");
     $db = "bestpicture";
