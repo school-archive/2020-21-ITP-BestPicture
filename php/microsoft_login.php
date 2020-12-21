@@ -14,7 +14,7 @@
      */
     function get_login_url() {
         $client_id = "e0815f2b-43c6-4f43-a71e-537fa2a93e60";
-        $redirect_uri = urlencode("http://localhost/Schule/4AI_2021/ITP/BestPicture/php/authtest/");
+        $redirect_uri = urlencode("https://bestpictureproject.ml/php/authtest/");
         $url = "https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=$client_id&scope=user.read&prompt=select_account&response_type=code&redirect_uri=$redirect_uri";
         return $url;
     }
@@ -26,7 +26,7 @@
     function get_token($code) {
         $client_id = "e0815f2b-43c6-4f43-a71e-537fa2a93e60";
         $client_secret = urlencode(getenv("MS_OAUTH_SECRET"));
-        $redirect_uri = urlencode("http://localhost/Schule/4AI_2021/ITP/BestPicture/php/authtest/"); // todo auf serverurl setzen
+        $redirect_uri = urlencode("https://bestpictureproject.ml/php/authtest/"); // todo auf serverurl setzen
         $url = "https://login.microsoftonline.com/common/oauth2/v2.0/token";
 
         $query = "client_id=$client_id&scope=user.read&code=$code&grant_type=authorization_code&redirect_uri=$redirect_uri&client_secret=$client_secret";
