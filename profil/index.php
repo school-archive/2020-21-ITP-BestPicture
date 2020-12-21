@@ -2,6 +2,12 @@
 session_start();
 require_once "../php/user.php";
 require_once "../php/photo.php";
+
+if(get_signed_in_user_id()==-1){
+    $url="needSignIn.html";
+    header("Location: " . $url);
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +18,7 @@ require_once "../php/photo.php";
 </head>
 <body>
 <?php
-if(get_signed_in_user_id()!=-1){
+
     $user = get_signed_in_user();
     $userid = $user['user_id'];
     $name = $user['vorname'] .' ' .$user['nachname'];
@@ -69,12 +75,5 @@ if(get_signed_in_user_id()!=-1){
         <img class="logofooter" src="../assets/images/Logo.png" alt="logo">
         <p class="agbs">Datenschutzerklärung | AGBs</p>
     </footer>
-<?php }
-else{
-    $url="needSignIn.html";
-    header("Location: " . $url);
-    exit();
-}
-?>
 </body>
 </html>
