@@ -26,7 +26,7 @@
             ":user_id" => $userid,
             ":photo_id" => $photoid,
             ":filepath" => $path,
-            ":approved_by_admins" => $approved_by_admins,
+            ":approved_by_admins" => $approved_by_admins ? 1 : 0,
             ":title" => $title,
             ":desc" => $desc
         ));
