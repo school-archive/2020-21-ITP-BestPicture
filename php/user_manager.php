@@ -17,7 +17,7 @@
             ":password_hash" => $password_hash,
             ":vorname" => $vorname,
             ":nachname" => $nachname,
-            ":is_admin" => $is_admin,
+            ":is_admin" => $is_admin ? 1 : 0,
         ));
 
         return $userid;
