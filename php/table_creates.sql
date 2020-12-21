@@ -27,7 +27,7 @@ create table user (
 );
 
 create table photo (
-                       photo_id int primary key auto_increment null,
+                       photo_id int primary key auto_increment,
                        user_id int,
                        path text,
                        title text,
