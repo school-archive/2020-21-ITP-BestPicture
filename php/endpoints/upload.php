@@ -8,14 +8,14 @@ if ($userid == null)
 if (!isset($_POST["title"]) || !isset($_POST["desc"]))
     handleError("title or description missing");
 if (isset($_FILES["file"])) {
-    echo "<pre>\r\n";
-    echo htmlspecialchars(print_r($_FILES, 1));
-    echo "</pre>\r\n";
+//    echo "<pre>\r\n";
+//    echo htmlspecialchars(print_r($_FILES, 1));
+//    echo "</pre>\r\n";
 
     $img = image_parse($_FILES["file"]["tmp_name"], $_FILES["file"]["type"]);
     $new_img = image_scaledown($img);
 
-    echo "<br>" . $userid;
+//    echo "<br>" . $userid;
 
     $photoid = create_image_entry($userid, $_POST["title"], $_POST["desc"]);
     ob_start();
@@ -28,7 +28,7 @@ if (isset($_FILES["file"])) {
         $quality = 70;
     imagejpeg($new_img, "../../assets/images/uploads/" . $photoid . ".jpg", $quality);
 
-    echo "<br>photo id: $photoid<br>quality: $quality%<br>size: $size";
+//    echo "<br>photo id: $photoid<br>quality: $quality%<br>size: $size";
 
     header("Location: ../../comment/?id=$photoid");
 }
