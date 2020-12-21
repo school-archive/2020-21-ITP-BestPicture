@@ -4,7 +4,7 @@ require_once "../php/user.php";
 require_once "../php/photo.php";
 
 if(get_signed_in_user_id()==-1){
-    $url="needSignIn.html";
+    $url="../login/needSignIn.html";
     header("Location: " . $url);
     exit();
 }
