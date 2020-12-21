@@ -26,7 +26,7 @@ if(get_signed_in_user_id()!=-1){
     </header>
     <main>
         <section class="main">
-            <form class="form" method="post" action="../php/endpoints/index.php" enctype="multipart/form-data" class="form1">
+            <form class="form" method="post" action="../php/endpoints/upload.php" enctype="multipart/form-data" class="form1">
                 <div>
                     <a href="../index.php"> <div class="close"></div></a>
                     <p class="sign" align="center">Upload</p>
@@ -38,13 +38,11 @@ if(get_signed_in_user_id()!=-1){
                     </label>
                 </div>
                 <div>
-                    <form action="#">
-                        <div class="input-file-container">
-                            <input class="input-file" id="my-file" type="file">
-                            <label tabindex="0" for="my-file" class="input-file-trigger">Choose file</label>
-                        </div>
-                        <p class="file-return"></p>
-                    </form>
+                    <div class="input-file-container">
+                        <input class="input-file" id="file" name="file" type="file">
+                        <label tabindex="0" for="file" class="input-file-trigger">Choose file</label>
+                    </div>
+                    <p class="file-return"></p>
                     <button type="submit" class="submit">Upload</button>
                 </div>
             </form>

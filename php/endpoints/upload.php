@@ -5,10 +5,9 @@ require_once "../photo.php";
 $userid = get_signed_in_user_id();
 if ($userid == null)
     handleError("not signed in");
-var_dump($_POST);
 if (!isset($_POST["title"]) || !isset($_POST["desc"]))
     handleError("title or description missing");
-if (!empty($_FILES)) {
+if (isset($_FILES["file"])) {
     echo "<pre>\r\n";
     echo htmlspecialchars(print_r($_FILES, 1));
     echo "</pre>\r\n";
@@ -30,6 +29,8 @@ if (!empty($_FILES)) {
     imagejpeg($new_img, "../../assets/images/uploads/" . $photoid . ".jpg", $quality);
 
     echo "<br>photo id: $photoid<br>quality: $quality%<br>size: $size";
+
+    header("Location: ../../comment/?id=$photoid");
 }
 
 /**

@@ -1,5 +1,6 @@
 <?php
     require_once "../php/user.php";
+    require_once "../php/microsoft_login.php";
 
     if(get_signed_in_user_id()!==-1) {
         header('Location: ./abmelden.html');
@@ -188,7 +189,7 @@
             <input class="un " type="text" align="center" placeholder="E-Mail" id="email">
             <input class="pass" type="password" align="center" placeholder="Passwort" id="password">
             <a class="submit" align="center" id="submit">Login</a><br>
-            <div class="microsoft"></div>
+            <a href="<?php echo get_login_url() ?>"><div class="microsoft"></div></a>
             <p class="login" align="center"><a href="registrieren.html">Registrieren</a></p>
         </form>
     </div>

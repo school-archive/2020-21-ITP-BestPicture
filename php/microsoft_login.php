@@ -6,7 +6,7 @@
      */
 
     $client_id = "e0815f2b-43c6-4f43-a71e-537fa2a93e60";
-    $redirect_uri = "http%3A%2F%2Flocalhost%2Fphp%2Fauthtest%2F";
+    $redirect_uri = urlencode("http://localhost/Schule/4AI_2021/ITP/BestPicture/php/authtest/");
     $url = "https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=$client_id&scope=user.read&prompt=select_account&response_type=code&redirect_uri=$redirect_uri";
 
     /*
@@ -16,7 +16,6 @@
         $client_id = "e0815f2b-43c6-4f43-a71e-537fa2a93e60";
         $redirect_uri = urlencode("http://localhost/Schule/4AI_2021/ITP/BestPicture/php/authtest/");
         $url = "https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=$client_id&scope=user.read&prompt=select_account&response_type=code&redirect_uri=$redirect_uri";
-
         return $url;
     }
 
