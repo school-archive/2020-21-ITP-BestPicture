@@ -47,7 +47,9 @@ html, body{
     font-family: acumin-pro-semi-condensed, "Source Code Pro Semibold";
     font-weight: 550;
     font-style: normal;
-    padding: 63px;
+    padding-left: 63px;
+    padding-top: 50px;
+    padding-bottom: 0px;
     font-size: 60px;
     color: #70C8FA;
 
@@ -78,8 +80,8 @@ html, body{
     font-family: acumin-pro-semi-condensed, sans-serif;
     font-stretch: condensed;
     font-size: 30px;
-    padding: 50px;
     color: #70C8FA;
+    padding-bottom: 20px;
 }
 
 .year{
@@ -156,4 +158,60 @@ footer a{
     justify-content: center;
     padding: 10px;
 }
+
+.countdown {
+    font-family: acumin-pro, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    padding-left: 31%;
+
+
+}
+
+.countdown  h1 {
+    font-weight: normal;
+}
+
+.countdown ul{
+    width: 530px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    background: linear-gradient(to right, #5B5FE3, #70C8FA);
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'acumin-pro', sans-serif;
+    margin-left: 35%;
+    font-size: 13px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.04);
+}
+
+.countdown li {
+    display: inline-block;
+    font-size: 20px;
+    list-style-type: none;
+    padding: 1em;
+
+}
+
+li span {
+    display: block;
+    font-size: 20px;
+}
+
+.message {
+    font-size: 4rem;
+}
+
+.erg {
+    display: none;
+}
+
+
+
 

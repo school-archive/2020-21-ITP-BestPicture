@@ -16,6 +16,43 @@ require_once "php/user.php";
     <link href="assets/styles/navbar.css" rel="stylesheet">
     <link href="assets/styles/gallery.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+    <script>
+        'use strict';
+        (function () {
+            const second = 1000,
+                minute = second * 60,
+                hour = minute * 60,
+                day = hour * 24;
+
+            let birthday = "Jan 10, 2021 00:00:50",
+                countDown = new Date(birthday).getTime(),
+                x = setInterval(function() {
+
+                    let now = new Date().getTime(),
+                        distance = countDown - now;
+
+                    document.getElementById("days").innerText = Math.floor(distance / (day)),
+                        document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+                        document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+                        document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+
+                    //do something later when date is reached
+                    if (distance < 0) {
+                        let headline = document.getElementById("headline"),
+                            countdown = document.getElementById("countdown"),
+                            content = document.getElementById("erg");
+
+                        headline.innerText = "Best Picture gewonnen hat: Name";
+                        countdown.style.display = "none";
+                        content.style.display = "block";
+
+                        clearInterval(x);
+                    }
+                    //seconds
+                }, 0)
+        }());
+    </script>
 </head>
 <body>
 <div class="box-area">
@@ -38,7 +75,6 @@ require_once "php/user.php";
 
 <div class="text content-area">
     <h2>Best Picture </h2>
-    <!--            <span class="year" style="font-style: italic">2020</span>-->
     <div class="container">
         <div class="item1">
             <p class="ue1">Fotowettbewerb HTL Rennweg</p>
@@ -47,10 +83,17 @@ require_once "php/user.php";
                 perspiciatis suscipit voluptatibus! </p>
         </div>
         <div class="item2">
-            <p class="ue1">Teilnehmer:</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, esse est iste magni reprehenderit
-                saepe sint! Assumenda consectetur fugit sit tempore. Architecto blanditiis deleniti, est fuga iusto
-                perspiciatis suscipit voluptatibus! </p>
+            <p class="ue1">Gewinner 2020</p>
+             <div class="countdown">
+                <div id="countdown">
+                    <ul>
+                        <li><span id="days"></span>Tage</li>
+                        <li><span id="hours"></span>Stunden</li>
+                        <li><span id="minutes"></span>Minuten</li>
+                        <li><span id="seconds"></span>Sekunden</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -100,3 +143,4 @@ require_once "php/user.php";
 </div>
 </body>
 </html>
+
