@@ -47,7 +47,8 @@ if (get_signed_in_user_id() == -1) {
                         <label tabindex="0" for="file" class="input-file-trigger">Choose file</label>
                     </div>
                     <p class="file-return"></p>
-                    <button type="submit" class="submit">Upload</button>
+                    <button type="submit" class="submit">Upload</button><br>
+                    <input type="checkbox" name="check" id="agb" value="1" required>AGBs zustimmen<br>
                 </div>
             </form>
         </section>
