@@ -20,6 +20,21 @@
     }
 
     /**
+     * startet einen neuen wettbewerb und stoppt den alten, falls noch einer läuft
+     */
+    function add_contest_entry($photoid) {
+        if (get_current_contest_id() == -1)
+            return;
+
+        $s = get_bp_mysql_object()->
+        prepare("insert into contest_entry (photo_id, contest_id) values (:photoid, :contestid)");
+        $s->execute(array(
+            ":photoid" => $photoid,
+            ":contestid" => get_current_contest_id()
+        ));
+    }
+
+    /**
      * stoppt den aktuellen wettbewerb und speichert den gewinner
      */
     function stop_contest() {
