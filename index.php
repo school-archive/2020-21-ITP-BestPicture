@@ -18,6 +18,7 @@ require_once "php/user.php";
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
 </head>
 <body>
+<script type="text/javascript" src="https://cookieconsent.popupsmart.com/src/js/popper.js"></script><script> window.start.init({Palette:"palette6",Mode:"floating left",Theme:"wire",Time:"5",})</script>
 <div class="box-area">
     <header>
         <div class="wr">
@@ -42,9 +43,8 @@ require_once "php/user.php";
     <div class="container">
         <div class="item1">
             <p class="ue1">Fotowettbewerb HTL Rennweg</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, esse est iste magni reprehenderit
-                saepe sint! Assumenda consectetur fugit sit tempore. Architecto blanditiis deleniti, est fuga iusto
-                perspiciatis suscipit voluptatibus! </p>
+            
+            </p>
         </div>
         <div class="item2">
             <p class="ue1">Teilnehmer:</p>
