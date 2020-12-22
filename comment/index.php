@@ -80,7 +80,7 @@
                         }
                     ?>
                 </div>
-                <form>
+                <form action="javascript:void(0);" class="co">
                     <input type="text" id="text" placeholder="Kommentar hinzufügen...">
                     <a id="submit">Posten</a>
                 </form>

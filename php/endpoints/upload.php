@@ -1,6 +1,7 @@
 <?php
 require_once "../user.php";
 require_once "../photo.php";
+require_once "../contest.php";
 
 $userid = get_signed_in_user_id();
 if ($userid == null)
@@ -27,6 +28,9 @@ if (isset($_FILES["file"])) {
     if ($size > 1000000)
         $quality = 70;
     imagejpeg($new_img, "../../assets/images/uploads/" . $photoid . ".jpg", $quality);
+
+    if (get_current_contest_id() != -1)
+        add_contest_entry($photoid);
 
 //    echo "<br>photo id: $photoid<br>quality: $quality%<br>size: $size";
 
