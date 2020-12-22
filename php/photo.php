@@ -84,7 +84,7 @@
 
     function get_date_by_photoid($photoid) {
         $date = get_photo_by_id($photoid)['date'];
-        $array2 = explode('\ ', $date);
+        $array2 = explode(' ', $date);
         $array = explode('-', $array2[0]);
         return "$array[2].$array[1].$array[0]";
     }
