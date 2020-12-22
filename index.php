@@ -63,7 +63,7 @@ require_once "php/user.php";
         foreach ($photos as $photo) {
 
             $id = $photo['photo_id'];
-            $path = substr($photo['path'], 4);
+            $path = $photo['path'];
             $namePhoto = $photo['title'];
             $photografer = get_username_by_photo($photo['photo_id']);
 

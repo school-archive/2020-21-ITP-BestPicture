@@ -38,7 +38,7 @@
                 <?php
                     $id=$_GET['id'];
                     $photo= get_photo_by_id($id);
-                    $path = substr($photo['path'], 1);
+                    $path = '../' .$photo['path'];
                     $namePhoto = $photo['title'];
                     $photografer = get_username_by_photo($id);
                     $date = get_date_by_photoid($id);

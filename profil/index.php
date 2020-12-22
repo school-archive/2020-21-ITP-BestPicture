@@ -51,7 +51,7 @@ if(get_signed_in_user_id()==-1){
                 <?php
                     $photos = get_all_photos_by_user($userid);
                     foreach ($photos as $photo) {
-                        $path = substr($photo['path'], 1);
+                        $path = '../' .$photo['path'];
                         $photoid = $photo['photo_id'];
                         echo "<a href='../comment/index.php?id=$photoid' class='gallary-link'>
                                 <img src='$path' class='content-picture'>
