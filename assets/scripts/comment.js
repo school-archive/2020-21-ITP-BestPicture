@@ -40,11 +40,13 @@
 
             xmlhttp.addEventListener("load", function () {
                 console.log(this.responseText)
-                document.getElementById('text').value = '';
-                let name = this.responseText;
-                let child = document.createElement('div');
-                child.innerHTML = `<div>${name}</div><div>${comment}</div>`
-                document.getElementById('myBox').appendChild(child);
+                if(this.responseText.split('#')[0]!=='error') {
+                    document.getElementById('text').value = '';
+                    let name = this.responseText.substr(1);
+                    let child = document.createElement('div');
+                    child.innerHTML = `<div>${name}</div><div>${comment}</div>`
+                    document.getElementById('myBox').appendChild(child);
+                }
             });
 
             xmlhttp.open("get", `../php/endpoints/post_comment.php?photoid=${id}&comment=${comment}`, true);

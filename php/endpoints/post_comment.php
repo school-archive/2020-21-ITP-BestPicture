@@ -4,7 +4,7 @@ require_once "../photo.php";
 require_once "../comment.php";
 
 $userid = get_signed_in_user_id();
-if ($userid == null)
+if ($userid === -1)
     handleError("not signed in");
 
 if (!isset($_GET["photoid"])) {
@@ -14,13 +14,10 @@ if (!isset($_GET["photoid"])) {
 } else {
     filterComment($_GET["photoid"], $_GET["comment"]);
     $user =  get_signed_in_user();
-    echo $user['vorname'] .' ' .$user['nachname'];
+    echo '#' .$user['vorname'] .' ' .$user['nachname'];
 }
 
 function handleError($msg) {
-    header("Content-Type: application/json");
-    echo json_encode(array(
-        "success" => false,
-        "message" => $msg
-    ));
+    echo 'error#';
+    exit();
 }
