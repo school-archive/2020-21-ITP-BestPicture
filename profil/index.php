@@ -46,6 +46,7 @@ if(get_signed_in_user_id()==-1){
                     <p class="acc"><span class="bold"><?php echo $likes ?></span> Likes</p>
                     <p class="acc"><span class="bold"><?php echo $posts ?></span>  Posts</p>
                 </div>
+                <a href="../admin%20panel.html" class="submit" id="submit">Admin Panel</a>
             </article>
             <div class="wrapper">
                 <?php
