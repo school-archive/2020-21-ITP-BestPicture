@@ -42,7 +42,8 @@
                 console.log(this.responseText)
                 document.getElementById('text').value = '';
                 let name = this.responseText;
-                let child = document.createTextNode(`<div><div>${name}</div><div>${comment}</div></div>`);
+                let child = document.createElement('div');
+                child.innerHTML = `<div>${name}</div><div>${comment}</div>`
                 document.getElementById('myBox').appendChild(child);
             });
 
