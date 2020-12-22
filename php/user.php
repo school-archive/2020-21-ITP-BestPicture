@@ -48,7 +48,7 @@
      * Liefert Summe aller hochgeladenen Fotos von einem User
      */
     function get_count_photos_of_user($userid) {
-        $s = get_bp_mysql_object()->prepare("select count(photo_id) as posts from user u join photo p on u.user_id = p.user_id where p.user_id = :userid;");
+        $s = get_bp_mysql_object()->prepare("select count(photo_id) as posts from user u join photo p on u.user_id = p.user_id where p.user_id = :userid and approved_by_admins;");
         $s->execute(array(
             ":userid" => $userid
         ));
