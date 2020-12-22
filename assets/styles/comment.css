@@ -29,7 +29,7 @@ body > section, #nebeneinander, #kommentar > div > div {
     font-style: italic;
 }
 
-#lesezeichen, #lesezeichen_left, #kommentar > form {
+#lesezeichen, #lesezeichen_left, .co {
     display: flex;
     width: 44vw;
 }
@@ -80,7 +80,7 @@ body > section, #nebeneinander, #kommentar > div > div {
     margin-top: 15px;
 }
 
-#kommentar > div, #kommentar > h3, #kommentar > form > input {
+#kommentar > div, #kommentar > h3, .co > input {
     padding-left: 4px;
 }
 
@@ -92,12 +92,12 @@ body > section, #nebeneinander, #kommentar > div > div {
     margin-right: 5px;
 }
 
-#kommentar > div > div > div:last-child, #kommentar > form > input::placeholder {
+#kommentar > div > div > div:last-child, .co > input::placeholder {
     font-weight: 100;
     font-style: italic;
 }
 
-#kommentar > form {
+.co {
     border-top: 2px solid lightgray;
 }
 
@@ -110,15 +110,15 @@ body > section, #nebeneinander, #kommentar > div > div {
     padding-right: 4px;
 }
 
-#kommentar > form > input {
+#text {
     border: none;
     font-size: medium;
     width: 44vw;
 }
-#kommentar > form > input::placeholder {
+.co > input::placeholder {
     color: darkgray;
 }
-#kommentar > form > input:focus {
+.co > input:focus {
     outline: none;
 }
 
