@@ -34,7 +34,7 @@ if (isset($_FILES["file"])) {
 
 //    echo "<br>photo id: $photoid<br>quality: $quality%<br>size: $size";
 
-    header("Location: ../../comment/?id=$photoid");
+    header("Location: ../../index.php");
 }
 
 /**
