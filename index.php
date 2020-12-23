@@ -54,16 +54,33 @@ require_once "php/user.php";
         }());
     </script>
 </head>
+
 <body>
 <script type="text/javascript" src="https://cookieconsent.popupsmart.com/src/js/popper.js"></script>
 <script> window.start.init({Palette:"palette6",Mode:"floating left",Theme:"wire",Time:"1",})</script>
+
+<?php
+    $contestid = get_last_finished_contest_id();
+    if(gettype($contestid)!='NULL') {
+        $winner = get_contest_winner($contestid)['photo_id'];
+        $winnerphoto = get_photo_by_id($winner)['path'];
+    } else {
+        $winnerphoto = 'assets/images/mountain.jpg';
+    }
+?>
+<style>
+    .hintergrund {
+        background-image: url("<?php echo $winnerphoto ?>");
+}
+</style>
+
 <div class="box-area">
-    <header>
-        <div class="wr">
-            <a href="index.php"> <img class="logo" src="assets/images/Logo.png" alt="logo"></a>
-            <nav>
-                <a href="index.php">Home</a>
-                <?php echo ((get_signed_in_user_id()!==-1) ? '<a href="login/abmelden.html">Abmelden</a>' : '<a href="login/login.php">Anmelden</a>'); ?>
+<header>
+    <div class="wr">
+        <a href="index.php"> <img class="logo" src="assets/images/Logo.png" alt="logo"></a>
+        <nav>
+            <a href="index.php">Home</a>
+            <?php echo ((get_signed_in_user_id()!==-1) ? '<a href="login/abmelden.html">Abmelden</a>' : '<a href="login/login.php">Anmelden</a>'); ?>
                 <a href="upload/index.php">Upload</a>
                 <a href="profil/index.php"> <img class="user" src="assets/images/user.png" alt="user">
                 </a>

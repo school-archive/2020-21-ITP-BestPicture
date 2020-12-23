@@ -66,7 +66,7 @@
      */
     function get_contest_winner($contest_id=null) {
         if ($contest_id == null) $contest_id = get_current_contest_id();
-        $s = get_bp_mysql_object()->prepare("select entry_id, contest_id, count(entryrating_id) as 'num_ratings' from contest_entry left join entry_rating er on contest_entry.photo_id = er.photo_id where contest_id=:contestid group by entry_id order by num_ratings desc;");
+        $s = get_bp_mysql_object()->prepare("select er.photo_id as photo_id, entry_id, contest_id, count(entryrating_id) as 'num_ratings' from contest_entry left join entry_rating er on contest_entry.photo_id = er.photo_id where contest_id=:contestid group by entry_id order by num_ratings desc;");
         $s->execute(array(":contestid" => $contest_id));
         return $s->fetch();
     }
@@ -77,4 +77,11 @@
         $s = get_bp_mysql_object()->prepare("select * from photo p left join contest_entry ce on p.photo_id = ce.photo_id where contest_id = :contestid and approved_by_admins order by date desc");
         $s->execute(array(":contestid" => $contestid));
         return $s->fetchAll();
+    }
+
+    function get_last_finished_contest_id() {
+        $s = get_bp_mysql_object()->prepare("select contest_id from contest where end = (select max(end) from contest where winner_entry_id is not null);");
+        $s->execute();
+        $obj = $s->fetch();
+        return $obj['contest_id'];
     }
