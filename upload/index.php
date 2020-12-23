@@ -48,7 +48,9 @@ if (get_signed_in_user_id() == -1) {
                     </div>
                     <p class="file-return"></p>
                     <button type="submit" class="submit">Upload</button><br>
-                    <input type="checkbox" name="check" id="agb" value="1" required>AGBs zustimmen<br>
+                    <label>
+                        <input type="checkbox" name="check" id="agb" value="1" required>AGBs zustimmen<br>
+                    </label>
                 </div>
             </form>
         </section>
