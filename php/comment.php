@@ -9,8 +9,10 @@
 //        $blacklist = file_get_contents("cursewordlist.txt");
 //
 //        if(preg_match($blacklist, $comment)) {
+            $comment = htmlspecialchars($comment, ENT_QUOTES);
             saveComment($photo_id, $comment);
 //        }
+        return $comment;
     }
 
     /*

@@ -39,10 +39,12 @@
             let xmlhttp = new XMLHttpRequest();
 
             xmlhttp.addEventListener("load", function () {
-                console.log(this.responseText)
-                if(this.responseText.split('#')[0]!=='error') {
+                let response = JSON.parse(this.responseText);
+                console.log(response)
+                if(response['success']==='true') {
                     document.getElementById('text').value = '';
-                    let name = this.responseText.substr(1);
+                    let name = response['name']
+                    comment = response['comment']
                     let child = document.createElement('div');
                     child.innerHTML = `<div>${name}</div><div>${comment}</div>`
                     document.getElementById('myBox').appendChild(child);

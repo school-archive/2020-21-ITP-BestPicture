@@ -12,12 +12,18 @@ if (!isset($_GET["photoid"])) {
 } else if (!isset($_GET["comment"])) {
     handleError("comment content not set");
 } else {
-    filterComment($_GET["photoid"], $_GET["comment"]);
+    $comment = filterComment($_GET["photoid"], $_GET["comment"]);
     $user =  get_signed_in_user();
-    echo '#' .$user['vorname'] .' ' .$user['nachname'];
+    echo json_encode([
+        "success" => "true",
+        "name" => $user['vorname'] ." " .$user['nachname'],
+        "comment" => $comment
+    ]);
 }
 
 function handleError($msg) {
-    echo 'error#';
+    echo json_encode([
+      "success" => "false"
+    ]);
     exit();
 }
