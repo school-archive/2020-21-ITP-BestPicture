@@ -41,14 +41,18 @@
             xmlhttp.addEventListener("load", function () {
                 let response = JSON.parse(this.responseText);
                 console.log(response)
+
+                document.getElementById('text').value = '';
+                let child = document.createElement('div');
                 if(response['success']==='true') {
-                    document.getElementById('text').value = '';
                     let name = response['name']
                     comment = response['comment']
-                    let child = document.createElement('div');
                     child.innerHTML = `<div>${name}</div><div>${comment}</div>`
-                    document.getElementById('myBox').appendChild(child);
                 }
+                else {
+                    child.innerHTML = '<div></div><div>Dieser Kommentar enthält anstößige Worte und wird deshalb nicht gepostet</div>'
+                }
+                document.getElementById('myBox').appendChild(child);
             });
 
             xmlhttp.open("get", `../php/endpoints/post_comment.php?photoid=${id}&comment=${comment}`, true);

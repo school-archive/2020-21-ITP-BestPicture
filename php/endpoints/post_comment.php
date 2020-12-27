@@ -12,18 +12,25 @@ if (!isset($_GET["photoid"])) {
 } else if (!isset($_GET["comment"])) {
     handleError("comment content not set");
 } else {
-    $comment = filterComment($_GET["photoid"], $_GET["comment"]);
-    $user =  get_signed_in_user();
-    echo json_encode([
-        "success" => "true",
-        "name" => $user['vorname'] ." " .$user['nachname'],
-        "comment" => $comment
-    ]);
+    $commentArray = filterComment($_GET["photoid"], $_GET["comment"]);
+    if($commentArray['success']) {
+        $user =  get_signed_in_user();
+        $comment = $commentArray['comment'];
+        echo json_encode([
+            "success" => "true",
+            "name" => $user['vorname'] ." " .$user['nachname'],
+            "comment" => $comment
+        ]);
+    }
+    else {
+        handleError('comment contains words from blacklist');
+    }
 }
 
 function handleError($msg) {
     echo json_encode([
-      "success" => "false"
+        "success" => "false",
+        "message" => $msg
     ]);
     exit();
 }
