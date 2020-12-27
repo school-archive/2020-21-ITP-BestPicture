@@ -50,8 +50,9 @@ body > section, #nebeneinander, #kommentar > div > div {
 
 #upload {
     width: 44vw;
-    height: auto;
+    height: 60vh;
     border-radius: 4%;
+    object-fit: contain;
 }
 
 #section_left {
