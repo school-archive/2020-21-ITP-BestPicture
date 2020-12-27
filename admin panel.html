@@ -114,7 +114,7 @@ Bild ID: <input id="photo-id" type="text"> <button id="delete-photo">Löschen</b
                 request_photo(update_preview);
             }
         });
-        req.open("get", "php/endpoints/adminpanel.php?action=delete_photo&photoid=" + photo_id.value);
+        req.open("get", "php/endpoints/adminpanel.php?action=delete_photo&photoid=" + cur_img.photo_id);
         req.send();
     })
 
