@@ -57,7 +57,14 @@ if(get_signed_in_user_id()==-1){
                     $photos = get_all_photos_by_user($userid);
 
                     if(sizeof($photos)==0) {
-                            echo "<div class='nix'>Es wurden noch keine Bilder hochgeladen</div>";
+                            echo " <section class=\"main2\">
+                                     <div class=\"form1\">
+                                            <a href=\"../index.php\"> <div class=\"close\"></div></a>
+                                            <p class=\"sign\" align=\"center\">Upload</p>
+                                            <p align=\"center\" class=\"un\">Es sind noch keine Bilder vorhanden. <a href='../upload/index.php'>Klick hier um welche hochzuladen</a></p>
+                                        </div>
+                                </section>
+                            ";
                     }
 
                     foreach ($photos as $photo) {
