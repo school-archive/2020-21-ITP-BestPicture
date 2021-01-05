@@ -27,7 +27,7 @@ require_once "php/user.php";
 
             let birthday = "Jan 10, 2021 00:00:50",
                 countDown = new Date(birthday).getTime(),
-                x = setInterval(function() {
+                x = setInterval(function () {
 
                     let now = new Date().getTime(),
                         distance = countDown - now;
@@ -57,30 +57,30 @@ require_once "php/user.php";
 
 <body>
 <script type="text/javascript" src="https://cookieconsent.popupsmart.com/src/js/popper.js"></script>
-<script> window.start.init({Palette:"palette6",Mode:"floating left",Theme:"wire",Time:"1",})</script>
+<script> window.start.init({Palette: "palette6", Mode: "floating left", Theme: "wire", Time: "1",})</script>
 
 <?php
-    $contestid = get_last_finished_contest_id();
-    if(gettype($contestid)!='NULL') {
-        $winner = get_contest_winner($contestid)['photo_id'];
-        $winnerphoto = get_photo_by_id($winner)['path'];
-    } else {
-        $winnerphoto = 'assets/images/mountain.jpg';
-    }
+$contestid = get_last_finished_contest_id();
+if (gettype($contestid) != 'NULL') {
+    $winner = get_contest_winner($contestid)['photo_id'];
+    $winnerphoto = get_photo_by_id($winner)['path'];
+} else {
+    $winnerphoto = 'assets/images/mountain.jpg';
+}
 ?>
 <style>
     .hintergrund {
         background-image: url("<?php echo $winnerphoto ?>");
-}
+    }
 </style>
 
 <div class="box-area">
-<header>
-    <div class="wr">
-        <a href="index.php"> <img class="logo" src="assets/images/Logo.png" alt="logo"></a>
-        <nav>
-            <a href="index.php">Home</a>
-            <?php echo ((get_signed_in_user_id()!==-1) ? '<a href="login/abmelden.html">Abmelden</a>' : '<a href="login/login.php">Anmelden</a>'); ?>
+    <header>
+        <div class="wr">
+            <a href="index.php"> <img class="logo" src="assets/images/Logo.png" alt="logo"></a>
+            <nav>
+                <a href="index.php">Home</a>
+                <?php echo((get_signed_in_user_id() !== -1) ? '<a href="login/abmelden.html">Abmelden</a>' : '<a href="login/login.php">Anmelden</a>'); ?>
                 <a href="upload/index.php">Upload</a>
                 <a href="profil/index.php"> <img class="user" src="assets/images/user.png" alt="user">
                 </a>
@@ -97,12 +97,36 @@ require_once "php/user.php";
     <div class="container">
         <div class="item1">
             <p class="ue1">Fotowettbewerb HTL Rennweg</p>
-
+            <p class="input">
+                Grundgedanke des Projektes ist, dass alle Schüler*innen der HTL Rennweg die Möglichkeit bekommen, ihre
+                eigenen Fotos in einem Wettbewerb zu veröffentlichen. Da unser Projekt ein Teil unserer Ausbildung an
+                der
+                HTL Rennweg ist, liegt es nahe, diesen Wettbewerb online auf einer Website zu verrichten. Das ist in der
+                momentanen Krisensituation dank COVID-19 vorteilhaft, da an dem Wettbewerb auch von Zuhause aus
+                teilgenommen werden kann.
             </p>
+            <p>Um an einem Wettbwerb teilnehmen zu können musst du folgende Schritte befolgen: <br>
+            <ul class="input">
+                <li>
+                    Melde dich an.
+                </li>
+                <li>
+                    Lade ein Bild hoch, um an dem Wettbewerb teilzunehmen. Die Anzahl der Bilder, welche du hochladen möchtest ist dir überlassen.
+                </li>
+                <li>
+                    Auf unserer Startseite werden in einer Gallerie alle Bilder der Teilnehmer des aktuellen Wettbewerbs dargestellt.
+                </li>
+                <li>
+                    Um genauere Informationen über ein Bild zu bekommen, gelangt man durch einen Klick auf die Infoseite des ausgewählten Bildes.
+                </li>
+                <li>
+                    Auf dieser Seite kannst du das Bild bewerten und einen Kommentar verfassen.
+                </li>
+            </ul>
         </div>
         <div class="item2">
             <p class="ue1">Gewinner 2020</p>
-             <div class="countdown">
+            <div class="countdown">
                 <div id="countdown">
                     <ul>
                         <li><span id="days"></span>Tage</li>

@@ -40,8 +40,6 @@ html, body{
     top: 840px;
     background: white;
     height: 80%;
-
-
 }
 .content-area h2 {
     font-family: acumin-pro-semi-condensed, "Source Code Pro Semibold";
@@ -210,6 +208,17 @@ li span {
 
 .erg {
     display: none;
+}
+
+.input{
+    text-decoration: none;
+    font-family: acumin-pro-semi-condensed, sans-serif;
+    font-style: normal;
+    font-size: 16px;
+}
+
+ul.input{
+    margin-left: 100px;
 }
 
 
