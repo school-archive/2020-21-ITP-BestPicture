@@ -79,7 +79,7 @@ if(get_signed_in_user_id()==-1){
         </div>
 
         <img class="logofooter" src="../assets/images/Logo.png" alt="logo">
-        <p class="agbs">Datenschutzerklärung | AGBs</p>
+        <a href="../rechte/rechte.php"><p class="agbs">Datenschutzerklärung | AGBs</p></a>
     </footer>
 </body>
 </html>
