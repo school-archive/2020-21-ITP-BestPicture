@@ -19,6 +19,8 @@
     body {
         background: url("../assets/images/login.jpg") no-repeat;
         font-family: acumin-pro, sans-serif;
+        width: 100%;
+        height: auto;
     }
 
     .main {
@@ -194,6 +196,7 @@
 </style>
 
 <body>
+
     <div class="alert" id="alert">
         <span id="closebtn">&times;</span>
         <div id="error"></div>

@@ -21,7 +21,9 @@ require_once "../php/user.php";
     }
 
     section {
-        padding: 100px;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-top: 50px;
         text-align: center;
     }
 
