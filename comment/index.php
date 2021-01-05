@@ -15,16 +15,16 @@
         die();
     }
 ?>
-<!DOCTYPE html>
+<!DOCTYPE html>ASD
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>BestPicture</title>
 
     <link rel="stylesheet" href="https://use.typekit.net/hhh6sjk.css">
-    <link href="../assets/styles/navbar.css" rel="stylesheet">
     <link href="../assets/styles/footer.css" rel="stylesheet">
     <link href="../assets/styles/comment.css" rel="stylesheet">
+    <link href="../assets/styles/navbar.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon.ico">
 
     <script type="text/javascript" src="../assets/scripts/comment.js"></script>

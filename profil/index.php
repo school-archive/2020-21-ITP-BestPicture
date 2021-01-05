@@ -55,6 +55,11 @@ if(get_signed_in_user_id()==-1){
             <div class="wrapper">
                 <?php
                     $photos = get_all_photos_by_user($userid);
+
+                    if(sizeof($photos)==0) {
+                            echo "<div class='nix'>Es wurden noch keine Bilder hochgeladen</div>";
+                    }
+
                     foreach ($photos as $photo) {
                         $path = '../' .$photo['path'];
                         $photoid = $photo['photo_id'];
