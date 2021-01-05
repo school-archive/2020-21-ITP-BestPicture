@@ -3,6 +3,17 @@
     require_once "../php/comment.php";
     require_once "../php/photo.php";
     require_once "../php/user.php";
+
+    if(isset($_GET['id'])) {
+        if(!is_array(get_photo_by_id($_GET['id']))) {
+            http_response_code(404);
+            die();
+        }
+    }
+    else {
+        http_response_code(404);
+        die();
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
