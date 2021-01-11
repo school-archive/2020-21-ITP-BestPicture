@@ -114,7 +114,7 @@
             <article>
                 <h1>Beschreibung des Bildes:</h1>
                 <p id="beschreibung">
-                    <?php echo $beschreibung ?>
+                    <?php echo htmlspecialchars($beschreibung) ?>
                 </p>
             </article>
         </section>
