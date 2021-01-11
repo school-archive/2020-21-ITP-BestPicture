@@ -36,7 +36,11 @@ $posts = get_count_photos_of_user($userid);
     <div class="wrapper">
         <a href="../index.php"> <img class="logo" src="../assets/images/Logo.png" alt="logo"></a>
         <nav>
-            <a href="../index.php">Home</a> <a href="../login/abmelden.html">Abmelden</a> <a href="../upload/index.php">Upload</a>
+            <a href="../index.php">Home</a> <?php
+            if (get_signed_in_user()['is_admin'] == 1) {
+                echo '<a href="../admin%20panel.html">Admin Panel</a>';
+            }
+            ?> <a href="../login/abmelden.html">Abmelden</a> <a href="../upload/index.php">Upload</a>
             <a href="index.php"> <img class="user" src="../assets/images/user.png" alt="user"> </a>
         </nav>
 
