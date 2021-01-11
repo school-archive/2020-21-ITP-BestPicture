@@ -43,12 +43,12 @@ $posts = get_count_photos_of_user($userid);
     </div>
 </header>
 <main>
-    <?php
-    if (get_signed_in_user()['is_admin'] == 1) {
-        echo '<a href="../admin%20panel.html" class="submit" id="submit">Admin Panel</a>';
-    }
-    ?>
     <div class="text content-area">
+        <?php
+        if (get_signed_in_user()['is_admin'] == 1) {
+            echo '<a href="../admin%20panel.html" class="submit" id="submit">Admin Panel</a>';
+        }
+        ?>
         <article class="wrapper profil">
             <!--<img class="bo boimg-1" src="../assets/images/Logo_light.jpg" alt="placehold">-->
             <div class="text">
