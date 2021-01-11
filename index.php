@@ -10,7 +10,7 @@ require_once "php/user.php";
 <head>
     <meta charset="UTF-8">
     <title>Best Picture</title>
-    <link rel="stylesheet" href="https://use.typekit.net/hhh6sjk.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
     <link rel="stylesheet" href="https://use.typekit.net/hhh6sjk.css">
     <link href="assets/styles/main.css" rel="stylesheet">
     <link href="assets/styles/navbar.css" rel="stylesheet">
@@ -56,8 +56,8 @@ require_once "php/user.php";
 </head>
 
 <body>
-<script type="text/javascript" src="https://cookieconsent.popupsmart.com/src/js/popper.js"></script>
-<script> window.start.init({Palette: "palette6", Mode: "floating left", Theme: "wire", Time: "1",})</script>
+<!--<script type="text/javascript" src="https://cookieconsent.popupsmart.com/src/js/popper.js"></script>
+<script> window.start.init({Palette: "palette6", Mode: "floating left", Theme: "wire", Time: "1",})</script> -->
 
 <?php
 $contestid = get_last_finished_contest_id();
@@ -183,6 +183,22 @@ if (gettype($contestid) != 'NULL') {
         <a href="rechte/rechte.php"><p class="agbs">Datenschutzerklärung | AGBs</p></a>
     </footer>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+    window.cookieconsent.initialise({
+        "palette": {
+            "popup": { "background": "rgba(240,240,248,0.5)", "text": "#fffff"},
+            "button": { "background": "#5B5FE3"}},
+        "theme": "edgeless",
+        "position": "bottom-left",
+        "content": {
+            "message": "Diese Webseite verwendet Cookies, um Ihnen ein angenehmeres Surfen zu ermöglichen.",
+            "dismiss": "Got it!",
+            "link": "Learn more",
+            "href": "https://www.cookiesandyou.com/"
+        }
+    });
+</script>
 </body>
 </html>
 
