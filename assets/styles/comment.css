@@ -1,7 +1,6 @@
 *{
     font-family: acumin-pro-semi-condensed, sans-serif;
     font-style: normal;
-    font-weight: 600;
     line-height: 30px;
     margin: 0;
     padding: 0;
@@ -9,6 +8,10 @@
 
 body > section, #nebeneinander, #kommentar > div > div {
     display: flex;
+}
+
+section {
+    font-weight: 600;
 }
 
 #nebeneinander {
