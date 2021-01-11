@@ -51,8 +51,8 @@ $posts = get_count_photos_of_user($userid);
         <article class="wrapper profil">
             <!--<img class="bo boimg-1" src="../assets/images/Logo_light.jpg" alt="placehold">-->
             <div class="text">
-                <p id="h5"><?php echo $name ?></p>
-                <p class="acc"><span class="bold"><?php echo $email ?></span></p>
+                <p id="h5"><?php echo $name ?></p><br>
+                <p class="acc" id="mail"><span class="bold"><?php echo $email ?></span></p>
                 <p class="acc"><span class="bold"><?php echo $likes ?></span> Likes</p>
                 <p class="acc"><span class="bold"><?php echo $posts ?></span> Posts</p>
             </div>
