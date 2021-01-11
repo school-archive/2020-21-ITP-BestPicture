@@ -39,7 +39,7 @@ html, body{
     /*position: relative;*/
     top: 840px;
     background: white;
-    height: 80%;
+    height: 45em;
 }
 .content-area h2 {
     font-family: acumin-pro-semi-condensed, "Source Code Pro Semibold";
@@ -100,11 +100,6 @@ html, body{
 
 
 .wrapper {
-    width: 100%;
-    height: 100%;
-}
-
-.content-area{
     width: 100%;
     height: 100%;
 }
