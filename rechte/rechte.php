@@ -197,7 +197,6 @@ require_once "../php/user.php";
     <h1 class="ue1">Datenschutzerklärung</h1>
     <h2 id="datenschutz" class="adsimple-121400314">Datenschutz</h2>
     <p>Wir haben diese Datenschutzerklärung (Fassung 01.01.1970-121400314) verfasst, um Ihnen gemäß der Vorgaben der <a
-                decorated="" class="adsimple-121400314"
                 href="https://eur-lex.europa.eu/legal-content/DE/ALL/?uri=celex%3A32016R0679&tid=121400314"
                 target="_blank"
                 rel="noopener noreferrer">Datenschutz-Grundverordnung (EU) 2016/679</a> zu erklären, welche
@@ -207,13 +206,13 @@ require_once "../php/user.php";
     </p>
     <p>Leider liegt es in der Natur der Sache, dass diese Erklärungen sehr technisch klingen, wir haben uns bei der
         Erstellung jedoch bemüht die wichtigsten Dinge so einfach und klar wie möglich zu beschreiben.</p>
-    <h2 id="automatische-datenspeicherung" class="adsimple-121400314">Automatische Datenspeicherung</h2>
+    <h2 >Automatische Datenspeicherung</h2>
     <p>Wenn Sie heutzutage Webseiten besuchen, werden gewisse Informationen automatisch erstellt und gespeichert, so
         auch
         auf dieser Webseite.</p>
     <p>Wenn Sie unsere Webseite so wie jetzt gerade besuchen, speichert unser Webserver (Computer auf dem diese Webseite
         gespeichert ist) automatisch Daten wie</p>
-    <ul class="">
+    <ul>
         <li>die Adresse (URL) der aufgerufenen Webseite</li>
         <li>Browser und Browserversion</li>
         <li>das verwendete Betriebssystem</li>
@@ -231,7 +230,7 @@ require_once "../php/user.php";
     <p>Unsere Webseite verwendet HTTP-Cookies, um nutzerspezifische Daten zu speichern.<br/>
         Im Folgenden erklären wir, was Cookies sind und warum Sie genutzt werden, damit Sie die folgende
         Datenschutzerklärung besser verstehen.</p>
-    <h3 class="ue3">Was genau sind Cookies?</h3>
+    <h2 class="ue3">Was genau sind Cookies?</h2>
     <p>Immer wenn Sie durch das Internet surfen, verwenden Sie einen Browser. Bekannte Browser sind beispielsweise
         Chrome,
         Safari, Firefox, Internet Explorer und Microsoft Edge. Die meisten Webseiten speichern kleine Text-Dateien in
@@ -339,7 +338,7 @@ require_once "../php/user.php";
         Anleitung in
         Google mit dem Suchbegriff “Cookies löschen Chrome” oder “Cookies deaktivieren Chrome” im Falle eines Chrome
         Browsers.</p>
-    <h3 class="ue3">Wie sieht es mit meinem Datenschutz aus?</h3>
+    <h2 class="ue3">Wie sieht es mit meinem Datenschutz aus?</h2>
     <p>Seit 2009 gibt es die sogenannten „Cookie-Richtlinien“. Darin ist festgehalten, dass das Speichern von Cookies
         eine
         Einwilligung von Ihnen verlangt. Innerhalb der EU-Länder gibt es allerdings noch sehr unterschiedliche
@@ -347,14 +346,12 @@ require_once "../php/user.php";
         auf diese Richtlinien. In Österreich erfolgte aber die Umsetzung dieser Richtlinie in § 96 Abs. 3 des
         Telekommunikationsgesetzes (TKG).</p>
     <p>Wenn Sie mehr über Cookies wissen möchten und technische Dokumentationen nicht scheuen, empfehlen wir <a
-                decorated=""
-                class="adsimple-121400314"
                 href="https://tools.ietf.org/html/rfc6265"
                 target="_blank"
                 rel="nofollow noopener noreferrer">https://tools.ietf.org/html/rfc6265</a>,
         dem Request for Comments der Internet Engineering Task Force (IETF) namens “HTTP State Management Mechanism”.
     </p>
-    <h3 class="ue3">Speicherung persönlicher Daten</h3>
+    <h2 class="ue3">Speicherung persönlicher Daten</h2>
     <p>Persönliche Daten, die Sie uns auf dieser Website elektronisch übermitteln, wie zum Beispiel Name,
         E-Mail-Adresse,
         Adresse oder andere persönlichen Angaben im Rahmen der Übermittlung eines Formulars oder Kommentaren im Blog,
@@ -372,7 +369,7 @@ require_once "../php/user.php";
         Übertragung und den Schutz Ihrer Daten garantieren. Wir empfehlen Ihnen, vertrauliche Daten niemals
         unverschlüsselt
         per E-Mail zu übermitteln.</p>
-    <h3 class="ue3">Rechte laut Datenschutzgrundverordnung</h3>
+    <h2 class="ue3">Rechte laut Datenschutzgrundverordnung</h2>
     <p>Ihnen stehen laut den Bestimmungen der DSGVO und des österreichischen <a href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10001597&tid=121400314"
                                                                                 target="_blank"
                                                                                 rel="noopener noreferrer">Datenschutzgesetzes
@@ -398,7 +395,7 @@ require_once "../php/user.php";
                                                                                                  class="adsimple-121400314"
                                                                                                  href="https://www.dsb.gv.at/?tid=121400314">https://www.dsb.gv.at/</a>
         finden.</p>
-    <h3 class="ue3">Auswertung des Besucherverhaltens</h3>
+    <h2 class="ue3">Auswertung des Besucherverhaltens</h2>
     <p>In der folgenden Datenschutzerklärung informieren wir Sie darüber, ob und wie wir Daten Ihres Besuchs dieser
         Website
         auswerten. Die Auswertung der gesammelten Daten erfolgt in der Regel anonym und wir können von Ihrem Verhalten
@@ -406,7 +403,7 @@ require_once "../php/user.php";
         dieser Website nicht auf Ihre Person schließen.</p>
     <p>Mehr über Möglichkeiten dieser Auswertung der Besuchsdaten zu widersprechen erfahren Sie in der folgenden
         Datenschutzerklärung.</p>
-    <h3 class="ue3">TLS-Verschlüsselung mit https</h3>
+    <h2 class="ue3">TLS-Verschlüsselung mit https</h2>
     <p>Wir verwenden https um Daten abhörsicher im Internet zu übertragen (Datenschutz durch Technikgestaltung <a
                 href="https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679&from=DE&tid=121400314"
                 target="_blank" rel="noopener noreferrer">Artikel 25 Absatz 1 DSGVO</a>). Durch den Einsatz von TLS
@@ -416,7 +413,7 @@ require_once "../php/user.php";
         Schlosssymbol links oben im Browser und der Verwendung des Schemas https (anstatt http) als Teil unserer
         Internetadresse.</p>
 
-    <h3 class="ue3">Wie kann ich meine Daten löschen bzw. die Datenspeicherung verhindern?</h3>
+    <h2 class="ue3">Wie kann ich meine Daten löschen bzw. die Datenspeicherung verhindern?</h2>
     <p>Nach dem Datenschutzrecht der Europäischen Union haben Sie das Recht, Auskunft über Ihre Daten zu erhalten, sie
         zu
         aktualisieren, zu löschen oder einzuschränken. Mithilfe des Browser-Add-ons zur Deaktivierung von Google
@@ -456,8 +453,8 @@ require_once "../php/user.php";
            rel="noopener noreferrer">Microsoft Edge: Löschen und Verwalten von Cookies</a>
     </p>
 
-    <h3 class="ue3">Einwilligung&nbsp;gem&auml;&szlig; DSGVO zur Ver&ouml;ffentlichung von Personenfotos &bdquo;externer
-        Personen&ldquo; zu werblichen Zwecken</h3>
+    <h2 class="ue3">Einwilligung&nbsp;gem&auml;&szlig; DSGVO zur Ver&ouml;ffentlichung von Personenfotos &bdquo;externer
+        Personen&ldquo; zu werblichen Zwecken</h2>
 
     <p>m&ouml;chten wir, Best Picture, gerne Personenfotos zum Zwecke der werblichen Au&szlig;endarstellung unseres
         Unternehmens und ver&ouml;ffentlichen. </p>
@@ -510,7 +507,7 @@ require_once "../php/user.php";
         umfangreiche Rechte. Die vollst&auml;ndigen Informationen finden Sie unter
         www.domain-der-organisation/ihre-rechte-art-13-dsgvo.de</p>
     <p>&nbsp;</p>
-    <h3 class="ue3">Einwilligungserkl&auml;rung der Sorgeberechtigten zur werblichen Bildver&ouml;ffentlichung</h3>
+    <h2 class="ue3">Einwilligungserkl&auml;rung der Sorgeberechtigten zur werblichen Bildver&ouml;ffentlichung</h2>
 
     <p>m&ouml;chten wir, Best Picture, gerne Personenfotos zum Zwecke der Au&szlig;endarstellung unseres Unternehmens
         ver&ouml;ffentlichen. </p>
@@ -518,60 +515,47 @@ require_once "../php/user.php";
         Unternehmens anzufertigen und zu ver&ouml;ffentlichen. Werbliche Au&szlig;endarstellung umfasst insbesondere die
         Ver&ouml;ffentlichungen zur Veranstaltungsbewerbung, zur Illustration unserer Veranstaltungsangebote und
         Veranstaltungsaktivit&auml;ten. (Hier k&ouml;nnen Sie weitere Zwecke nennen)</p>
-    <p>&nbsp;</p>
+
     <p>Die Ver&ouml;ffentlichungen d&uuml;rfen erfolgen (Unzutreffendes ist zu streichen):</p>
-    <p>&nbsp;</p>
+
     <ul>
         <li>auf den Internetseiten unseres Unternehmens https://bestpictureproject.ml/ (hier alle Webpr&auml;senzen, auf
             denen das
             Bild zu sehen sein soll, benennen)
         </li>
-    </ul>
-    <p>&nbsp;</p>
-    <ul>
         <li>in unseren Druckmedien wie Flyer, Werbe- und Informationsbrosch&uuml;ren, Jahres- und Gesch&auml;ftsberichten</li>
-    </ul>
-    <p>&nbsp;</p>
-    <ul>
         <li>Weitergabe zum Zweck der &Ouml;ffentlichkeitsarbeit an Stellen wie Agenturen, Redaktionen oder freie
             Publizistinnen und Publizisten (diese m&uuml;ssen hier benannt werden)
         </li>
-    </ul>
-    <p>&nbsp;</p>
-    <ul>
         <li>in unseren Social Media Accounts der Netzwerke (genaue Benennung der Netzwerke und der Accounts
             erforderlich!)
         </li>
     </ul>
-    <p>&nbsp;</p>
-    <p>&nbsp; <strong>Das m&uuml;ssen Sie wissen:</strong></p>
-    <p>&nbsp;</p>
+    <p><strong>Das m&uuml;ssen Sie wissen:</strong></p>
     <p>Informationen im Internet sind weltweit zug&auml;nglich und k&ouml;nnen mit Suchmaschinen gefunden und mit
         anderen Informationen verkn&uuml;pft &nbsp;werden, woraus sich unter Umst&auml;nden Pers&ouml;nlichkeitsprofile
         &uuml;ber Ihr Kind erstellen lassen. Uns ist als Sorgeberechtigte bewusst, dass &nbsp;in das Internet gestellte
         Informationen einschlie&szlig;lich Fotos problemlos kopiert und weiterverbreitet werden k&ouml;nnen und &nbsp;dass
-        &nbsp;es &nbsp;spezialisierte Archivierungsdienste gibt, deren Ziel es ist, den Zustand bestimmter
+        es &nbsp;spezialisierte Archivierungsdienste gibt, deren Ziel es ist, den Zustand bestimmter
         Internetseiten dauerhaft zu dokumentieren. Dies kann dazu f&uuml;hren, dass im Internet ver&ouml;ffentlichte
         Informationen auch nach ihrer L&ouml;schung auf der Ursprungsseite weiterhin andernorts aufzufinden sind.</p>
     <p>&nbsp;</p>
-    <p>&nbsp;Soweit Sie in <strong>Social Media Ver&ouml;ffentlichungen</strong> einwilligen, m&uuml;ssen Sie als
+    <p>Soweit Sie in <strong>Social Media Ver&ouml;ffentlichungen</strong> einwilligen, m&uuml;ssen Sie als
         Sorgeberechtigte</p>
-    <p>&nbsp;wissen:</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;Soziale Netzwerke&nbsp; &bdquo;vermehren&ldquo; Inhalte, ohne dass wir auf die Anzahl der</p>
-    <p>&nbsp;Verbreitungshandlungen durch Nutzer Einfluss haben. Durch Kommentierungen und</p>
-    <p>&nbsp;anschlie&szlig;endes Teilen unserer Ursprungsver&ouml;ffentlichung mit dem Foto Ihres Kindes</p>
-    <p>&nbsp;besteht die theoretische M&ouml;glichkeit, dass unsere Ursprungsver&ouml;ffentlichung ung&uuml;nstig</p>
-    <p>&nbsp;kommentiert wird.&nbsp;&nbsp;</p>
-    <p>&nbsp;</p>
+    <p>wissen:</p>
+    <p>Soziale Netzwerke&nbsp; &bdquo;vermehren&ldquo; Inhalte, ohne dass wir auf die Anzahl der</p>
+    <p>Verbreitungshandlungen durch Nutzer Einfluss haben. Durch Kommentierungen und</p>
+    <p>anschlie&szlig;endes Teilen unserer Ursprungsver&ouml;ffentlichung mit dem Foto Ihres Kindes</p>
+    <p>besteht die theoretische M&ouml;glichkeit, dass unsere Ursprungsver&ouml;ffentlichung ung&uuml;nstig</p>
+    <p>kommentiert wird.&nbsp;&nbsp;</p>
     <p>Uns ist bekannt, dass wir diese Einwilligungserkl&auml;rung <strong>jederzeit mit&nbsp; Wirkung f&uuml;r die
             Zukunft widerrufen</strong> k&ouml;nnen. Der Widerruf bewirkt, dass ver&ouml;ffentlichte Fotos Ihres Kindes
         aus dem Internetauftritt entfernt werden und keine weiteren Fotos eingestellt werden.</p>
-    <p>&nbsp;</p>
+  
     <p>Beim &nbsp;Einstellen in bestimmte <strong>Social Media Angebote</strong> (z. B. Facebook) kann nicht
         sichergestellt werden, dass eine vollst&auml;ndige L&ouml;schung der Fotos m&ouml;glich ist.</p>
     <p>Wir haben zur Kenntnis genommen, dass eine L&ouml;schung der Bilder aus dem <strong>Internetauftritt </strong>(Websites)
-        unseres Unternehmens bis zu maximal &nbsp;drei Werktage nach Eingang unseres Widerrufs dauern kann. Bei <strong>Druckerzeugnissen</strong>
+        unseres Unternehmens bis zu maximal drei Werktage nach Eingang unseres Widerrufs dauern kann. Bei <strong>Druckerzeugnissen</strong>
         bewirkt Ihr Widerruf, dass wir in Neuauflagen der bereits gedruckten Erzeugnisse Ihr Foto nicht mehr ver&ouml;ffentlichen
         werden.</p>
 
@@ -588,20 +572,18 @@ require_once "../php/user.php";
     <p>Insbesondere steht Ihnen ein Widerspruchrecht gegen die Verarbeitung Ihrer personenbezogenen Daten zu. Wir werden
         in den einzelnen Abschnitten der Erkl&auml;rungen jeweils gesondert darauf hinweisen.</p>
     <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Name und Kontaktdaten des Verantwortlichen</h2>
+    <h2>Name und Kontaktdaten des Verantwortlichen</h2>
     <p>Wir, Best Picture, sind als Verantwortlicher im Sinne der DSGVO und des Bundesdatenschutzgesetzes (BDSG) sowie
         sonstiger datenschutzrechtlicher Bestimmungen f&uuml;r unsere Online-Datenbank unter der Adresse
         https://bestpictureproject.ml/ und
         die damit verbundenen Datenverarbeitungen zu bezeichnen. Umfassende Angaben zu unserem Unternehmen sind im
         Impressum &nbsp;zu finden.</p>
 
-    <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Empf&auml;nger der Daten</h2>
-    <h2>&nbsp;</h2>
+    <h2>Empf&auml;nger der Daten</h2>
     <p>Da wir keine externen Dienstleister zum Betrieb und zur Wartung des Portals besch&auml;ftigen, sind wir,
         BestPicutre, alleiniger Empf&auml;nger Ihrer Daten.</p>
-    <p>&nbsp;<strong>&nbsp;</strong></p>
-    <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Erl&auml;uterungen zu den einzelnen Datenverarbeitungen</h2>
+
+    <h2>Erl&auml;uterungen zu den einzelnen Datenverarbeitungen</h2>
     <p>Sie haben im Rahmen unseres Internetauftrittes die M&ouml;glichkeit Fotos zur honorarfreien Nutzung
         herunterzuladen und entsprechend unserer AGB zu nutzen. Nutzen Sie den Service unseres datenbankgest&uuml;tzten
         Bildportals, verarbeiten wir Ihre personenbezogenen Daten an vier Stellen der Nutzung. Diese sind</p>
@@ -612,11 +594,8 @@ require_once "../php/user.php";
         <li>Aktionen, die im eingeloggten Zustand vorgenommen werden</li>
     </ul>
     <p>Nachfolgend unter Punkt 1 bis 4 erfahren Sie hierzu genaueres.</p>
-    <p>&nbsp;</p>
-    <ol>
-        <li><strong> Informatorische Nutzung des Bildportals</strong></li>
-    </ol>
-    <h3>&nbsp;</h3>
+    <br>
+        <h2> Informatorische Nutzung des Bildportals</h2>
     <p>Mit dem Aufruf unseres Fotoportals zur reinen Betrachtung des Bildangebotes ist technisch bedingt die
         Verarbeitung von Besucherinformationen verbunden. Welche Ihrer Daten dabei erhoben und gespeichert werden,
         erfahren Sie nachfolgend.</p>
@@ -626,7 +605,6 @@ require_once "../php/user.php";
         speichern diese in sogenannten Server-Log-Files. Folgende Daten werden automatisch durch Ihren Browser bei einem
         Aufruf unserer Website &uuml;bertragen:</p>
     <ul>
-        <ul>
             <li>IP-Adresse des anfragenden Rechners</li>
             <li>Datum und Uhrzeit des Zugriffs</li>
             <li>Name und URL der abgerufenen Datei</li>
@@ -637,7 +615,6 @@ require_once "../php/user.php";
             <li>Zugriffsstatus des Web-Servers (Datei &uuml;bertragen, Datei nicht gefunden, Kommando nicht ausgef&uuml;hrt,
                 etc.)
             </li>
-        </ul>
     </ul>
     <p>&nbsp;</p>
     <p><strong>Zweck der Datenverarbeitung</strong></p>
@@ -662,11 +639,11 @@ require_once "../php/user.php";
         einschr&auml;nken und auch ganz verhindern, sowie die automatische L&ouml;schung von Cookies bei der Schlie&szlig;ung
         des Browserfensters veranlassen. Es ist jedoch m&ouml;glich, dass die Funktionalit&auml;t der Website damit
         nicht mehr voll gew&auml;hrleistet ist.</p>
-    <p>&nbsp;</p>
-    <ol start="2">
-        <li><strong>2</strong>. Datenverarbeitungen bei Recherche im Bildbestand &uuml;ber unsere &bdquo;Suchen-Funktion&ldquo;
-        </li>
-    </ol>
+
+
+    <p><strong>Datenverarbeitungen bei Recherche im Bildbestand &uuml;ber unsere &bdquo;Suchen-Funktion&ldquo;</strong></p>
+
+
     <p>Sobald Sie eine Foto-Suchanfrage mit der Eingabe von Suchbegriffen starten ohne dabei mit Ihrem Benutzerdaten
         eingeloggt zu sein, wird diese Eingabe eines Suchbegriffs in unserer Datenbank gespeichert. Eine Zusammenf&uuml;hrung
         von Suchanfragen und weiteren Daten, insbesondere Ihrer IP-Adresse, findet nicht statt. Damit ist gew&auml;hrleistet,
@@ -679,7 +656,7 @@ require_once "../php/user.php";
     <p><strong>Speicherdauer der Begriffe der Suchanfragen</strong></p>
     <p>Die Liste der Suchanfragen wird in der Regel monatlich gel&ouml;scht.</p>
     <p>&nbsp;</p>
-    <h3>3. Registrierung zur Berechtigung zum Download der Fotos</h3>
+    <h2>Registrierung zur Berechtigung zum Download der Fotos</h2>
     <p>Um Fotos herunterzuladen und diese dann entsprechend unserer AGB nutzen zu k&ouml;nnen, k&ouml;nnen Sie sich mit
         dem Namen Ihrer Organisation und Ihrer E-Mail Adresse registrieren. Nach einer Freischaltung durch uns steht
         Ihnen die Downloadfunktion f&uuml;r hochaufgel&ouml;ste Fotos zur Verf&uuml;gung. Ihre Registrierungsdaten
@@ -719,7 +696,7 @@ require_once "../php/user.php";
         Lizenzinformationen erfolgt dann innerhalb von 7 Werktagen nach Zugang Ihrer K&uuml;ndigung der
         Lizenzvereinbarung.</p>
     <p>&nbsp;</p>
-    <h3>4. Datenverarbeitungen als angemeldeter Nutzer</h3>
+    <h2>Datenverarbeitungen als angemeldeter Nutzer</h2>
     <p>Wenn Sie sich als registrierter Nutzer eingeloggt haben, sind Ihre Aktionen f&uuml;r uns sichtbar. Das bedeutet,
         wir k&ouml;nnen Ihrem Account (Ihren Anmeldedaten, Punkt 3) zuordnen, welche Bilder Sie suchen, anschauen und
         herunterladen. Weiter k&ouml;nnen wir feststellen, zu welchem Datum und zu welcher Zeit Sie sich eingeloggt
