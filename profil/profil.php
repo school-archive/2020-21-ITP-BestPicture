@@ -32,6 +32,12 @@ $email = $user['email'];
 $likes = get_count_likes_of_user($userid);
 $posts = get_count_photos_of_user($userid);
 ?>
+<style>
+    @keyframes typewriter{
+    from{width: 0;}
+    to{width: <?php echo strlen($name)?>em;}
+}
+</style>
 <header>
     <div class="wrapper">
         <a href="../index.php"> <img class="logo" src="../assets/images/Logo.png" alt="logo"></a>
