@@ -101,7 +101,7 @@
         <section id="section_right">
             <article id="nebeneinander">
                 <div>
-                    <div><?php echo $namePhoto ?></div>
+                    <div><?php echo htmlspecialchars($namePhoto) ?></div>
                     <div><?php echo $photografer ?></div>
                     <div><?php echo $date ?></div>
                 </div>
