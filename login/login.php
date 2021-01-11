@@ -19,8 +19,7 @@
     body {
         background: url("../assets/images/login.jpg") no-repeat;
         font-family: acumin-pro, sans-serif;
-        width: 100%;
-        height: auto;
+        background-size: 100%;
     }
 
     .main {

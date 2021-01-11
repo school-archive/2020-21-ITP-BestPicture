@@ -25,7 +25,7 @@ require_once "php/user.php";
                 hour = minute * 60,
                 day = hour * 24;
 
-            let birthday = "Jan 10, 2021 00:00:50",
+            let birthday = "Jan 17, 2021 00:00:00",
                 countDown = new Date(birthday).getTime(),
                 x = setInterval(function () {
 
@@ -111,13 +111,16 @@ if (gettype($contestid) != 'NULL') {
                     Melde dich an.
                 </li>
                 <li>
-                    Lade ein Bild hoch, um an dem Wettbewerb teilzunehmen. Die Anzahl der Bilder, welche du hochladen möchtest ist dir überlassen.
+                    Lade ein Bild hoch, um an dem Wettbewerb teilzunehmen. Die Anzahl der Bilder, welche du hochladen
+                    möchtest ist dir überlassen.
                 </li>
                 <li>
-                    Auf unserer Startseite werden in einer Gallerie alle Bilder der Teilnehmer des aktuellen Wettbewerbs dargestellt.
+                    Auf unserer Startseite werden in einer Gallerie alle Bilder der Teilnehmer des aktuellen Wettbewerbs
+                    dargestellt.
                 </li>
                 <li>
-                    Um genauere Informationen über ein Bild zu bekommen, gelangt man durch einen Klick auf die Infoseite des ausgewählten Bildes.
+                    Um genauere Informationen über ein Bild zu bekommen, gelangt man durch einen Klick auf die Infoseite
+                    des ausgewählten Bildes.
                 </li>
                 <li>
                     Auf dieser Seite kannst du das Bild bewerten und einen Kommentar verfassen.

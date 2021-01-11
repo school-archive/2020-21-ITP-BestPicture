@@ -101,7 +101,7 @@
         <section id="section_right">
             <article id="nebeneinander">
                 <div>
-                    <div><?php echo $namePhoto ?></div>
+                    <div><?php echo htmlspecialchars($namePhoto) ?></div>
                     <div><?php echo $photografer ?></div>
                     <div><?php echo $date ?></div>
                 </div>
@@ -114,7 +114,7 @@
             <article>
                 <h1>Beschreibung des Bildes:</h1>
                 <p id="beschreibung">
-                    <?php echo $beschreibung ?>
+                    <?php echo htmlspecialchars($beschreibung) ?>
                 </p>
             </article>
         </section>

@@ -4,7 +4,8 @@ body {
     font-family: acumin-pro, sans-serif;
     margin: 0;
 }
-main{
+
+main {
     padding-top: 29px;
 }
 
@@ -32,7 +33,6 @@ main{
     background: rgba(136, 126, 126, 0.04);
     padding: 10px 20px;
     border: none;
-
     outline: none;
     box-sizing: border-box;
     border: 2px solid rgba(0, 0, 0, 0.02);
@@ -59,7 +59,8 @@ a {
     color: #5B5FE3;
     text-decoration: none
 }
-textarea{
+
+textarea {
     resize: none;
 }
 
@@ -78,16 +79,19 @@ textarea{
     font-size: 13px;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.04);
 }
+
 input[type=file] {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 .close {
     width: 30px;
     height: 30px;
     position: relative;
 }
+
 .close:after {
     content: '';
     height: 30px;
@@ -95,7 +99,7 @@ input[type=file] {
     position: absolute;
     transform: rotate(45deg);
     left: 20px;
-    top:5px;
+    top: 5px;
 }
 
 .close:before {
@@ -105,8 +109,10 @@ input[type=file] {
     position: absolute;
     transform: rotate(-45deg);
     left: 20px;
-    top:5px;
+    top: 5px;
 }
-#foot{
-    bottom: 0;
+
+footer {
+    float: bottom;
+
 }
