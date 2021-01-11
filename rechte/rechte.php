@@ -11,6 +11,7 @@ require_once "../php/user.php";
     <link href="../assets/styles/navbar.css" rel="stylesheet">
     <link href="../assets/styles/footer.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon.ico">
+    <link rel="stylesheet" href="https://use.typekit.net/hhh6sjk.css">
 </head>
 <style>
     body {
@@ -19,39 +20,111 @@ require_once "../php/user.php";
     }
 
     section {
-        padding: 100px;
+        padding-left: 100px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-right: 250px;
 
+
+    }
+
+    footer {
+        bottom: 0;
     }
 
     h1, h2 {
         color: #5B5FE3;
     }
 
-    .ue1{
+    .ue1 {
         letter-spacing: 5px;
-        font-size: 30px;
-        font-family: acumin-pro,sans-serif;
-        font-weight: 100;
+        font-size: 40px;
+        font-family: acumin-pro, sans-serif;
+        font-weight: 200;
         font-style: normal;
     }
 
-    p{
-        font-family: acumin-pro,sans-serif;
-        font-weight: 100;
+    p {
+        font-family: acumin-pro, sans-serif;
+        font-weight: 200;
         font-style: normal;
         letter-spacing: 1px;
+        padding-left: 50px;
     }
 
     a {
         color: black;
     }
 
-    .img{
+    .img {
         width: 100%;
         height: 300px;
+        opacity: 0.9;
     }
 
+    span {
+        color: #5B5FE3;
+        font-size: 20px;
+    }
 
+    .small {
+        font-size: 15px;
+        font-family: acumin-pro, sans-serif;
+        font-weight: 100;
+        font-style: italic;
+    }
+
+    .logoimp {
+        width: 250px;
+        padding-left: 50px;
+    }
+
+    .info {
+
+        font-size: 18px;
+    }
+
+    .info1 {
+
+        font-size: 15px;
+    }
+
+    .externallink {
+        width: 15px;
+    }
+
+    .nounderli {
+        text-decoration: none;
+    }
+
+    .email {
+        font-size: 15px;
+    }
+
+    h2 {
+        padding-left: 50px;
+        font-family: acumin-pro, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: 1px;
+    }
+
+    ul {
+        font-family: acumin-pro, sans-serif;
+        font-weight: 200;
+        font-style: normal;
+        letter-spacing: 1px;
+        padding-left: 100px;
+    }
+
+    .ue3 {
+        font-family: acumin-pro, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: 1px;
+        color: #5B5FE3;
+        padding-left: 50px;
+    }
 </style>
 
 <body>
@@ -67,21 +140,26 @@ require_once "../php/user.php";
         </nav>
     </div>
 </header>
-<img class="img" src="../assets/images/rechte.jpg" alt="rechte">
+<img class="img" src="../assets/images/rechte.png" alt="rechte">
 <section>
 
     <h1 class="ue1">Impressum</h1>
-    <p>Informationspflicht laut §5 E-Commerce Gesetz, §14 Unternehmensgesetzbuch, §63
+    <img class="logoimp" src="../assets/images/logo_imp.png" alt="logoimp">
+    <p class="info">Projekt der <a class="nounderli" href="https://www.htl.rennweg.at/" title="HTL-Rennweg">HTL-Rennweg
+            <img class="externallink"
+                 src="https://icon-library.net//images/icon-external-link/icon-external-link-16.jpg" width="350"/></a>
+    </p>
+    <p class="info1">Höhere Technische Bundeslehranstalt</p>
+
+    <p>Rennweg 89b<br> 1030 Wien<br> Österreich</p>
+
+
+    <p class="email"><span>&#x2709</span><a href="mailto:7046@htl.rennweg.at">Dietrich Kops</a></p>
+    <p class="email"><span>&#x2709</span><a href="mailto:7047@htl.rennweg.at">Johanna Kronfuß</a></p>
+    <p class="email"><span>&#x2709</span><a href="mailto:7055@htl.rennweg.at">Nils Schneider-Sturm</a></p>
+    <p class="email"><span>&#x2709</span><a href="mailto:7053@htl.rennweg.at">Nicoletta Sarzi Sartori</a></p><br>
+    <p class="small">Informationspflicht laut §5 E-Commerce Gesetz, §14 Unternehmensgesetzbuch, §63
         Gewerbeordnung und Offenlegungspflicht laut §25 Mediengesetz.</p>
-    <p><strong>Best Picture</strong></p>
-    <p>Wien, <br/>Österreich</p>
-    <p><strong>E-Mail:</strong></p>
-
-    <p>&#x2709<a href="mailto:7046@htl.rennweg.at">Dietrich Kops</a></p>
-    <p>&#x2709<a href="mailto:7047@htl.rennweg.at">Johanna Kronfuß</a></p>
-    <p>&#x2709<a href="mailto:7055@htl.rennweg.at">Nils Schneider-Sturm</a></p>
-    <p>&#x2709<a href="mailto:7053@htl.rennweg.at">Nicoletta Sarzi Sartori</a></p>
-
     <h2 id="eu-streitschlichtung" class="adsimple-121400314">EU-Streitschlichtung</h2>
     <p>Gemäß Verordnung über Online-Streitbeilegung in Verbraucherangelegenheiten (ODR-Verordnung) möchten wir Sie über
         die
@@ -112,7 +190,11 @@ require_once "../php/user.php";
         aufgefallen sind und wir Links sofort entfernen würden, wenn uns Rechtswidrigkeiten bekannt werden.</p>
     <p>Wenn Ihnen rechtswidrige Links auf unserer Website auffallen, bitten wir Sie uns zu kontaktieren, Sie finden die
         Kontaktdaten im Impressum.</p>
-    <h1 class="adsimple-121400314">Datenschutzerklärung</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 class="ue1">Datenschutzerklärung</h1>
     <h2 id="datenschutz" class="adsimple-121400314">Datenschutz</h2>
     <p>Wir haben diese Datenschutzerklärung (Fassung 01.01.1970-121400314) verfasst, um Ihnen gemäß der Vorgaben der <a
                 decorated="" class="adsimple-121400314"
@@ -131,24 +213,25 @@ require_once "../php/user.php";
         auf dieser Webseite.</p>
     <p>Wenn Sie unsere Webseite so wie jetzt gerade besuchen, speichert unser Webserver (Computer auf dem diese Webseite
         gespeichert ist) automatisch Daten wie</p>
-    <ul class="adsimple-121400314">
-        <li class="adsimple-121400314">die Adresse (URL) der aufgerufenen Webseite</li>
-        <li class="adsimple-121400314">Browser und Browserversion</li>
-        <li class="adsimple-121400314">das verwendete Betriebssystem</li>
-        <li class="adsimple-121400314">die Adresse (URL) der zuvor besuchten Seite (Referrer URL)</li>
-        <li class="adsimple-121400314">den Hostname und die IP-Adresse des Geräts von welchem aus zugegriffen wird</li>
-        <li class="adsimple-121400314">Datum und Uhrzeit</li>
+    <ul class="">
+        <li>die Adresse (URL) der aufgerufenen Webseite</li>
+        <li>Browser und Browserversion</li>
+        <li>das verwendete Betriebssystem</li>
+        <li>die Adresse (URL) der zuvor besuchten Seite (Referrer URL)</li>
+        <li>den Hostname und die IP-Adresse des Geräts von welchem aus zugegriffen wird</li>
+        <li>Datum und Uhrzeit</li>
     </ul>
+
     <p>in Dateien (Webserver-Logfiles).</p>
     <p>In der Regel werden Webserver-Logfiles zwei Wochen gespeichert und danach automatisch gelöscht. Wir geben diese
         Daten
         nicht weiter, können jedoch nicht ausschließen, dass diese Daten beim Vorliegen von rechtswidrigem Verhalten
         eingesehen werden.</p>
-    <h2 id="cookies" class="adsimple-121400314">Cookies</h2>
+    <h2>Cookies</h2>
     <p>Unsere Webseite verwendet HTTP-Cookies, um nutzerspezifische Daten zu speichern.<br/>
         Im Folgenden erklären wir, was Cookies sind und warum Sie genutzt werden, damit Sie die folgende
         Datenschutzerklärung besser verstehen.</p>
-    <h3 class="adsimple-121400314">Was genau sind Cookies?</h3>
+    <h3 class="ue3">Was genau sind Cookies?</h3>
     <p>Immer wenn Sie durch das Internet surfen, verwenden Sie einen Browser. Bekannte Browser sind beispielsweise
         Chrome,
         Safari, Firefox, Internet Explorer und Microsoft Edge. Die meisten Webseiten speichern kleine Text-Dateien in
@@ -178,24 +261,24 @@ require_once "../php/user.php";
         Trojaner oder andere „Schädlinge“. Cookies können auch nicht auf Informationen Ihres PCs zugreifen.</p>
     <p>So können zum Beispiel Cookie-Daten aussehen:</p>
     <p>
-        <strong class="adsimple-121400314">Name:</strong> _ga<br/>
-        <strong class="adsimple-121400314">Wert:</strong> GA1.2.1326744211.152121400314-9<br/>
-        <strong class="adsimple-121400314">Verwendungszweck:</strong> Unterscheidung der Webseitenbesucher<br/>
-        <strong class="adsimple-121400314">Ablaufdatum:</strong> nach 2 Jahren</p>
+        <strong>Name:</strong> _ga<br/>
+        <strong>Wert:</strong> GA1.2.1326744211.152121400314-9<br/>
+        <strong>Verwendungszweck:</strong> Unterscheidung der Webseitenbesucher<br/>
+        <strong>Ablaufdatum:</strong> nach 2 Jahren</p>
     <p>Diese Mindestgrößen sollte ein Browser unterstützen können:</p>
-    <ul class="adsimple-121400314">
-        <li class="adsimple-121400314">Mindestens 4096 Bytes pro Cookie</li>
-        <li class="adsimple-121400314">Mindestens 50 Cookies pro Domain</li>
-        <li class="adsimple-121400314">Mindestens 3000 Cookies insgesamt</li>
+    <ul>
+        <li>Mindestens 4096 Bytes pro Cookie</li>
+        <li>Mindestens 50 Cookies pro Domain</li>
+        <li>Mindestens 3000 Cookies insgesamt</li>
     </ul>
-    <h3 class="adsimple-121400314">Welche Arten von Cookies gibt es?</h3>
+    <h3 class="ue3">Welche Arten von Cookies gibt es?</h3>
     <p>Die Frage welche Cookies wir im Speziellen verwenden, hängt von den verwendeten Diensten ab und wird in den
         folgenden
         Abschnitten der Datenschutzerklärung geklärt. An dieser Stelle möchten wir kurz auf die verschiedenen Arten von
         HTTP-Cookies eingehen.</p>
     <p>Man kann 4 Arten von Cookies unterscheiden:</p>
     <p>
-        <strong class="adsimple-121400314">Unerlässliche Cookies<br/>
+        <strong>Unerlässliche Cookies<br/>
         </strong>Diese Cookies sind nötig, um grundlegende Funktionen der Webseite sicherzustellen. Zum Beispiel braucht
         es
         diese Cookies, wenn ein User ein Produkt in den Warenkorb legt, dann auf anderen Seiten weitersurft und später
@@ -203,24 +286,24 @@ require_once "../php/user.php";
         zur Kasse geht. Durch diese Cookies wird der Warenkorb nicht gelöscht, selbst wenn der User sein Browserfenster
         schließt.</p>
     <p>
-        <strong class="adsimple-121400314">Zweckmäßige Cookies<br/>
+        <strong>Zweckmäßige Cookies<br/>
         </strong>Diese Cookies sammeln Infos über das Userverhalten und ob der User etwaige Fehlermeldungen bekommt.
         Zudem
         werden mithilfe dieser Cookies auch die Ladezeit und das Verhalten der Webseite bei verschiedenen Browsern
         gemessen.
     </p>
     <p>
-        <strong class="adsimple-121400314">Zielorientierte Cookies<br/>
+        <strong>Zielorientierte Cookies<br/>
         </strong>Diese Cookies sorgen für eine bessere Nutzerfreundlichkeit. Beispielsweise werden eingegebene
         Standorte,
         Schriftgrößen oder Formulardaten gespeichert.</p>
     <p>
-        <strong class="adsimple-121400314">Werbe-Cookies<br/>
+        <strong>Werbe-Cookies<br/>
         </strong>Diese Cookies werden auch Targeting-Cookies genannt. Sie dienen dazu dem User individuell angepasste
         Werbung zu liefern. Das kann sehr praktisch, aber auch sehr nervig sein.</p>
     <p>Üblicherweise werden Sie beim erstmaligen Besuch einer Webseite gefragt, welche dieser Cookiearten Sie zulassen
         möchten. Und natürlich wird diese Entscheidung auch in einem Cookie gespeichert.</p>
-    <h3 class="adsimple-121400314">Wie kann ich Cookies löschen?</h3>
+    <h3 class="ue3">Wie kann ich Cookies löschen?</h3>
     <p>Wie und ob Sie Cookies verwenden wollen, entscheiden Sie selbst. Unabhängig von welchem Service oder welcher
         Webseite
         die Cookies stammen, haben Sie immer die Möglichkeit Cookies zu löschen, zu deaktivieren oder nur teilweise
@@ -229,30 +312,25 @@ require_once "../php/user.php";
     <p>Wenn Sie feststellen möchten, welche Cookies in Ihrem Browser gespeichert wurden, wenn Sie Cookie-Einstellungen
         ändern oder löschen wollen, können Sie dies in Ihren Browser-Einstellungen finden:</p>
     <p>
-        <a decorated="" class="adsimple-121400314" href="https://support.google.com/chrome/answer/95647?tid=121400314"
+        <a href="https://support.google.com/chrome/answer/95647?tid=121400314"
            target="_blank" rel="noopener noreferrer">Chrome: Cookies in Chrome löschen, aktivieren und verwalten</a>
     </p>
     <p>
-        <a decorated="" class="adsimple-121400314"
-           href="https://support.apple.com/de-at/guide/safari/sfri11471/mac?tid=121400314" target="_blank"
-           rel="noopener noreferrer">Safari: Verwalten von Cookies und Websitedaten mit Safari</a>
+        <a href="https://support.apple.com/de-at/guide/safari/sfri11471/mac?tid=121400314" target="_blank"
+                rel="noopener noreferrer">Safari: Verwalten von Cookies und Websitedaten mit Safari</a>
     </p>
     <p>
-        <a decorated="" class="adsimple-121400314"
-           href="https://support.mozilla.org/de/kb/cookies-und-website-daten-in-firefox-loschen?tid=121400314"
-           target="_blank" rel="noopener noreferrer">Firefox: Cookies löschen, um Daten zu entfernen, die Websites auf
-            Ihrem
-            Computer abgelegt haben</a>
+        <a href="https://support.mozilla.org/de/kb/cookies-und-website-daten-in-firefox-loschen?tid=121400314"
+                target="_blank" rel="noopener noreferrer">Firefox: Cookies löschen, um Daten zu entfernen, die Websites auf Ihrem Computer abgelegt haben</a>
     </p>
     <p>
-        <a decorated="" class="adsimple-121400314"
-           href="https://support.microsoft.com/de-at/help/17442/windows-internet-explorer-delete-manage-cookies?tid=121400314"
-           target="_blank" rel="noopener noreferrer">Internet Explorer: Löschen und Verwalten von Cookies</a>
+        <a href="https://support.microsoft.com/de-at/help/17442/windows-internet-explorer-delete-manage-cookies?tid=121400314"
+                target="_blank" rel="noopener noreferrer">Internet Explorer: Löschen und Verwalten von Cookies</a>
     </p>
     <p>
-        <a decorated="" class="adsimple-121400314"
-           href="https://support.microsoft.com/de-at/help/4027947/windows-delete-cookies?tid=121400314" target="_blank"
-           rel="noopener noreferrer">Microsoft Edge: Löschen und Verwalten von Cookies</a>
+        <a href="https://support.microsoft.com/de-at/help/4027947/windows-delete-cookies?tid=121400314"
+                target="_blank"
+                rel="noopener noreferrer">Microsoft Edge: Löschen und Verwalten von Cookies</a>
     </p>
     <p>Falls Sie grundsätzlich keine Cookies haben wollen, können Sie Ihren Browser so einrichten, dass er Sie immer
         informiert, wenn ein Cookie gesetzt werden soll. So können Sie bei jedem einzelnen Cookie entscheiden, ob Sie
@@ -261,7 +339,7 @@ require_once "../php/user.php";
         Anleitung in
         Google mit dem Suchbegriff “Cookies löschen Chrome” oder “Cookies deaktivieren Chrome” im Falle eines Chrome
         Browsers.</p>
-    <h3 class="adsimple-121400314">Wie sieht es mit meinem Datenschutz aus?</h3>
+    <h3 class="ue3">Wie sieht es mit meinem Datenschutz aus?</h3>
     <p>Seit 2009 gibt es die sogenannten „Cookie-Richtlinien“. Darin ist festgehalten, dass das Speichern von Cookies
         eine
         Einwilligung von Ihnen verlangt. Innerhalb der EU-Länder gibt es allerdings noch sehr unterschiedliche
@@ -276,7 +354,7 @@ require_once "../php/user.php";
                 rel="nofollow noopener noreferrer">https://tools.ietf.org/html/rfc6265</a>,
         dem Request for Comments der Internet Engineering Task Force (IETF) namens “HTTP State Management Mechanism”.
     </p>
-    <h2 id="speicherung-persoenlicher-daten" class="adsimple-121400314">Speicherung persönlicher Daten</h2>
+    <h3 class="ue3">Speicherung persönlicher Daten</h3>
     <p>Persönliche Daten, die Sie uns auf dieser Website elektronisch übermitteln, wie zum Beispiel Name,
         E-Mail-Adresse,
         Adresse oder andere persönlichen Angaben im Rahmen der Übermittlung eines Formulars oder Kommentaren im Blog,
@@ -294,23 +372,22 @@ require_once "../php/user.php";
         Übertragung und den Schutz Ihrer Daten garantieren. Wir empfehlen Ihnen, vertrauliche Daten niemals
         unverschlüsselt
         per E-Mail zu übermitteln.</p>
-    <h2 id="rechte-dsgvo" class="adsimple-121400314">Rechte laut Datenschutzgrundverordnung</h2>
-    <p>Ihnen stehen laut den Bestimmungen der DSGVO und des österreichischen <a decorated="" class="adsimple-121400314"
-                                                                                href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10001597&tid=121400314"
+    <h3 class="ue3">Rechte laut Datenschutzgrundverordnung</h3>
+    <p>Ihnen stehen laut den Bestimmungen der DSGVO und des österreichischen <a href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10001597&tid=121400314"
                                                                                 target="_blank"
                                                                                 rel="noopener noreferrer">Datenschutzgesetzes
             (DSG)</a> grundsätzlich die folgende Rechte zu:</p>
-    <ul class="adsimple-121400314">
-        <li class="adsimple-121400314">Recht auf Berichtigung (Artikel 16 DSGVO)</li>
-        <li class="adsimple-121400314">Recht auf Löschung („Recht auf Vergessenwerden“) (Artikel 17 DSGVO)</li>
-        <li class="adsimple-121400314">Recht auf Einschränkung der Verarbeitung (Artikel 18 DSGVO)</li>
-        <li class="adsimple-121400314">Recht auf Benachrichtigung – Mitteilungspflicht im Zusammenhang mit der
+    <ul >
+        <li>Recht auf Berichtigung (Artikel 16 DSGVO)</li>
+        <li >Recht auf Löschung („Recht auf Vergessenwerden“) (Artikel 17 DSGVO)</li>
+        <li >Recht auf Einschränkung der Verarbeitung (Artikel 18 DSGVO)</li>
+        <li >Recht auf Benachrichtigung – Mitteilungspflicht im Zusammenhang mit der
             Berichtigung
             oder Löschung personenbezogener Daten oder der Einschränkung der Verarbeitung (Artikel 19 DSGVO)
         </li>
-        <li class="adsimple-121400314">Recht auf Datenübertragbarkeit (Artikel 20 DSGVO)</li>
-        <li class="adsimple-121400314">Widerspruchsrecht (Artikel 21 DSGVO)</li>
-        <li class="adsimple-121400314">Recht, nicht einer ausschließlich auf einer automatisierten Verarbeitung —
+        <li >Recht auf Datenübertragbarkeit (Artikel 20 DSGVO)</li>
+        <li >Widerspruchsrecht (Artikel 21 DSGVO)</li>
+        <li>Recht, nicht einer ausschließlich auf einer automatisierten Verarbeitung —
             einschließlich Profiling — beruhenden Entscheidung unterworfen zu werden (Artikel 22 DSGVO)
         </li>
     </ul>
@@ -321,7 +398,7 @@ require_once "../php/user.php";
                                                                                                  class="adsimple-121400314"
                                                                                                  href="https://www.dsb.gv.at/?tid=121400314">https://www.dsb.gv.at/</a>
         finden.</p>
-    <h2 id="auswertung-des-besucherverhaltens" class="adsimple-121400314">Auswertung des Besucherverhaltens</h2>
+    <h3 class="ue3">Auswertung des Besucherverhaltens</h3>
     <p>In der folgenden Datenschutzerklärung informieren wir Sie darüber, ob und wie wir Daten Ihres Besuchs dieser
         Website
         auswerten. Die Auswertung der gesammelten Daten erfolgt in der Regel anonym und wir können von Ihrem Verhalten
@@ -329,9 +406,8 @@ require_once "../php/user.php";
         dieser Website nicht auf Ihre Person schließen.</p>
     <p>Mehr über Möglichkeiten dieser Auswertung der Besuchsdaten zu widersprechen erfahren Sie in der folgenden
         Datenschutzerklärung.</p>
-    <h2 id="tls-verschluesselung-https" class="adsimple-121400314">TLS-Verschlüsselung mit https</h2>
+    <h3 class="ue3">TLS-Verschlüsselung mit https</h3>
     <p>Wir verwenden https um Daten abhörsicher im Internet zu übertragen (Datenschutz durch Technikgestaltung <a
-                decorated="" class="adsimple-121400314"
                 href="https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679&from=DE&tid=121400314"
                 target="_blank" rel="noopener noreferrer">Artikel 25 Absatz 1 DSGVO</a>). Durch den Einsatz von TLS
         (Transport
@@ -340,14 +416,13 @@ require_once "../php/user.php";
         Schlosssymbol links oben im Browser und der Verwendung des Schemas https (anstatt http) als Teil unserer
         Internetadresse.</p>
 
-    <h3 class="adsimple-121400314">Wie kann ich meine Daten löschen bzw. die Datenspeicherung verhindern?</h3>
+    <h3 class="ue3">Wie kann ich meine Daten löschen bzw. die Datenspeicherung verhindern?</h3>
     <p>Nach dem Datenschutzrecht der Europäischen Union haben Sie das Recht, Auskunft über Ihre Daten zu erhalten, sie
         zu
         aktualisieren, zu löschen oder einzuschränken. Mithilfe des Browser-Add-ons zur Deaktivierung von Google
         Analytics-JavaScript (ga.js, analytics.js, dc.js) verhindern Sie, dass Google Analytics Ihre Daten verwendet.
         Das
-        Browser-Add-on können Sie unter <a decorated="" class="adsimple-121400314"
-                                           href="https://tools.google.com/dlpage/gaoptout?hl=de" target="_blank"
+        Browser-Add-on können Sie unter <a href="https://tools.google.com/dlpage/gaoptout?hl=de" target="_blank"
                                            rel="noopener noreferrer">https://tools.google.com/dlpage/gaoptout?hl=de</a>
         runterladen und installieren. Beachten Sie bitte, dass durch dieses Add-on nur die Datenerhebung durch Google
         Analytics deaktiviert wird.</p>
@@ -355,69 +430,58 @@ require_once "../php/user.php";
         gibt
         es für jeden Browser eine eigene Anleitung:</p>
     <p>
-        <a decorated="" class="adsimple-121400314" href="https://support.google.com/chrome/answer/95647?tid=121400314"
+        <a href="https://support.google.com/chrome/answer/95647?tid=121400314"
            target="_blank" rel="noopener noreferrer">Chrome: Cookies in Chrome löschen, aktivieren und verwalten</a>
     </p>
     <p>
-        <a decorated="" class="adsimple-121400314"
+        <a
            href="https://support.apple.com/de-at/guide/safari/sfri11471/mac?tid=121400314" target="_blank"
            rel="noopener noreferrer">Safari: Verwalten von Cookies und Websitedaten mit Safari</a>
     </p>
     <p>
-        <a decorated="" class="adsimple-121400314"
+        <a
            href="https://support.mozilla.org/de/kb/cookies-und-website-daten-in-firefox-loschen?tid=121400314"
            target="_blank" rel="noopener noreferrer">Firefox: Cookies löschen, um Daten zu entfernen, die Websites auf
             Ihrem
             Computer abgelegt haben</a>
     </p>
     <p>
-        <a decorated="" class="adsimple-121400314"
+        <a
            href="https://support.microsoft.com/de-at/help/17442/windows-internet-explorer-delete-manage-cookies?tid=121400314"
            target="_blank" rel="noopener noreferrer">Internet Explorer: Löschen und Verwalten von Cookies</a>
     </p>
     <p>
-        <a decorated="" class="adsimple-121400314"
+        <a
            href="https://support.microsoft.com/de-at/help/4027947/windows-delete-cookies?tid=121400314" target="_blank"
            rel="noopener noreferrer">Microsoft Edge: Löschen und Verwalten von Cookies</a>
     </p>
 
-    <h1>Einwilligung&nbsp; gem&auml;&szlig; &nbsp;DSGVO zur Ver&ouml;ffentlichung von Personenfotos &bdquo;externer
-        Personen&ldquo; zu werblichen Zwecken</h1>
+    <h3 class="ue3">Einwilligung&nbsp;gem&auml;&szlig; DSGVO zur Ver&ouml;ffentlichung von Personenfotos &bdquo;externer
+        Personen&ldquo; zu werblichen Zwecken</h3>
 
     <p>m&ouml;chten wir, Best Picture, gerne Personenfotos zum Zwecke der werblichen Au&szlig;endarstellung unseres
         Unternehmens und ver&ouml;ffentlichen. </p>
-    <p>&nbsp;</p>
     <p>Mit Ihrer Einwilligung erlauben Sie uns, Ihre Fotos zur werblichen Au&szlig;endarstellung unseres Unternehmens
         anzufertigen und zu ver&ouml;ffentlichen. Werbliche Au&szlig;endarstellung umfasst insbesondere die Ver&ouml;ffentlichungen
         zur Veranstaltungsbewerbung, zur Illustration unserer Veranstaltungsangebote. (Hier k&ouml;nnen Sie weitere
         Zwecke nennen)</p>
-    <p>&nbsp;</p>
     <p>Die Ver&ouml;ffentlichungen d&uuml;rfen erfolgen (Unzutreffendes ist zu streichen):</p>
-    <p>&nbsp;</p>
     <ul>
-        <li>auf den Internetseiten unseres Unternehmens https://bestpictureproject.ml/ (hier alle Webpr&auml;senzen, auf denen das
+        <li>auf den Internetseiten unseres Unternehmens https://bestpictureproject.ml/ (hier alle Webpr&auml;senzen, auf
+            denen das
             Bild zu sehen sein soll, benennen)
         </li>
-    </ul>
-    <p>&nbsp;</p>
-    <ul>
         <li>in unseren Druckmedien wie Flyer, Werbe- und Informationsbrosch&uuml;ren, Jahres- und Gesch&auml;ftsberichten</li>
-    </ul>
-    <p>&nbsp;</p>
-    <ul>
         <li>Weitergabe zum Zweck der &Ouml;ffentlichkeitsarbeit an Stellen wie Agenturen, Redaktionen oder freie
             Publizistinnen und Publizisten (diese m&uuml;ssen hier benannt werden)
         </li>
-    </ul>
-    <p>&nbsp;</p>
-    <ul>
+
         <li>in unseren Social Media Accounts der Netzwerke (genaue Benennung der Netzwerke und der Accounts
             erforderlich!)
         </li>
     </ul>
-    <p>&nbsp;</p>
     <p><strong>Das m&uuml;ssen Sie wissen</strong></p>
-    <p>&nbsp;</p>
+
     <p>Ich habe zur Kenntnis genommen, dass Informationen im Internet weltweit zug&auml;nglich sind, mit Suchmaschinen
         gefunden und mit anderen Informationen verkn&uuml;pft werden k&ouml;nnen, woraus sich unter Umst&auml;nden Pers&ouml;nlichkeitsprofile
         &uuml;ber mich erstellen lassen. Mir ist bewusst, dass ins Internet gestellte Informationen einschlie&szlig;lich
@@ -428,34 +492,28 @@ require_once "../php/user.php";
         auf der Ursprungsseite weiterhin andernorts aufzufinden sind.</p>
     <p>Soweit Sie in <strong>Social Media Ver&ouml;ffentlichungen</strong> einwilligen, m&uuml;ssen Sie wissen: Soziale
         Netzwerke&nbsp; &bdquo;vermehren&ldquo; Inhalte, ohne dass wir auf die Anzahl der Verbreitungshandlungen</p>
-    <p>&nbsp;durch Nutzer Einfluss haben. Durch Kommentierungen und anschlie&szlig;endes Teilen unserer &nbsp;&nbsp;</p>
-    <p>&nbsp;Ursprungsver&ouml;ffentlichung besteht die theoretische M&ouml;glichkeit, dass abgebildete Personen</p>
-    <p>&nbsp;ung&uuml;nstig kommentiert werden. &nbsp;&nbsp;</p>
-    <p>&nbsp;</p>
+    <p>durch Nutzer Einfluss haben. Durch Kommentierungen und anschlie&szlig;endes Teilen unserer &nbsp;&nbsp;</p>
+    <p>Ursprungsver&ouml;ffentlichung besteht die theoretische M&ouml;glichkeit, dass abgebildete Personen</p>
+    <p>ung&uuml;nstig kommentiert werden. &nbsp;&nbsp;</p>
     <p>Beim &nbsp;Einstellen in bestimmte Social Media &nbsp;Angebote (z. B. Facebook) kann nicht sichergestellt werden,
         dass eine vollst&auml;ndige L&ouml;schung der Fotos m&ouml;glich ist.</p>
     <p>Ich habe zur Kenntnis genommen, dass eine L&ouml;schung der Bilder aus dem Internetauftritt unseres Unternehmens
         bis zu maximal&nbsp; drei Werktage nach Eingang meines Widerrufs dauern kann.</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
+
     <p><strong>Ihr Widerrufsrecht</strong></p>
-    <p>&nbsp;</p>
     <p>Mir ist bekannt, dass ich diese Einwilligungserkl&auml;rung jederzeit mit&nbsp; Wirkung f&uuml;r die Zukunft
         widerrufen kann. Der Widerruf bewirkt, dass ver&ouml;ffentlichte Fotos aus dem Internetauftritt entfernt werden
         und keine weiteren Fotos eingestellt werden. Bei Druckerzeugnissen bewirkt Ihr Widerruf, dass wir in Neuauflagen
         der bereits gedruckten Erzeugnisse Ihr Foto nicht mehr ver&ouml;ffentlichen werden.</p>
-    <p>&nbsp;</p>
 
     <p>Als Betroffener einer Datenverarbeitung Ihrer personenbezogenen Daten haben Sie gem&auml;&szlig; Art. 13 DSGVO
         umfangreiche Rechte. Die vollst&auml;ndigen Informationen finden Sie unter
         www.domain-der-organisation/ihre-rechte-art-13-dsgvo.de</p>
     <p>&nbsp;</p>
-    <h1>Einwilligungserkl&auml;rung der Sorgeberechtigten zur</h1>
-    <h1>werblichen Bildver&ouml;ffentlichung</h1>
+    <h3 class="ue3">Einwilligungserkl&auml;rung der Sorgeberechtigten zur werblichen Bildver&ouml;ffentlichung</h3>
 
     <p>m&ouml;chten wir, Best Picture, gerne Personenfotos zum Zwecke der Au&szlig;endarstellung unseres Unternehmens
         ver&ouml;ffentlichen. </p>
-    <p>&nbsp;</p>
     <p>Mit Ihrer Einwilligung erlauben Sie uns Fotos Ihres Kindes zur werblichen Au&szlig;endarstellung unseres
         Unternehmens anzufertigen und zu ver&ouml;ffentlichen. Werbliche Au&szlig;endarstellung umfasst insbesondere die
         Ver&ouml;ffentlichungen zur Veranstaltungsbewerbung, zur Illustration unserer Veranstaltungsangebote und
@@ -464,7 +522,8 @@ require_once "../php/user.php";
     <p>Die Ver&ouml;ffentlichungen d&uuml;rfen erfolgen (Unzutreffendes ist zu streichen):</p>
     <p>&nbsp;</p>
     <ul>
-        <li>auf den Internetseiten unseres Unternehmens https://bestpictureproject.ml/ (hier alle Webpr&auml;senzen, auf denen das
+        <li>auf den Internetseiten unseres Unternehmens https://bestpictureproject.ml/ (hier alle Webpr&auml;senzen, auf
+            denen das
             Bild zu sehen sein soll, benennen)
         </li>
     </ul>
@@ -516,7 +575,8 @@ require_once "../php/user.php";
         bewirkt Ihr Widerruf, dass wir in Neuauflagen der bereits gedruckten Erzeugnisse Ihr Foto nicht mehr ver&ouml;ffentlichen
         werden.</p>
 
-    <p>Unsere Online-Fotodatenbank mit der Internet-Adresse https://bestpictureproject.ml/ unserer Abteilung der Presse- und &Ouml;ffentlichkeitsarbeit
+    <p>Unsere Online-Fotodatenbank mit der Internet-Adresse https://bestpictureproject.ml/ unserer Abteilung der Presse-
+        und &Ouml;ffentlichkeitsarbeit
         stellt Ihnen Fotomaterial honorarfrei zur Ver&ouml;ffentlichung zur Verf&uuml;gung. Dieses geschieht mittels
         einer Website, &uuml;ber die die Datenbank erreichbar ist. Neben einer Recherchefunktion steht Ihnen als
         registriertem Besucher ein Downloadbereich f&uuml;r hoch aufgel&ouml;ste Fotos zur Verf&uuml;gung. Mit dem
@@ -531,13 +591,15 @@ require_once "../php/user.php";
     <p>&nbsp;</p>
     <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Name und Kontaktdaten des Verantwortlichen</h2>
     <p>Wir, Best Picture, sind als Verantwortlicher im Sinne der DSGVO und des Bundesdatenschutzgesetzes (BDSG) sowie
-        sonstiger datenschutzrechtlicher Bestimmungen f&uuml;r unsere Online-Datenbank unter der Adresse https://bestpictureproject.ml/ und
+        sonstiger datenschutzrechtlicher Bestimmungen f&uuml;r unsere Online-Datenbank unter der Adresse
+        https://bestpictureproject.ml/ und
         die damit verbundenen Datenverarbeitungen zu bezeichnen. Umfassende Angaben zu unserem Unternehmen sind im
         Impressum &nbsp;zu finden.</p>
 
     <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Empf&auml;nger der Daten</h2>
     <h2>&nbsp;</h2>
-    <p>Da wir keine externen Dienstleister zum Betrieb und zur Wartung des Portals besch&auml;ftigen, sind wir, BestPicutre, alleiniger Empf&auml;nger Ihrer Daten.</p>
+    <p>Da wir keine externen Dienstleister zum Betrieb und zur Wartung des Portals besch&auml;ftigen, sind wir,
+        BestPicutre, alleiniger Empf&auml;nger Ihrer Daten.</p>
     <p>&nbsp;<strong>&nbsp;</strong></p>
     <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Erl&auml;uterungen zu den einzelnen Datenverarbeitungen</h2>
     <p>Sie haben im Rahmen unseres Internetauftrittes die M&ouml;glichkeit Fotos zur honorarfreien Nutzung
