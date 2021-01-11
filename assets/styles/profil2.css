@@ -54,7 +54,7 @@ html, body{
     padding-top: 10px;
     float: top;
     font-family: 'acumin-pro', sans-serif;
-    text-align: right;
+    margin-right: 10%;
     font-size: 13px;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.04);
     height: 34px;
