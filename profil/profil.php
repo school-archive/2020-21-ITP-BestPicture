@@ -63,6 +63,7 @@ $posts = get_count_photos_of_user($userid);
         </article>
     </div>
     <div class="main gallery">
+        <p class="u1">Beiträge</p>
         <div class="gallery-image">
             <?php
             $photos = get_all_photos_by_user($userid);
