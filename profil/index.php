@@ -15,7 +15,7 @@ if (get_signed_in_user_id() == -1) {
     <link href="../assets/styles/profil.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon.ico">
     <meta charset="UTF-8">
-    <title>BestPicture</title>
+    <title>BP | Profil</title>
 </head>
 <body>
 <?php

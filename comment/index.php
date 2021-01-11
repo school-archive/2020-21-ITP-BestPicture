@@ -19,7 +19,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>BestPicture</title>
+    <title>BP | Info</title>
 
     <link rel="stylesheet" href="https://use.typekit.net/hhh6sjk.css">
     <link href="../assets/styles/footer.css" rel="stylesheet">
