@@ -7,28 +7,48 @@ require_once "../php/user.php";
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>BestPicture</title>
+    <title>BP | Datenschutzerklärung</title>
     <link href="../assets/styles/navbar.css" rel="stylesheet">
     <link href="../assets/styles/footer.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon.ico">
 </head>
 <style>
     body {
-        font-family: acumin-pro-semi-condensed, sans-serif;
-        font-style: normal;
         position: absolute;
         margin: 0px;
     }
 
     section {
-        padding-left: 100px;
-        padding-right: 100px;
-        padding-top: 50px;
-        text-align: center;
+        padding: 100px;
+
     }
 
     h1, h2 {
         color: #5B5FE3;
+    }
+
+    .ue1{
+        letter-spacing: 5px;
+        font-size: 30px;
+        font-family: acumin-pro,sans-serif;
+        font-weight: 100;
+        font-style: normal;
+    }
+
+    p{
+        font-family: acumin-pro,sans-serif;
+        font-weight: 100;
+        font-style: normal;
+        letter-spacing: 1px;
+    }
+
+    a {
+        color: black;
+    }
+
+    .img{
+        width: 100%;
+        height: 300px;
     }
 
 
@@ -47,20 +67,20 @@ require_once "../php/user.php";
         </nav>
     </div>
 </header>
+<img class="img" src="../assets/images/rechte.jpg" alt="rechte">
 <section>
-    <h1 class="adsimple-121400314">Impressum</h1>
-    <p class="adsimple-121400314">Informationspflicht laut §5 E-Commerce Gesetz, §14 Unternehmensgesetzbuch, §63
-        Gewerbeordnung und Offenlegungspflicht laut §25 Mediengesetz.</p>
-    <p class="adsimple-121400314">
-        <strong>Best Picture</strong>
-    <p class="adsimple-121400314">Wien, <br/>Österreich</p>
-    <p class="adsimple-121400314">
-        <strong>E-Mail:</strong></p>
 
-    <p><a href="mailto:7046@htl.rennweg.at">Dietrich Kops</a></p>
-    <p><a href="mailto:7047@htl.rennweg.at">Johanna Kronfuß</a></p>
-    <p><a href="mailto:7055@htl.rennweg.at">Nils Schneider-Sturm</a></p>
-    <p><a href="mailto:7053@htl.rennweg.at">Nicoletta Sarzi Sartori</a></p>
+    <h1 class="ue1">Impressum</h1>
+    <p>Informationspflicht laut §5 E-Commerce Gesetz, §14 Unternehmensgesetzbuch, §63
+        Gewerbeordnung und Offenlegungspflicht laut §25 Mediengesetz.</p>
+    <p><strong>Best Picture</strong></p>
+    <p>Wien, <br/>Österreich</p>
+    <p><strong>E-Mail:</strong></p>
+
+    <p>&#x2709<a href="mailto:7046@htl.rennweg.at">Dietrich Kops</a></p>
+    <p>&#x2709<a href="mailto:7047@htl.rennweg.at">Johanna Kronfuß</a></p>
+    <p>&#x2709<a href="mailto:7055@htl.rennweg.at">Nils Schneider-Sturm</a></p>
+    <p>&#x2709<a href="mailto:7053@htl.rennweg.at">Nicoletta Sarzi Sartori</a></p>
 
     <h2 id="eu-streitschlichtung" class="adsimple-121400314">EU-Streitschlichtung</h2>
     <p>Gemäß Verordnung über Online-Streitbeilegung in Verbraucherangelegenheiten (ODR-Verordnung) möchten wir Sie über
