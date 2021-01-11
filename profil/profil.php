@@ -44,6 +44,11 @@ $posts = get_count_photos_of_user($userid);
 </header>
 <main>
     <div class="text content-area">
+        <?php
+        if (get_signed_in_user()['is_admin'] == 1) {
+            echo '<a href="../admin%20panel.html" class="submit" id="submit">Admin Panel</a>';
+        }
+        ?>
         <article class="wrapper profil">
             <!--<img class="bo boimg-1" src="../assets/images/Logo_light.jpg" alt="placehold">-->
             <div class="text">
@@ -52,11 +57,6 @@ $posts = get_count_photos_of_user($userid);
                 <p class="acc"><span class="bold"><?php echo $likes ?></span> Likes</p>
                 <p class="acc"><span class="bold"><?php echo $posts ?></span> Posts</p>
             </div>
-            <?php
-            if (get_signed_in_user()['is_admin'] == 1) {
-                echo '<a href="../admin%20panel.html" class="submit" id="submit">Admin Panel</a>';
-            }
-            ?>
         </article>
     </div>
     <div class="main gallery">
