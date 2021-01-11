@@ -190,7 +190,7 @@ if (gettype($contestid) != 'NULL') {
 <script>
     window.cookieconsent.initialise({
         "palette": {
-            "popup": { "background": "rgba(240,240,248,0.5)", "text": "#fffff"},
+            "popup": { "background": "rgba(240,240,248,0.7)", "text": "#fffff"},
             "button": { "background": "#5B5FE3"}},
         "theme": "edgeless",
         "position": "bottom-left",
