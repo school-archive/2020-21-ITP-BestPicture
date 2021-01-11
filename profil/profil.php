@@ -35,7 +35,7 @@ $posts = get_count_photos_of_user($userid);
 <style>
     @keyframes typewriter{
     from{width: 0;}
-    to{width: <?php echo strlen($name)?>em;}
+    to{width: <?php echo 0.8 * strlen($name)?>em;}
 }
 </style>
 <header>
