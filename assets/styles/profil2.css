@@ -7,27 +7,39 @@ html, body{
     background-color: #202125;
 }
 
-.main{
-    top:0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    position: relative;
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-}
-.hintergrund{
-    background-image: url("../images/mountain.jpg");
-    -webkit-background-size: cover;
-    background-position: center center;
-    display: flex;
-    justify-content: center;
-}
 .content-area {
     width: 100%;
-    /*position: relative;*/
-    top: 840px;
-    background: white;
+    background-image: url("../images/mountain.jpg");
+    -webkit-background-size: cover;
+    opacity: 0.3;
     height: 45em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#h5{
+    opacity: 1.0;
+    color: white;
+    font-family: acumin-pro-semi-condensed, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    letter-spacing: 4px;
+    padding: 55px 30px 30px 55px;
+    font-size: 100px;
+}
+.acc{
+    font-family: acumin-pro-semi-condensed, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    letter-spacing: 4px;
+    padding: 0px 5px 5px 55px;
+    font-size: 30px;
+    color: white;
+    opacity: 1.0 !important;
+}
+.profil{
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
 }

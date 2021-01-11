@@ -19,7 +19,6 @@ exit();
     <link href="../assets/styles/navbar.css" rel="stylesheet">
     <link href="../assets/styles/footer.css" rel="stylesheet">
     <link href="../assets/styles/gallery.css" rel="stylesheet">
-    <link href="../assets/styles/profil.css" rel="stylesheet">
     <meta charset="UTF-8">
     <title>BP | Profil</title>
 </head>
@@ -44,11 +43,9 @@ $posts = get_count_photos_of_user($userid);
     </div>
 </header>
 <main>
-    <div class="main hintergrund">
-    </div>
     <div class="text content-area">
         <article class="wrapper profil">
-            <img class="bo boimg-1" src="../assets/images/Logo_light.jpg" alt="placehold">
+            <!--<img class="bo boimg-1" src="../assets/images/Logo_light.jpg" alt="placehold">-->
             <div class="text">
                 <p id="h5"><?php echo $name ?></p>
                 <p class="acc"><span class="bold"><?php echo $email ?></span></p>
