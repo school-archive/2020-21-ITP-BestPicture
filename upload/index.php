@@ -12,7 +12,7 @@ if (get_signed_in_user_id() == -1) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>BP</title>
+    <title>BP | Upload</title>
     <link href="../assets/styles/upload.css" rel="stylesheet">
     <link href="../assets/styles/navbar.css" rel="stylesheet">
     <link href="../assets/styles/footer.css" rel="stylesheet">

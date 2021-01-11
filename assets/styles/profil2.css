@@ -1,0 +1,63 @@
+*{
+    margin: 0px;
+}
+
+html, body{
+    height: 100%;
+    background-color: #202125;
+}
+
+.content-area {
+    width: 100%;
+    background-image: url("../images/mountain.jpg");
+    -webkit-background-size: cover;
+    height: 45em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#h5{
+    opacity: 1.0;
+    color: white;
+    font-family: acumin-pro-semi-condensed, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    letter-spacing: 4px;
+    padding: 55px 30px 30px 55px;
+    font-size: 100px;
+}
+.acc{
+    font-family: acumin-pro-semi-condensed, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    letter-spacing: 4px;
+    padding: 0px 5px 5px 55px;
+    font-size: 30px;
+    color: white;
+    opacity: 1.0 !important;
+}
+.profil{
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+}
+.submit {
+    cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    background: linear-gradient(to right, #5B5FE3, #70C8FA);
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    float: top;
+    font-family: 'acumin-pro', sans-serif;
+    margin-right: 35%;
+    font-size: 13px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.04);
+    height: 34px;
+    width: 100px;
+    text-decoration: none;
+}

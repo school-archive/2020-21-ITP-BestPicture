@@ -2,24 +2,29 @@
 session_start();
 require_once "../php/user.php";
 require_once "../php/photo.php";
+require_once "../php/contest.php";
+
 
 if (get_signed_in_user_id() == -1) {
-    $url = "../login/needSignIn.html";
-    header("Location: " . $url);
-    exit();
+$url = "../login/needSignIn.html";
+header("Location: " . $url);
+exit();
 }
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="../assets/styles/profil.css" rel="stylesheet">
+    <link href="../assets/styles/profil2.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon.ico">
+    <link href="../assets/styles/navbar.css" rel="stylesheet">
+    <link href="../assets/styles/footer.css" rel="stylesheet">
+    <link href="../assets/styles/gallery.css" rel="stylesheet">
     <meta charset="UTF-8">
     <title>BP | Profil</title>
 </head>
 <body>
-<?php
 
+<?php
 $user = get_signed_in_user();
 $userid = $user['user_id'];
 $name = $user['vorname'] . ' ' . $user['nachname'];
@@ -31,49 +36,57 @@ $posts = get_count_photos_of_user($userid);
     <div class="wrapper">
         <a href="../index.php"> <img class="logo" src="../assets/images/Logo.png" alt="logo"></a>
         <nav>
-            <a href="../index.php">Home</a> <a href="../login/abmelden.html">Abmelden</a> <a href="../upload/index.php">Upload</a>
+            <a href="../index.php">Home</a> <?php
+            if (get_signed_in_user()['is_admin'] == 1) {
+                echo '<a href="../admin%20panel.html">Admin Panel</a>';
+            }
+            ?> <a href="../login/abmelden.html">Abmelden</a> <a href="../upload/index.php">Upload</a>
             <a href="index.php"> <img class="user" src="../assets/images/user.png" alt="user"> </a>
         </nav>
 
     </div>
 </header>
-<main class="main">
-    <section class="gallary-links">
+<main>
+    <div class="text content-area">
         <article class="wrapper profil">
-            <img class="bo boimg-1" src="../assets/images/Logo_light.jpg" alt="placehold">
+            <!--<img class="bo boimg-1" src="../assets/images/Logo_light.jpg" alt="placehold">-->
             <div class="text">
                 <p id="h5"><?php echo $name ?></p>
                 <p class="acc"><span class="bold"><?php echo $email ?></span></p>
                 <p class="acc"><span class="bold"><?php echo $likes ?></span> Likes</p>
                 <p class="acc"><span class="bold"><?php echo $posts ?></span> Posts</p>
             </div>
-            <?php
-            if (get_signed_in_user()['is_admin'] == 1) {
-                echo '<a href="../admin%20panel.html" class="submit" id="submit">Admin Panel</a>';
-            }
-            ?>
         </article>
-        <div class="wrapper">
+    </div>
+    <div class="main gallery">
+        <p class="u1">Beiträge</p>
+        <div class="gallery-image">
             <?php
             $photos = get_all_photos_by_user($userid);
 
-            if (sizeof($photos) == 0) {
-                echo " 
-                            <p align=\"center\" class=\"un\">Es sind noch keine Bilder vorhanden. <a id='color' href='../upload/index.php'>Klick hier um welche hochzuladen</a></p>             
-                      
-                ";
-            }
-
             foreach ($photos as $photo) {
-                $path = '../' . $photo['path'];
-                $photoid = $photo['photo_id'];
-                echo "<a href='../comment/index.php?id=$photoid' class='gallary-link'>
-                                <img src='$path' class='content-picture'>
-                              </a>";
+
+                $id = $photo['photo_id'];
+                $path = $photo['path'];
+                $namePhoto = $photo['title'];
+                $photografer = get_username_by_photo($photo['photo_id']);
+
+                echo "<a href='../comment/index.php?id=$id'>
+                        <div class='img-box'>
+                            <img src='../$path' alt='$namePhoto'/>
+                            <div class='transparent-box'>
+                                <div class='caption'>
+                                    <p>$namePhoto</p>
+                                    <p class='opacity-low'>$photografer</p>
+                                </div>
+                            </div>
+                        </div>
+                       </a>";
             }
             ?>
         </div>
-    </section>
+    </div>
+    </div>
 </main>
 <footer>
     <p id="contact">Contact</p><br>

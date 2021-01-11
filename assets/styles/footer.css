@@ -15,7 +15,7 @@ footer{
     font-style: normal;
     background-color: #5B5FE3;
     left: 0;
-    
+
     width: 100%;
     text-align: center;
     color: white;
@@ -38,7 +38,8 @@ footer a{
 }
 
 .agbs{
-    float: right;
+    text-align: right;
+    float: bottom;
     margin: 0px;
 }
 

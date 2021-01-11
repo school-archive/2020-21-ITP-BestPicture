@@ -9,7 +9,7 @@ require_once "php/user.php";
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Best Picture</title>
+    <title>BP | Startseite</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
     <link rel="stylesheet" href="https://use.typekit.net/hhh6sjk.css">
     <link href="assets/styles/main.css" rel="stylesheet">
