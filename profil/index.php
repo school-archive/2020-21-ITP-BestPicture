@@ -72,6 +72,7 @@ $posts = get_count_photos_of_user($userid);
 
             if (sizeof($photos) == 0) {
                 echo " 
+                            <p align=\"center\" class=\"un\">Es sind noch keine Bilder vorhanden. <a id='color' href='../upload/index.php'>Klick hier um welche hochzuladen</a></p>             
                       
                 ";
             }
@@ -97,7 +98,6 @@ $posts = get_count_photos_of_user($userid);
             }
             ?>
         </div>
-    </div>
     </div>
 </main>
 <footer>
