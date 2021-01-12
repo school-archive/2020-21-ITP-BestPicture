@@ -128,7 +128,7 @@ if (gettype($contestid) != 'NULL') {
             </ul>
         </div>
         <div class="item2">
-            <p class="ue1">Gewinner 2020</p>
+            <p class="ue1">Gewinner 20/21</p>
             <div class="countdown">
                 <div id="countdown">
                     <ul>
