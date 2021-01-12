@@ -148,3 +148,7 @@ footer * {
     cursor: pointer;
 }
 
+footer{
+    bottom: 0;
+    float: bottom;
+}
