@@ -4,15 +4,18 @@
 
 html, body{
     height: 100%;
-    background-image: url("/assets/images/rose_farbe.png");
+    background-color: #202125;
 }
 
 .content-area {
+    background-image: url(../images/rose_farbe.png);
+    object-fit: cover;
     width: 100%;
     height: 45em;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #ffffff;
 }
 
 #h5{
