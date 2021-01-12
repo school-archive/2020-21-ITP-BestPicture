@@ -30,8 +30,11 @@ html, body{
     justify-content: center;
 }
 .bestpicture{
+    width: 800px;
     position: absolute;
-    margin: 350px;
+    margin-left: 50%;
+    margin-right: 50%;
+    margin-top: 20%;
 }
 
 .content-area {
