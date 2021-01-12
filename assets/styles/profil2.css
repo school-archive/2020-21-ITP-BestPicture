@@ -94,5 +94,6 @@ html, body{
     to{border-right-color: transparent;}
 }
 
-footer{
+.u1{
+    letter-spacing: 7px;
 }
