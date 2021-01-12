@@ -70,6 +70,13 @@ $posts = get_count_photos_of_user($userid);
             <?php
             $photos = get_all_photos_by_user($userid);
 
+            if (sizeof($photos) == 0) {
+                echo " 
+                            <p align=\"center\" class=\"un\">Es sind noch keine Bilder vorhanden. <a id='color' href='../upload/index.php'>Klick hier um welche hochzuladen</a></p>             
+                      
+                ";
+            }
+
             foreach ($photos as $photo) {
 
                 $id = $photo['photo_id'];
