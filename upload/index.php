@@ -58,7 +58,7 @@ if (get_signed_in_user_id() == -1) {
     <footer>
         <p id="contact">Contact</p><br>
         <div class="emails">
-            <p><a href="mailto:7046@htl.rennweg.at">BestPictureTeam</a></p>
+            <p><a href="mailto:7046@htl.rennweg.at">BestPicture Team</a></p>
         </div>
         <img class="logofooter" src="../assets/images/Logo.png" alt="logo"><br>
         <p class="copyrightfooter">© 2020-2021 <a class="linkhome" href="https://bestpictureproject.ml/index.php" >bestpicture.ml</a></p>
