@@ -50,3 +50,10 @@ footer a{
 .contact{
     font-size: 20px;
 }
+
+.copyrightfooter{
+    text-decoration: none;
+    text-align: center;
+    bottom: 0;
+    position: absolute;
+}

@@ -174,15 +174,10 @@ if (gettype($contestid) != 'NULL') {
     <footer>
         <p id="contact">Contact</p><br>
         <div class="emails">
-            <p><a href="mailto:7046@htl.rennweg.at">Dietrich Kops</a></p>
-            <p>●</p>
-            <p><a href="mailto:7047@htl.rennweg.at">Johanna Kronfuß</a></p>
-            <p>●</p>
-            <p><a href="mailto:7055@htl.rennweg.at">Nils Schneider-Sturm</a></p>
-            <p>●</p>
-            <p><a href="mailto:7053@htl.rennweg.at">Nicoletta Sarzi Sartori</a></p>
+            <p><a href="mailto:7046@htl.rennweg.at">BestPictureTeam</a></p>
         </div>
         <img class="logofooter" src="assets/images/Logo.png" alt="logo"><br>
+        <p class="copyrightfooter">© 2020-2021 <a class="linkhome" href="https://bestpictureproject.ml/index.php" >bestpicture.ml</a></p>
         <a href="rechte/rechte.php"><p class="agbs">Datenschutzerklärung | AGBs</p></a>
     </footer>
 </div>

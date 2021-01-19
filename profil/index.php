@@ -33,9 +33,13 @@ $likes = get_count_likes_of_user($userid);
 $posts = get_count_photos_of_user($userid);
 ?>
 <style>
-    @keyframes typewriter{
-        from{width: 0;}
-        to{width: <?php echo 0.9 * strlen($name)?>em;}
+    @keyframes typewriter {
+        from {
+            width: 0;
+        }
+        to {
+            width: <?php echo 0.9 * strlen($name)?>em;
+        }
     }
 </style>
 <header>
@@ -103,14 +107,10 @@ $posts = get_count_photos_of_user($userid);
 <footer>
     <p id="contact">Contact</p><br>
     <div class="emails">
-        <p><a href="mailto:7046@htl.rennweg.at">Dietrich Kops</a></p>
-        <p>●</p>
-        <p><a href="mailto:7047@htl.rennweg.at">Johanna Kronfuß</a></p>
-        <p>●</p>
-        <p><a href="mailto:7055@htl.rennweg.at">Nils Schneider-Sturm</a></p>
-        <p>●</p>
-        <p><a href="mailto:7053@htl.rennweg.at">Nicoletta Sarzi Sartori</a></p>
+        <p><a href="mailto:7046@htl.rennweg.at">BestPictureTeam</a></p>
     </div>
+   
+    <p class="copyrightfooter">© 2020-2021 <a class="linkhome" href="https://bestpictureproject.ml/index.php">bestpicture.ml</a></p>
 
     <img class="logofooter" src="../assets/images/Logo.png" alt="logo">
     <a href="../rechte/rechte.php"><p class="agbs">Datenschutzerklärung | AGBs</p></a>

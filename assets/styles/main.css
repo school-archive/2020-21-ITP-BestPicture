@@ -220,6 +220,13 @@ li{
     padding-bottom: 7px;
 }
 
+.copyrightfooter{
+    text-decoration: none;
+    text-align: center;
+    bottom: 0;
+    position: absolute;
+}
+
 
 
 
