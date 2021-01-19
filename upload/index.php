@@ -88,7 +88,8 @@ if (get_signed_in_user_id() == -1) {
         return false;
     });
     fileInput.addEventListener( "change", function( event ) {
-        the_return.innerHTML = this.value;
+        const path_split = this.value.split(/[\\/]/);
+        the_return.innerHTML = path_split[path_split.length - 1];
     });
 </script>
 </html>
