@@ -1,4 +1,4 @@
-<?php
+<?php 
 session_start();
 require_once "php/contest.php";
 require_once "php/photo.php";
